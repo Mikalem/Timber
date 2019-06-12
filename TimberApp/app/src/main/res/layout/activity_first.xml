@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,13 +7,27 @@
         android:layout_height="match_parent"
         tools:context=".FirstActivity" android:background="#3F51B5">
 
+    <!-- Timber! (title) -->
     <TextView
+            android:text="@string/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:textColor="#FFFFFF"/>
+            android:layout_centerHorizontal="true"
+            android:id="@+id/title"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <!-- login button -->
+    <Button
+            android:text="@string/login"
+            android:layout_width="60pt"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/reddish"
+            android:id="@+id/loginBtn"/>
+
+</RelativeLayout>
