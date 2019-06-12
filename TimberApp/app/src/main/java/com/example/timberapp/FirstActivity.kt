@@ -79,6 +79,10 @@ class FirstActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 Log.i("myTag", "login success")
+                val user = FirebaseAuth.getInstance().currentUser
+
+                // show a welcome popup msg
+                Toast.makeText(applicationContext, "Welcome $user!", Toast.LENGTH_SHORT).show()
 
                 toSecondActivity()
             } else {
