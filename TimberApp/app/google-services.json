@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "964366774414",
+    "firebase_url": "https://timber-1418d.firebaseio.com",
+    "project_id": "timber-1418d",
+    "storage_bucket": "timber-1418d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964366774414:android:a79d56c006f6692f",
+        "android_client_info": {
+          "package_name": "com.example.timberapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964366774414-nbvkmbcuhgeu06e1rslj4mu7hvak5i7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvijh6nnH0oDj-QKANNVLhcMm61Ci3j9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964366774414-nbvkmbcuhgeu06e1rslj4mu7hvak5i7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
