@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -37,12 +38,13 @@ class SecondActivity : AppCompatActivity() {
             // clicked
             Log.d("myTag", "writeDB clicked!")
 
-            writeToDB()
+            writeToDB(getUserInput())
         }
 
         readDBBtn.setOnClickListener {
             // clicked
             Log.d("myTag", "readDB clicked!")
+
             readFromDB()
         }
     }
@@ -62,10 +64,29 @@ class SecondActivity : AppCompatActivity() {
             }
     }
 
-    private fun writeToDB() {
+    private fun getUserInput(): String {
+        val input = editText.text.toString().trim()
+
+        // input should not be empty
+        if (input.isEmpty()) {
+            Toast.makeText(applicationContext, "Title required", Toast.LENGTH_SHORT).show()
+        }
+
+        // input should be less than 31 characters
+        if (input.length > 30) {
+            Toast.makeText(applicationContext, "Title too long", Toast.LENGTH_SHORT).show()
+        }
+
+        // display entered text
+        Toast.makeText(applicationContext, "'$input' entered", Toast.LENGTH_SHORT).show()
+
+        return input
+    }
+
+    private fun writeToDB(msg: String) {
         // set value to write to
         val myRef = database.getReference("message")
-        myRef.setValue("Hello, World!")
+        myRef.setValue(msg)
     }
 
     private fun readFromDB() {
