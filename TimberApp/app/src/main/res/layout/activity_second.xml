@@ -37,4 +37,26 @@
             android:backgroundTint="@color/reddish"
             android:id="@+id/signOutBtn"/>
 
+    <Button
+            android:text="@string/write_to_db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30pt"
+            android:layout_below="@id/signOutBtn"
+            android:layout_marginTop="10pt"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/reddish"
+            android:id="@+id/writeDBBtn"/>
+
+    <Button
+            android:text="@string/read_from_db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30pt"
+            android:layout_below="@id/signOutBtn"
+            android:layout_marginTop="10pt"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/reddish"
+            android:id="@+id/readDBBtn" android:layout_alignParentEnd="true"/>
+
 </RelativeLayout>

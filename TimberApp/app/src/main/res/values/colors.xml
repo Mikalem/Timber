@@ -5,5 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <!-- My colours -->
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
     <color name="reddish">#F44336</color>
 </resources>

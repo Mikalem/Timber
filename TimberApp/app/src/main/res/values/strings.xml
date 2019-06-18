@@ -7,4 +7,6 @@
     <string name="welcome_timber">Welcome to Timber!</string>
     <string name="nothing_to_see">Nothing to see here (in development)</string>
     <string name="sign_out">Sign out</string>
+    <string name="write_to_db">Write to DB</string>
+    <string name="read_from_db">Read from DB</string>
 </resources>
