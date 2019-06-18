@@ -7,16 +7,15 @@
         android:layout_height="match_parent"
         tools:context=".SecondActivity" android:background="#3F51B5">
 
-    <Button
-            android:text="@string/sign_out"
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_above="@id/welcome"
             android:layout_marginBottom="20pt"
             android:textColor="@color/white"
-            android:backgroundTint="@color/reddish"
-            android:id="@+id/signOutBtn"/>
+            android:text="@string/nothing_to_see"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,13 +25,16 @@
             android:textColor="@color/white"
             android:text="@string/welcome_timber"
             android:textSize="16pt"/>
-    <TextView
+
+    <Button
+            android:text="@string/sign_out"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/welcome"
             android:layout_marginTop="20pt"
             android:textColor="@color/white"
-            android:text="@string/nothing_to_see"/>
+            android:backgroundTint="@color/reddish"
+            android:id="@+id/signOutBtn"/>
 
 </RelativeLayout>
