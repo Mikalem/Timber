@@ -13,6 +13,9 @@ import com.google.firebase.database.ValueEventListener
 
 class SecondActivity : AppCompatActivity() {
 
+    // Link to database
+    private val database = FirebaseDatabase.getInstance()
+
     // onCreate function runs when activity is loaded
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,22 +28,22 @@ class SecondActivity : AppCompatActivity() {
         // Logout and go to first activity
         signOutBtn.setOnClickListener {
             // clicked
-            Log.i("myTag", "logout clicked!")
+            Log.d("myTag", "logout clicked!")
 
             signOut()
         }
 
         writeDBBtn.setOnClickListener {
             // clicked
-            Log.i("myTag", "writeDB clicked!")
+            Log.d("myTag", "writeDB clicked!")
 
             writeToDB()
         }
 
         readDBBtn.setOnClickListener {
             // clicked
-            Log.i("myTag", "readDB clicked!")
-//            readFromDB()
+            Log.d("myTag", "readDB clicked!")
+            readFromDB()
         }
     }
 
@@ -49,22 +52,39 @@ class SecondActivity : AppCompatActivity() {
             .signOut(this)
             .addOnCompleteListener {
                 // Sign-out successful
-                Log.i("myTag", "sign-out successful")
+                Log.d("myTag", "sign-out successful")
 
                 // now back to first activity
                 val intent = Intent(this, FirstActivity::class.java)
                 startActivity(intent)
 
-                Log.i("myTag", "switched activities")
+                Log.d("myTag", "switched activities")
             }
     }
 
     private fun writeToDB() {
-        // Write a message to the database
-        val database = FirebaseDatabase.getInstance()
+        // set value to write to
         val myRef = database.getReference("message")
-
         myRef.setValue("Hello, World!")
     }
-    
+
+    private fun readFromDB() {
+        //set value to read from
+        val myRef = database.getReference("message")
+
+        // Read from the database
+        myRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                val value = dataSnapshot.getValue(String::class.java)
+                Log.d("myTag", "Value is: $value")
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w("myTag", "Failed to read value.", error.toException())
+            }
+        })
+    }
 }
