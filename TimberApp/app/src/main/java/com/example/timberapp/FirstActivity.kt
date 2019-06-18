@@ -27,16 +27,16 @@ class FirstActivity : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
             // user is signed in
-            Log.i("myTag", "user signed in")
+            Log.d("myTag", "user signed in")
         } else {
             // user is not signed in
-            Log.i("myTag", "user not signed in")
+            Log.d("myTag", "user not signed in")
         }
 
         // Login and go to main program
         loginBtn.setOnClickListener {
             // clicked,
-            Log.i("myTag", "login clicked!")
+            Log.d("myTag", "login clicked!")
             // now sign in
             signIn()
         }
@@ -49,7 +49,7 @@ class FirstActivity : AppCompatActivity() {
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
 
-        Log.i("myTag", "activity switched")
+        Log.d("myTag", "activity switched")
     }
 
     /* sign-in the user using the firebase UI */
@@ -78,7 +78,7 @@ class FirstActivity : AppCompatActivity() {
 
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
-                Log.i("myTag", "login success")
+                Log.d("myTag", "login success")
                 val user = FirebaseAuth.getInstance().currentUser
 
                 // show a welcome popup msg
@@ -89,7 +89,7 @@ class FirstActivity : AppCompatActivity() {
                 // Sign in failed. If response is null the user canceled the
                 // sign-in flow using the back button. Otherwise check
                 // response.getError().getErrorCode() and handle the error.
-                Log.i("myTag", "login fail")
+                Log.d("myTag", "login fail")
             }
         }
     }
