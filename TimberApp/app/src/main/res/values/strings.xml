@@ -1,12 +1,15 @@
 <resources>
-    <string name="app_name">TimberApp</string>
-    <!-- first activity -->
+    <string name="app_name">Timber!</string>
+    <!-- sign_in_up activity -->
     <string name="login">Signin/Signup</string>
-    <string name="title">Timber!</string>
-    <!-- second activity -->
+    <!-- home activity -->
     <string name="welcome_timber">Welcome to Timber!</string>
     <string name="nothing_to_see">Nothing to see here (in development)</string>
     <string name="sign_out">Sign out</string>
     <string name="write_to_db">Write to DB</string>
     <string name="read_from_db">Read from DB</string>
+    <!-- menu resource -->
+    <string name="open_profile">Open Profile</string>
+    <string name="help">Help</string>
+    <string name="logout">Logout</string>
 </resources>
