@@ -4,6 +4,8 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
@@ -21,6 +23,11 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        // use a toolbar on this activity
+        setSupportActionBar(findViewById(R.id.home_toolbar))
+        // enable Up button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val signOutBtn = findViewById<Button>(R.id.signOutBtn)
         val writeDBBtn = findViewById<Button>(R.id.writeDBBtn)
@@ -46,6 +53,37 @@ class Home : AppCompatActivity() {
             Log.d("myTag", "readDB clicked!")
 
             readFromDB()
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_home, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.open_profile -> {
+            Log.d("myTag", "Profile clicked")
+            true
+        }
+        R.id.logout -> {
+            Log.d("myTag", "Logout clicked")
+            true
+        }
+        R.id.action_settings -> {
+            // User chose the "Settings" item, show the app settings UI...
+            Log.d("myTag", "Settings clicked")
+            true
+        }
+        R.id.help -> {
+            Log.d("myTag", "Help clicked")
+            true
+        }
+
+        else -> {
+            // If we got here, the user's action was not recognized.
+            // Invoke the superclass to handle it.
+            super.onOptionsItemSelected(item)
         }
     }
 
