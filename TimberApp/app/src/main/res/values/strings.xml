@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TimberApp</string>
     <!-- first activity -->
-    <string name="login">Login</string>
+    <string name="login">Signin/Signup</string>
     <string name="title">Timber!</string>
     <!-- second activity -->
     <string name="welcome_timber">Welcome to Timber!</string>
