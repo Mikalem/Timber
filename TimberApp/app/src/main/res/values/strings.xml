@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Timber!</string>
-    <!-- first activity -->
-    <string name="login">Login</string>
-    <!-- second activity -->
+    <!-- sign_in_up activity -->
+    <string name="login">Signin/Signup</string>
+    <!-- home activity -->
     <string name="welcome_timber">Welcome to Timber!</string>
     <string name="nothing_to_see">Nothing to see here (in development)</string>
     <string name="sign_out">Sign out</string>
