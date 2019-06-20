@@ -1,7 +1,6 @@
 package com.example.timberapp
 
 import android.app.Activity
-import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +10,7 @@ import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 
-class FirstActivity : AppCompatActivity() {
+class SignInUp : AppCompatActivity() {
 
     // random value for signed-in users
     val RC_SIGN_IN = 123
@@ -19,7 +18,7 @@ class FirstActivity : AppCompatActivity() {
     // onCreate function runs when activity is loaded
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_first)
+        setContentView(R.layout.activity_sign_in_up)
 
         val loginBtn = findViewById<Button>(R.id.loginBtn)
 
@@ -46,7 +45,7 @@ class FirstActivity : AppCompatActivity() {
     private fun toSecondActivity() {
 
         // create second activity intent, then startActivity
-        val intent = Intent(this, SecondActivity::class.java)
+        val intent = Intent(this, Home::class.java)
         startActivity(intent)
 
         Log.d("myTag", "activity switched")

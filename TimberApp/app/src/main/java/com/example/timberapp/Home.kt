@@ -5,13 +5,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class SecondActivity : AppCompatActivity() {
+class Home : AppCompatActivity() {
 
     // Link to database
     private val database = FirebaseDatabase.getInstance()
@@ -19,7 +20,7 @@ class SecondActivity : AppCompatActivity() {
     // onCreate function runs when activity is loaded
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
+        setContentView(R.layout.activity_home)
 
         val signOutBtn = findViewById<Button>(R.id.signOutBtn)
         val writeDBBtn = findViewById<Button>(R.id.writeDBBtn)
@@ -43,6 +44,7 @@ class SecondActivity : AppCompatActivity() {
         readDBBtn.setOnClickListener {
             // clicked
             Log.d("myTag", "readDB clicked!")
+
             readFromDB()
         }
     }
@@ -55,7 +57,7 @@ class SecondActivity : AppCompatActivity() {
                 Log.d("myTag", "sign-out successful")
 
                 // now back to first activity
-                val intent = Intent(this, FirstActivity::class.java)
+                val intent = Intent(this, SignInUp::class.java)
                 startActivity(intent)
 
                 Log.d("myTag", "switched activities")
@@ -79,6 +81,9 @@ class SecondActivity : AppCompatActivity() {
                 // whenever data at this location is updated.
                 val value = dataSnapshot.getValue(String::class.java)
                 Log.d("myTag", "Value is: $value")
+
+                // show value as popup msg
+                Toast.makeText(applicationContext, "Value is: $value", Toast.LENGTH_SHORT).show()
             }
 
             override fun onCancelled(error: DatabaseError) {
