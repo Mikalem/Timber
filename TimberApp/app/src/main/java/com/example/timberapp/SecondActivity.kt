@@ -4,7 +4,9 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.database.DataSnapshot
@@ -16,6 +18,7 @@ class SecondActivity : AppCompatActivity() {
 
     // Link to database
     private val database = FirebaseDatabase.getInstance()
+    private val dbMessage = findViewById<EditText>(R.id.db_msg)
 
     // onCreate function runs when activity is loaded
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,14 +41,18 @@ class SecondActivity : AppCompatActivity() {
             // clicked
             Log.d("myTag", "writeDB clicked!")
 
-            writeToDB(getUserInput())
+            setVisibility(1)
+
+//            writeToDB(getUserInput())
         }
 
         readDBBtn.setOnClickListener {
             // clicked
             Log.d("myTag", "readDB clicked!")
 
-            readFromDB()
+            setVisibility(0)
+
+//            readFromDB()
         }
     }
 
@@ -64,8 +71,19 @@ class SecondActivity : AppCompatActivity() {
             }
     }
 
+    private fun setVisibility(value: Int) {
+        when (value) {
+            // make visible
+            1 -> dbMessage.visibility = View.VISIBLE
+            // make invisible
+            0 -> dbMessage.visibility = View.INVISIBLE
+            // error
+            else -> Log.e("myTag", "improper use of setVisibility() function")
+        }
+    }
+
     private fun getUserInput(): String {
-        val input = editText.text.toString().trim()
+        val input = dbMessage.text.toString().trim()
 
         // input should not be empty
         if (input.isEmpty()) {

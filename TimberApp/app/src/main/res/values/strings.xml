@@ -9,4 +9,5 @@
     <string name="sign_out">Sign out</string>
     <string name="write_to_db">Write to DB</string>
     <string name="read_from_db">Read from DB</string>
+    <string name="db_message">DB message</string>
 </resources>
