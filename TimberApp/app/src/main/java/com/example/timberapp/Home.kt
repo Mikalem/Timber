@@ -26,20 +26,9 @@ class Home : AppCompatActivity() {
 
         // use a toolbar on this activity
         setSupportActionBar(findViewById(R.id.home_toolbar))
-        // enable Up button
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val signOutBtn = findViewById<Button>(R.id.signOutBtn)
         val writeDBBtn = findViewById<Button>(R.id.writeDBBtn)
         val readDBBtn = findViewById<Button>(R.id.readDBBtn)
-
-        // Logout and go to first activity
-        signOutBtn.setOnClickListener {
-            // clicked
-            Log.d("myTag", "logout clicked!")
-
-            signOut()
-        }
 
         writeDBBtn.setOnClickListener {
             // clicked
@@ -64,27 +53,38 @@ class Home : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.open_profile -> {
             Log.d("myTag", "Profile clicked")
+            toProfilePage()
             true
         }
         R.id.logout -> {
             Log.d("myTag", "Logout clicked")
+            signOut()
             true
         }
         R.id.action_settings -> {
             // User chose the "Settings" item, show the app settings UI...
             Log.d("myTag", "Settings clicked")
+            Toast.makeText(applicationContext, "No current settings for this app", Toast.LENGTH_SHORT).show()
             true
         }
         R.id.help -> {
             Log.d("myTag", "Help clicked")
+            Toast.makeText(applicationContext, "Haha, no help for you!", Toast.LENGTH_SHORT).show()
             true
         }
 
         else -> {
             // If we got here, the user's action was not recognized.
             // Invoke the superclass to handle it.
+            Log.d("myTag", "user action unrecognized")
             super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun toProfilePage() {
+        // now to profile
+        val intent = Intent(this, Profile::class.java)
+        startActivity(intent)
     }
 
     private fun signOut() {
