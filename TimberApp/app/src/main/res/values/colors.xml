@@ -7,5 +7,6 @@
     <!-- My colours -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="reddish">#F44336</color>
+    <color name="red">#F44336</color>
+    <color name="turquoise">#009688</color>
 </resources>

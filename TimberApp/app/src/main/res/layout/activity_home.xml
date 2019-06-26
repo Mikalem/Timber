@@ -46,7 +46,7 @@
             android:layout_below="@id/welcome"
             android:layout_marginTop="20pt"
             android:textColor="@color/white"
-            android:backgroundTint="@color/reddish"
+            android:backgroundTint="@color/red"
             android:id="@+id/signOutBtn"/>
 
     <Button
@@ -57,7 +57,7 @@
             android:layout_below="@id/signOutBtn"
             android:layout_marginTop="10pt"
             android:textColor="@color/black"
-            android:backgroundTint="@color/reddish"
+            android:backgroundTint="@color/red"
             android:id="@+id/writeDBBtn"/>
 
     <Button
@@ -68,7 +68,7 @@
             android:layout_below="@id/signOutBtn"
             android:layout_marginTop="10pt"
             android:textColor="@color/black"
-            android:backgroundTint="@color/reddish"
+            android:backgroundTint="@color/red"
             android:id="@+id/readDBBtn" android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>

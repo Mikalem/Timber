@@ -10,6 +10,18 @@
         android:orientation="vertical"
         android:background="#3F51B5">
 
+    <!-- Logo -->
+    <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@color/turquoise"
+            app:srcCompat="@drawable/ic_logo"
+            android:layout_above="@+id/title"
+            android:layout_marginBottom="70dp"
+            android:id="@+id/logo"
+            android:layout_centerVertical="false"
+            android:layout_centerHorizontal="true"/>
+
     <!-- Timber! (title) -->
     <TextView
             android:text="@string/app_name"
@@ -18,21 +30,38 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:id="@+id/title"
-            android:textSize="28sp"
+            android:textSize="35sp"
             android:textColor="@color/white"
             android:gravity="center"/>
 
     <!-- login button -->
-    <Button
-            android:text="@string/login"
-            android:layout_width="60pt"
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/title"
             android:layout_marginTop="20pt"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/reddish"
-            android:id="@+id/loginBtn"
-            android:gravity="center"/>
+            android:layout_below="@id/title"
+            android:background="@color/red"
+            android:backgroundTint="@color/red">
+
+        <ImageView
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_mail"
+                android:id="@+id/email_image"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="40dp"/>
+        <Button
+                android:text="@string/login_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:backgroundTint="@color/red"
+                android:id="@+id/loginBtn"
+                android:gravity="center"/>
+    </LinearLayout>
+
 
 </RelativeLayout>
