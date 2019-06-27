@@ -12,6 +12,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 class SignInUp : AppCompatActivity() {
 
+    // pressing back on your phone
+    private var backPressedTime : Long = 0
     // random value for signed-in users
     val RC_SIGN_IN = 123
 
@@ -26,29 +28,56 @@ class SignInUp : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
             // user is signed in
-            Log.d("myTag", "user signed in")
+            Log.i("myTag", "User signed in")
+            toHomeActivity()
         } else {
             // user is not signed in
-            Log.d("myTag", "user not signed in")
+            Log.i("myTag", "User not signed in")
         }
 
         // Login and go to main program
         loginBtn.setOnClickListener {
             // clicked,
-            Log.d("myTag", "login clicked!")
+            Log.i("myTag", "Login clicked!")
             // now sign in
             signIn()
         }
     }
 
+    // pressing back twice exits the app
+    override fun onBackPressed() {
+        val backToast = Toast.makeText(applicationContext,
+            "Press back again to exit the app",
+            Toast.LENGTH_SHORT)
+        Log.i("myTag", "Back key pressed")
+
+        // pressed back twice quickly
+        if (backPressedTime + 1500 > System.currentTimeMillis()) {
+            Log.i("myTag", "backPressedTime interval = $backPressedTime")
+            backToast.cancel()
+            super.onBackPressed()
+            return
+        }
+        // show toast (first back-key press or second too slow)
+        else {
+            Log.i("myTag", "Back key pressed again")
+            backToast.show()
+        }
+
+        // first press grabs start time to compare for second press
+        backPressedTime = System.currentTimeMillis()
+    }
+
     /* starts the second activity */
-    private fun toSecondActivity() {
+    private fun toHomeActivity() {
 
         // create second activity intent, then startActivity
         val intent = Intent(this, Home::class.java)
         startActivity(intent)
 
-        Log.d("myTag", "activity switched")
+        Log.i("myTag", "Switched to Home activity")
+
+        finish()
     }
 
     /* sign-in the user using the firebase UI */
@@ -77,18 +106,18 @@ class SignInUp : AppCompatActivity() {
 
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
-                Log.d("myTag", "login success")
+                Log.i("myTag", "Login success")
                 val user = FirebaseAuth.getInstance().currentUser
 
                 // show a welcome popup msg
                 Toast.makeText(applicationContext, "Welcome $user!", Toast.LENGTH_SHORT).show()
 
-                toSecondActivity()
+                toHomeActivity()
             } else {
                 // Sign in failed. If response is null the user canceled the
                 // sign-in flow using the back button. Otherwise check
                 // response.getError().getErrorCode() and handle the error.
-                Log.d("myTag", "login fail")
+                Log.e("myTag", "Login fail")
             }
         }
     }

@@ -28,22 +28,22 @@ class Profile : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.edit_profile -> {
-            Log.d("myTag", "Edit clicked")
+            Log.i("myTag", "Edit clicked")
             true
         }
         R.id.logout -> {
-            Log.d("myTag", "Logout clicked")
+            Log.i("myTag", "Logout clicked")
             signOut()
             true
         }
         R.id.action_settings -> {
             // User chose the "Settings" item, show the app settings UI...
-            Log.d("myTag", "Settings clicked")
+            Log.i("myTag", "Settings clicked")
             Toast.makeText(applicationContext, "No current settings for this app", Toast.LENGTH_SHORT).show()
             true
         }
         R.id.help -> {
-            Log.d("myTag", "Help clicked")
+            Log.i("myTag", "Help clicked")
             Toast.makeText(applicationContext, "Haha, no help for you!", Toast.LENGTH_SHORT).show()
             true
         }
@@ -51,7 +51,7 @@ class Profile : AppCompatActivity() {
         else -> {
             // If we got here, the user's action was not recognized.
             // Invoke the superclass to handle it.
-            Log.d("myTag", "user action unrecognized")
+            Log.w("myTag", "User action unrecognized")
             super.onOptionsItemSelected(item)
         }
     }
@@ -61,13 +61,15 @@ class Profile : AppCompatActivity() {
             .signOut(this)
             .addOnCompleteListener {
                 // Sign-out successful
-                Log.d("myTag", "sign-out successful")
+                Log.d("myTag", "Sign-out successful")
 
                 // now back to first activity
                 val intent = Intent(this, SignInUp::class.java)
                 startActivity(intent)
 
-                Log.d("myTag", "switched activities")
+                Log.d("myTag", "Switched to SignInUp activity")
+
+                finish()
             }
     }
 }

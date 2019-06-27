@@ -16,6 +16,8 @@ import com.google.firebase.database.ValueEventListener
 
 class Home : AppCompatActivity() {
 
+    // pressing back on your phone
+    private var backPressedTime : Long = 0
     // Link to database
     private val database = FirebaseDatabase.getInstance()
 
@@ -32,43 +34,69 @@ class Home : AppCompatActivity() {
 
         writeDBBtn.setOnClickListener {
             // clicked
-            Log.d("myTag", "writeDB clicked!")
+            Log.i("myTag", "writeDB clicked!")
 
             writeToDB()
         }
 
         readDBBtn.setOnClickListener {
             // clicked
-            Log.d("myTag", "readDB clicked!")
+            Log.i("myTag", "readDB clicked!")
 
             readFromDB()
         }
     }
 
+    // pressing back twice logs you out
+    override fun onBackPressed() {
+        val backToast = Toast.makeText(applicationContext,
+            "Press back again to logout",
+            Toast.LENGTH_SHORT)
+        Log.i("myTag", "Back key pressed")
+
+        // pressed back twice quickly
+        if (backPressedTime + 1500 > System.currentTimeMillis()) {
+            Log.i("myTag", "backPressedTime interval = $backPressedTime")
+            backToast.cancel()
+            signOut()
+            return
+        }
+        // show toast (first back-key press or second too slow)
+        else {
+            Log.i("myTag", "Back key pressed again")
+            backToast.show()
+        }
+
+        // first press grabs start time to compare for second press
+        backPressedTime = System.currentTimeMillis()
+    }
+
+    // set up toolbar from menu_home (menu) resource
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_home, menu)
         return true
     }
 
+    // do stuff when various toolbar menu items are selected
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.open_profile -> {
-            Log.d("myTag", "Profile clicked")
+            Log.i("myTag", "Profile clicked")
             toProfilePage()
             true
         }
         R.id.logout -> {
-            Log.d("myTag", "Logout clicked")
+            Log.i("myTag", "Logout clicked")
             signOut()
             true
         }
         R.id.action_settings -> {
             // User chose the "Settings" item, show the app settings UI...
-            Log.d("myTag", "Settings clicked")
+            Log.i("myTag", "Settings clicked")
             Toast.makeText(applicationContext, "No current settings for this app", Toast.LENGTH_SHORT).show()
             true
         }
         R.id.help -> {
-            Log.d("myTag", "Help clicked")
+            Log.i("myTag", "Help clicked")
             Toast.makeText(applicationContext, "Haha, no help for you!", Toast.LENGTH_SHORT).show()
             true
         }
@@ -76,7 +104,7 @@ class Home : AppCompatActivity() {
         else -> {
             // If we got here, the user's action was not recognized.
             // Invoke the superclass to handle it.
-            Log.d("myTag", "user action unrecognized")
+            Log.w("myTag", "User action unrecognized")
             super.onOptionsItemSelected(item)
         }
     }
@@ -85,6 +113,7 @@ class Home : AppCompatActivity() {
         // now to profile
         val intent = Intent(this, Profile::class.java)
         startActivity(intent)
+        Log.i("myTag", "Switched to Profile activity")
     }
 
     private fun signOut() {
@@ -92,13 +121,15 @@ class Home : AppCompatActivity() {
             .signOut(this)
             .addOnCompleteListener {
                 // Sign-out successful
-                Log.d("myTag", "sign-out successful")
+                Log.i("myTag", "Sign-out successful")
 
-                // now back to first activity
+                // now back to SignInUp activity
                 val intent = Intent(this, SignInUp::class.java)
                 startActivity(intent)
 
-                Log.d("myTag", "switched activities")
+                Log.i("myTag", "Switched to SignInUp activity")
+
+                finish()
             }
     }
 
@@ -118,7 +149,7 @@ class Home : AppCompatActivity() {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 val value = dataSnapshot.getValue(String::class.java)
-                Log.d("myTag", "Value is: $value")
+                Log.i("myTag", "Value is: $value")
 
                 // show value as popup msg
                 Toast.makeText(applicationContext, "Value is: $value", Toast.LENGTH_SHORT).show()
