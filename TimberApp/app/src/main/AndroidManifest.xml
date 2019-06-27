@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.timberapp">
+          xmlns:tools="http://schemas.android.com/tools" package="com.example.timberapp">
 
     <application
             android:allowBackup="true"
@@ -8,15 +8,20 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_logo_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- Profile -->
         <activity
                 android:name=".Profile"
                 android:parentActivityName=".Home">
         </activity>
+        <!-- Home -->
         <activity
                 android:name=".Home"
                 android:parentActivityName=".SignInUp">
         </activity>
+        <!-- Sign in/up -->
         <activity android:name=".SignInUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -24,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
