@@ -6,18 +6,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/activity_profile"
         tools:context=".Profile">
 
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:background="@color/turquoise"
             android:layout_centerVertical="true">
         <TextView
-                android:text="What you want help for:"
+                android:text="@string/what_you_want_help_for"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/textView"/>
         <EditText
@@ -45,7 +55,7 @@
                 android:id="@+id/NeedC"
                 android:autofillHints="@string/what_you_need"/>
         <TextView
-                android:text="What you can provide help for:"
+                android:text="@string/what_you_can_provide_help_for"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/textView2"/>
         <EditText
