@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Timber!</string>
     <!-- sign_in_up activity -->
+    <string name="logo">Logo</string>
     <string name="login_email">Continue with Email</string>
     <!-- home activity -->
     <string name="welcome_timber">Welcome to Timber!</string>
