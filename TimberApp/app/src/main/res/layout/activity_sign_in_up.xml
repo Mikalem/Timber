@@ -15,7 +15,7 @@
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:background="@color/turquoise"
-            app:srcCompat="@drawable/ic_logo"
+            app:srcCompat="@drawable/ic_logo_85"
             android:layout_above="@+id/title"
             android:layout_marginBottom="70dp"
             android:id="@+id/logo"

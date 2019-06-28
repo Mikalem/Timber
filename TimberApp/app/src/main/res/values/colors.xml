@@ -5,8 +5,9 @@
     <color name="colorPrimaryDark">#3F51B5</color>
     <color name="colorAccent">#F44336</color>
     <!-- My colours -->
+    <color name="midBlue">#4B96FF</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="red">#C93B31</color>
-    <color name="turquoise">#009688</color>
+    <color name="turquoise">#26A69A</color>
 </resources>
