@@ -34,7 +34,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.9' // Firebase SDK
     implementation 'com.firebaseui:firebase-ui-auth:5.0.0' // Firebase UI
     implementation 'com.google.firebase:firebase-database:17.0.0' // Firebase Realtime Database
+    implementation 'de.hdodenhof:circleimageview:3.0.0' // CircleImageView
 }
 
 apply plugin: 'com.google.gms.google-services' // Firebase SDK
-
