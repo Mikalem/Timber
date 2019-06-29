@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/colorPrimaryDark"
+              tools:context=".ProfileEdit">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                    android:id="@+id/inner_relativelayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@color/red">
+
+                <RelativeLayout
+                        android:id="@+id/inner_relativelayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/turquoise">
+
+                    <ImageView
+                            android:id="@+id/symbol"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_logo_85"/>
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/HomeFragmentProfileImageView"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="85dp"
+                        app:civ_border_width="4dp"
+                        app:civ_border_color="@color/red"
+                        android:src="@drawable/man"/>
+
+                <TextView
+                        android:id="@+id/ProjectNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/HomeFragmentProfileImageView"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/profile"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:id="@+id/viewB"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/midBlue"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_head"/>
+
+                    <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <EditText
+                                android:id="@+id/input_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/user_name"
+                                android:inputType="text"
+                                android:padding="30dp"
+                                android:singleLine="true"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_head"/>
+
+                    <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_profession"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <EditText
+                                android:id="@+id/input_profession"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/profession"
+                                android:inputType="text"
+                                android:padding="30dp"
+                                android:singleLine="true"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="20dp"
+                        android:gravity="bottom|center"
+                        android:orientation="horizontal">
+
+                    <Button
+                            android:id="@+id/save_changes_btn"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/red"
+                            android:text="@string/save_changes"
+                            android:textColor="@android:color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

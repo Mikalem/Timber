@@ -29,6 +29,7 @@ class Profile : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.edit_profile -> {
             Log.i("myTag", "Edit clicked")
+            toProfileEdit()
             true
         }
         R.id.logout -> {
@@ -54,6 +55,13 @@ class Profile : AppCompatActivity() {
             Log.w("myTag", "User action unrecognized")
             super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun toProfileEdit() {
+        // now to profile
+        val intent = Intent(this, ProfileEdit::class.java)
+        startActivity(intent)
+        Log.i("myTag", "Switched to ProfileEdit activity")
     }
 
     private fun signOut() {

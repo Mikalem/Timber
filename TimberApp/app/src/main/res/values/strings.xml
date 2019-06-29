@@ -20,4 +20,8 @@
     <string name="what_you_need">What you need</string>
     <string name="what_you_want_help_for">What you want help for:</string>
     <string name="what_you_can_provide_help_for">What you can provide help for:</string>
+    <string name="profile">Profile</string>
+    <string name="user_name">User Name</string>
+    <string name="profession">Profession</string>
+    <string name="save_changes">Save Changes</string>
 </resources>
