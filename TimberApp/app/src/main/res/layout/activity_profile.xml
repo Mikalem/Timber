@@ -47,7 +47,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="180dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_logo_85"/>
+                            android:src="@drawable/ic_logo_85"
+                            android:contentDescription="@string/background_image"/>
                 </RelativeLayout>
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -68,7 +69,7 @@
                         android:layout_below="@id/HomeFragmentProfileImageView"
                         android:layout_marginTop="20dp"
                         android:layout_centerHorizontal="true"
-                        android:text="@string/profile"
+                        android:text="User Name"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold"/>
@@ -86,46 +87,67 @@
                         android:id="@+id/user_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/user_name"
-                        android:padding="30dp"
+                        android:hint="Full name"
+                        android:padding="15dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
                         android:singleLine="true"
-                        android:drawableStart="@drawable/ic_mail"
+                        android:drawableStart="@drawable/ic_person"
                         android:drawablePadding="10dp"/>
                 <TextView
                         android:id="@+id/profession"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/profession"
-                        android:padding="30dp"
+                        android:padding="10dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
                         android:singleLine="true"
-                        android:drawableStart="@drawable/ic_head"
+                        android:drawableStart="@drawable/ic_briefcase"
                         android:drawablePadding="10dp"/>
                 <TextView
-                        android:id="@+id/profession2"
+                        android:id="@+id/burning_question"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/profession"
-                        android:padding="30dp"
-                        android:singleLine="true"
-                        android:drawableStart="@drawable/ic_head"
+                        android:hint="Burning question"
+                        android:padding="10dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:singleLine="false"
+                        android:drawableStart="@drawable/ic_exclamation"
                         android:drawablePadding="10dp"/>
                 <TextView
-                        android:id="@+id/profession3"
+                        android:id="@+id/degree"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/profession"
-                        android:padding="30dp"
+                        android:hint="Degree"
+                        android:padding="10dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
                         android:singleLine="true"
-                        android:drawableStart="@drawable/ic_head"
+                        android:drawableStart="@drawable/ic_diploma"
                         android:drawablePadding="10dp"/>
                 <TextView
-                        android:id="@+id/profession4"
+                        android:id="@+id/graduating_year"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/profession"
-                        android:padding="30dp"
+                        android:hint="Graduating year"
+                        android:padding="10dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
                         android:singleLine="true"
-                        android:drawableStart="@drawable/ic_head"
+                        android:drawableStart="@drawable/ic_calendar"
+                        android:drawablePadding="10dp"/>
+                <TextView
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Location"
+                        android:padding="10dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:singleLine="true"
+                        android:drawableStart="@drawable/ic_location"
                         android:drawablePadding="10dp"/>
             </LinearLayout>
         </LinearLayout>

@@ -24,4 +24,5 @@
     <string name="user_name">User Name</string>
     <string name="profession">Profession</string>
     <string name="save_changes">Save Changes</string>
+    <string name="background_image">Background Image</string>
 </resources>
