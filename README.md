@@ -106,4 +106,6 @@ While most of the above will surely not be developed at this time, it is well th
 The current plan is to implement secure and encrypted login credentials with a log-in, sign-up, and a basic placeholder for Timber itself with a log-out.
 
 #### Credits
-Axe in stump icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/) (Creative Commons BY 3.0)
+Axe in stump icon and scroll icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/), is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/) (Creative Commons BY 3.0)
+
+Calendar icon made by [Dave Gandy](https://www.flaticon.com/authors/dave-gandy) from [www.flaticon.com](https://www.flaticon.com/), is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/) (Creative Commons BY 3.0)
