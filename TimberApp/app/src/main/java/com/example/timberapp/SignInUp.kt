@@ -108,9 +108,10 @@ class SignInUp : AppCompatActivity() {
                 // Successfully signed in
                 Log.i("myTag", "Login success")
                 val user = FirebaseAuth.getInstance().currentUser
+                val name = user?.displayName
 
                 // show a welcome popup msg
-                Toast.makeText(applicationContext, "Welcome $user!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Welcome $name!", Toast.LENGTH_SHORT).show()
 
                 toHomeActivity()
             } else {
