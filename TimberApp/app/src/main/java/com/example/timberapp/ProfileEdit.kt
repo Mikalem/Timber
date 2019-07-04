@@ -13,6 +13,7 @@ class ProfileEdit : AppCompatActivity() {
         setContentView(R.layout.activity_profile_edit)
 
         val saveChangesBtn = findViewById<Button>(R.id.save_changes_btn)
+        val discardChangesBtn = findViewById<Button>(R.id.discard_changes_btn)
 
         saveChangesBtn.setOnClickListener {
             // clicked
@@ -21,6 +22,15 @@ class ProfileEdit : AppCompatActivity() {
             // write data to DB
             // (read data from database in profile) -- perhaps always read from db and have default values
 
+            // go back to profile
+            toProfile()
+        }
+
+        discardChangesBtn.setOnClickListener {
+            // clicked
+            Log.i("myTag", "Discard Changes clicked!")
+
+            // DO NOT write data to DB
             // go back to profile
             toProfile()
         }
