@@ -14,11 +14,12 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
+// Home activity
 class Home : AppCompatActivity() {
 
-    // pressing back on your phone
-    private var backPressedTime : Long = 0
-    // Link to database
+    // the time at which user presses back on phone
+    private var backPressedTimeStamp : Long = 0
+    // Reference to Firebase database (see more: firebase.google.com)
     private val database = FirebaseDatabase.getInstance()
 
     // onCreate function runs when activity is loaded
@@ -29,6 +30,10 @@ class Home : AppCompatActivity() {
         // use a toolbar on this activity
         setSupportActionBar(findViewById(R.id.home_toolbar))
 
+        setUpClickEvents()
+    }
+
+    private fun setUpClickEvents() {
         val writeDBBtn = findViewById<Button>(R.id.writeDBBtn)
         val readDBBtn = findViewById<Button>(R.id.readDBBtn)
 
@@ -47,7 +52,7 @@ class Home : AppCompatActivity() {
         }
     }
 
-    // pressing back twice logs you out
+    // Handles what happens when user presses back key
     override fun onBackPressed() {
         val backToast = Toast.makeText(applicationContext,
             "Press back again to logout",
@@ -55,8 +60,8 @@ class Home : AppCompatActivity() {
         Log.i("myTag", "Back key pressed")
 
         // pressed back twice quickly
-        if (backPressedTime + 1500 > System.currentTimeMillis()) {
-            Log.i("myTag", "backPressedTime interval = $backPressedTime")
+        if (backPressedTimeStamp + 1500 > System.currentTimeMillis()) {
+            Log.i("myTag", "backPressedTime interval = $backPressedTimeStamp")
             backToast.cancel()
             signOut()
             return
@@ -68,7 +73,7 @@ class Home : AppCompatActivity() {
         }
 
         // first press grabs start time to compare for second press
-        backPressedTime = System.currentTimeMillis()
+        backPressedTimeStamp = System.currentTimeMillis()
     }
 
     // set up toolbar from menu_home (menu) resource
@@ -77,7 +82,7 @@ class Home : AppCompatActivity() {
         return true
     }
 
-    // do stuff when various toolbar menu items are selected
+    // Handle each menu item when selected
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.open_profile -> {
             Log.i("myTag", "Profile clicked")
@@ -109,6 +114,7 @@ class Home : AppCompatActivity() {
         }
     }
 
+    // Launch Profile page
     private fun toProfilePage() {
         // now to profile
         val intent = Intent(this, Profile::class.java)
@@ -116,6 +122,7 @@ class Home : AppCompatActivity() {
         Log.i("myTag", "Switched to Profile activity")
     }
 
+    // Sign out the user
     private fun signOut() {
         AuthUI.getInstance()
             .signOut(this)

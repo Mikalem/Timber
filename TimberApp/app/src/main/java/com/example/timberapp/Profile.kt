@@ -6,10 +6,19 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class Profile : AppCompatActivity() {
+
+    // Link to database
+    private val database = FirebaseDatabase.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +28,8 @@ class Profile : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.profile_toolbar))
         // enable Up button
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // read DB values if changed
+        readFromDB()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -79,5 +90,33 @@ class Profile : AppCompatActivity() {
 
                 finish()
             }
+    }
+
+    private fun readFromDB() {
+        // instantiate userid
+        val user = FirebaseAuth.getInstance().currentUser
+        val uid = user?.uid
+        //set value to read from
+        val usernameRef = database.getReference("$uid/UserName")
+
+        // Read from the database
+        usernameRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                val usernameVal = dataSnapshot.getValue(String::class.java)
+                Log.i("myTag", "Value is: $usernameVal")
+
+                // show value as popup msg
+                Toast.makeText(applicationContext, "Value is: $usernameVal", Toast.LENGTH_SHORT).show()
+                val usernameTV = findViewById<TextView>(R.id.user_name)
+                usernameTV.setText(usernameVal)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                Log.w("myTag", "Failed to read value.", error.toException())
+            }
+        })
     }
 }

@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 
+//  activity
 class SignInUp : AppCompatActivity() {
 
     // pressing back on your phone
