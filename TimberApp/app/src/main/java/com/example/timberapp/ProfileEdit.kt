@@ -8,8 +8,10 @@ import android.widget.Button
 import android.support.design.widget.TextInputEditText
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import java.util.regex.Pattern
 
 /* Handles all functionality related to the ProfileEdit activity */
 class ProfileEdit : AppCompatActivity() {
@@ -22,8 +24,18 @@ class ProfileEdit : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_edit)
 
+        setUpProfileHeaderName()
         setUpClickEvents()
-        autoCompleteArrays()
+        setUpAutoCompleteArrays()
+    }
+
+    /* Sets up profile header to become provided full name */
+    private fun setUpProfileHeaderName() {
+        // Instantiate userID from Firebase login info
+        val user = FirebaseAuth.getInstance().currentUser
+        val fullName = user?.displayName
+        val fullNameRefTV = findViewById<TextView>(R.id.ProjectNameTextView)
+        fullNameRefTV.text = fullName
     }
 
     /* Sets up and handles click events */
@@ -35,7 +47,6 @@ class ProfileEdit : AppCompatActivity() {
         saveChangesBtn.setOnClickListener {
             Log.i("myTag", "Save Changes clicked!")
             setProfileValues()
-            toProfile()
         }
 
         // DO NOT write results to Firebase DB, launch Profile activity
@@ -45,7 +56,7 @@ class ProfileEdit : AppCompatActivity() {
         }
     }
 
-    private fun autoCompleteArrays() {
+    private fun setUpAutoCompleteArrays() {
         // Set up adapter for city_array
         val locationTV = findViewById<AutoCompleteTextView>(R.id.input_location_edit)
         val cities: Array<out String> = resources.getStringArray(R.array.city_array)
@@ -60,7 +71,7 @@ class ProfileEdit : AppCompatActivity() {
         }
     }
 
-    /* Handles any changes and stores the new information in the Firebase DB */
+    /* Handles any changes and error checking, then stores the new information in the Firebase DB */
     private fun setProfileValues() {
         // Instantiate userID from Firebase login info
         val user = FirebaseAuth.getInstance().currentUser
@@ -83,7 +94,7 @@ class ProfileEdit : AppCompatActivity() {
         val locationET = findViewById<AutoCompleteTextView>(R.id.input_location_edit)
         val location = locationET.text.toString()
 
-        // Write to in Firebase DB if values aren't null
+        // Write to in Firebase DB if values are not null && valid
         if (fullName != null) {
             val fullNameRef = database.getReference("$uid/Full Name")
             fullNameRef.setValue(fullName)
@@ -114,16 +125,26 @@ class ProfileEdit : AppCompatActivity() {
             universityRef.setValue(university)
             Log.i("myTag", "University: $university")
         }
-        if (graduateYear.isNotEmpty()) {
+        val yearPattern = "^\\d{4}$"
+        if (graduateYear.isNotEmpty() && graduateYear.matches(yearPattern.toRegex())){
             val graduateYearRef = database.getReference("$uid/Graduating Year")
             graduateYearRef.setValue(graduateYear)
             Log.i("myTag", "Graduating Year: $graduateYear")
+        }
+        else if (graduateYear.isNotEmpty()){
+            Log.i("myTag", "Year change invalid")
+            graduateYearET.requestFocus()
+            graduateYearET.error = "A year should be only 4 digits\n(or leave empty)"
+            return
         }
         if (location.isNotEmpty()) {
             val locationRef = database.getReference("$uid/Location")
             locationRef.setValue(location)
             Log.i("myTag", "Location: $location")
         }
+
+        // Success, launch Profile, exit ProfileEdit
+        toProfile()
     }
 
     /* Launches Profile activity */
@@ -131,5 +152,6 @@ class ProfileEdit : AppCompatActivity() {
         val intent = Intent(this, Profile::class.java)
         startActivity(intent)
         Log.i("myTag", "Switched to Profile activity")
+        finish()
     }
 }
