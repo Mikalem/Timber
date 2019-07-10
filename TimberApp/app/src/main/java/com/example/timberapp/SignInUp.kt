@@ -50,7 +50,7 @@ class SignInUp : AppCompatActivity() {
 
         // Sign-in the user when clicked
         loginBtn.setOnClickListener {
-            Log.i("myTag", "Login clicked!")
+            Log.d("myTag", "Login clicked!")
             signIn()
         }
     }
@@ -60,18 +60,18 @@ class SignInUp : AppCompatActivity() {
         val backToast = Toast.makeText(applicationContext,
             "Press back again to exit the app",
             Toast.LENGTH_SHORT)
-        Log.i("myTag", "Back key pressed")
+        Log.d("myTag", "Back key pressed")
 
         // Pressed back twice within the BACK_KEY_TIME_INTERVAL specification
         if (backPressedTimeStamp + BACK_KEY_TIME_INTERVAL > System.currentTimeMillis()) {
-            Log.i("myTag", "backPressedTimeStamp = $backPressedTimeStamp")
+            Log.d("myTag", "backPressedTimeStamp = $backPressedTimeStamp")
             backToast.cancel()
             super.onBackPressed()
             return
         }
         // First back-key pressed or second+ too slow
         else {
-            Log.i("myTag", "Back key pressed again")
+            Log.d("myTag", "Back key pressed again")
             backToast.show()
         }
 
@@ -83,7 +83,7 @@ class SignInUp : AppCompatActivity() {
     private fun toHomeActivity() {
         val intent = Intent(this, Home::class.java)
         startActivity(intent)
-        Log.i("myTag", "Switched to Home activity")
+        Log.d("myTag", "Switched to Home activity")
 
         finish()
     }

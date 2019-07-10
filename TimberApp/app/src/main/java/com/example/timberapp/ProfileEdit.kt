@@ -45,13 +45,13 @@ class ProfileEdit : AppCompatActivity() {
 
         // Write results to Firebase DB, launch Profile activity
         saveChangesBtn.setOnClickListener {
-            Log.i("myTag", "Save Changes clicked!")
+            Log.d("myTag", "Save Changes clicked!")
             setProfileValues()
         }
 
         // DO NOT write results to Firebase DB, launch Profile activity
         discardChangesBtn.setOnClickListener {
-            Log.i("myTag", "Discard Changes clicked!")
+            Log.d("myTag", "Discard Changes clicked!")
             toProfile()
         }
     }
@@ -98,41 +98,41 @@ class ProfileEdit : AppCompatActivity() {
         if (fullName != null) {
             val fullNameRef = database.getReference("$uid/Full Name")
             fullNameRef.setValue(fullName)
-            Log.i("myTag", "Full Name: $fullName")
+            Log.d("myTag", "Full Name: $fullName")
         }
         if (username.isNotEmpty()) {
             val usernameRef = database.getReference("$uid/Username")
             usernameRef.setValue(username)
-            Log.i("myTag", "Username: $username")
+            Log.d("myTag", "Username: $username")
         }
         if (profession.isNotEmpty()) {
             val professionRef = database.getReference("$uid/Profession")
             professionRef.setValue(profession)
-            Log.i("myTag", "Profession: $profession")
+            Log.d("myTag", "Profession: $profession")
         }
         if (burningQ.isNotEmpty()) {
             val burningQRef = database.getReference("$uid/Burning Question")
             burningQRef.setValue(burningQ)
-            Log.i("myTag", "Burning Question: $burningQ")
+            Log.d("myTag", "Burning Question: $burningQ")
         }
         if (degree.isNotEmpty()) {
             val degreeRef = database.getReference("$uid/Degree")
             degreeRef.setValue(degree)
-            Log.i("myTag", "Degree: $degree")
+            Log.d("myTag", "Degree: $degree")
         }
         if (university.isNotEmpty()) {
             val universityRef = database.getReference("$uid/University")
             universityRef.setValue(university)
-            Log.i("myTag", "University: $university")
+            Log.d("myTag", "University: $university")
         }
         val yearPattern = "^\\d{4}$"
         if (graduateYear.isNotEmpty() && graduateYear.matches(yearPattern.toRegex())){
             val graduateYearRef = database.getReference("$uid/Graduating Year")
             graduateYearRef.setValue(graduateYear)
-            Log.i("myTag", "Graduating Year: $graduateYear")
+            Log.d("myTag", "Graduating Year: $graduateYear")
         }
         else if (graduateYear.isNotEmpty()){
-            Log.i("myTag", "Year change invalid")
+            Log.d("myTag", "Year change invalid")
             graduateYearET.requestFocus()
             graduateYearET.error = "A year should be only 4 digits\n(or leave empty)"
             return
@@ -140,7 +140,7 @@ class ProfileEdit : AppCompatActivity() {
         if (location.isNotEmpty()) {
             val locationRef = database.getReference("$uid/Location")
             locationRef.setValue(location)
-            Log.i("myTag", "Location: $location")
+            Log.d("myTag", "Location: $location")
         }
 
         // Success, launch Profile, exit ProfileEdit
@@ -151,7 +151,7 @@ class ProfileEdit : AppCompatActivity() {
     private fun toProfile() {
         val intent = Intent(this, Profile::class.java)
         startActivity(intent)
-        Log.i("myTag", "Switched to Profile activity")
+        Log.d("myTag", "Switched to Profile activity")
         finish()
     }
 }

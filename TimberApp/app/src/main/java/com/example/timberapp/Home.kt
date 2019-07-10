@@ -41,22 +41,22 @@ class Home : AppCompatActivity() {
     /* Handles click events from toolbar */
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.open_profile -> {
-            Log.i("myTag", "Profile clicked")
+            Log.d("myTag", "Profile clicked")
             toProfilePage()
             true
         }
         R.id.logout -> {
-            Log.i("myTag", "Logout clicked")
+            Log.d("myTag", "Logout clicked")
             signOut()
             true
         }
         R.id.action_settings -> {
-            Log.i("myTag", "Settings clicked")
+            Log.d("myTag", "Settings clicked")
             Toast.makeText(applicationContext, "No current settings for this app", Toast.LENGTH_SHORT).show()
             true
         }
         R.id.help -> {
-            Log.i("myTag", "Help clicked")
+            Log.d("myTag", "Help clicked")
             Toast.makeText(applicationContext, "Haha, no help for you!", Toast.LENGTH_SHORT).show()
             true
         }
@@ -73,18 +73,18 @@ class Home : AppCompatActivity() {
         val backToast = Toast.makeText(applicationContext,
             "Press back again to logout",
             Toast.LENGTH_SHORT)
-        Log.i("myTag", "Back key pressed")
+        Log.d("myTag", "Back key pressed")
 
         // Pressed back twice within the BACK_KEY_TIME_INTERVAL specification
         if (backPressedTimeStamp + BACK_KEY_TIME_INTERVAL > System.currentTimeMillis()) {
-            Log.i("myTag", "backPressedTime interval = $backPressedTimeStamp")
+            Log.d("myTag", "backPressedTime interval = $backPressedTimeStamp")
             backToast.cancel()
             signOut()
             return
         }
         // First back-key pressed or second+ too slow
         else {
-            Log.i("myTag", "Back key pressed again")
+            Log.d("myTag", "Back key pressed again")
             backToast.show()
         }
 
@@ -96,7 +96,7 @@ class Home : AppCompatActivity() {
     private fun toProfilePage() {
         val intent = Intent(this, Profile::class.java)
         startActivity(intent)
-        Log.i("myTag", "Switched to Profile activity")
+        Log.d("myTag", "Switched to Profile activity")
     }
 
     /* Signs out user and launches SignInUp activity */

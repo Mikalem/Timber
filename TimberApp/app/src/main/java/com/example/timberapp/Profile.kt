@@ -49,22 +49,22 @@ class Profile : AppCompatActivity() {
     /* Handles click events from toolbar */
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.edit_profile -> {
-            Log.i("myTag", "Edit clicked")
+            Log.d("myTag", "Edit clicked")
             toProfileEdit()
             true
         }
         R.id.logout -> {
-            Log.i("myTag", "Logout clicked")
+            Log.d("myTag", "Logout clicked")
             signOut()
             true
         }
         R.id.action_settings -> {
-            Log.i("myTag", "Settings clicked")
+            Log.d("myTag", "Settings clicked")
             Toast.makeText(applicationContext, "No current settings for this app", Toast.LENGTH_SHORT).show()
             true
         }
         R.id.help -> {
-            Log.i("myTag", "Help clicked")
+            Log.d("myTag", "Help clicked")
             Toast.makeText(applicationContext, "Haha, no help for you!", Toast.LENGTH_SHORT).show()
             true
         }
@@ -80,7 +80,7 @@ class Profile : AppCompatActivity() {
     private fun toProfileEdit() {
         val intent = Intent(this, ProfileEdit::class.java)
         startActivity(intent)
-        Log.i("myTag", "Switched to ProfileEdit activity")
+        Log.d("myTag", "Switched to ProfileEdit activity")
     }
 
     /* Signs out user and launches SignInUp activity */
