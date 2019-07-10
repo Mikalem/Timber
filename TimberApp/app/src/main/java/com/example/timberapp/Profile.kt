@@ -116,7 +116,7 @@ class Profile : AppCompatActivity() {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 val refVal = dataSnapshot.getValue(String::class.java)
-                Log.i("myTag", "Username value is:\t $refVal")
+                Log.i("myTag", "Username value is: $refVal")
                 val refTV = findViewById<TextView>(R.id.user_name)
                 refTV.text = refVal
             }
@@ -128,7 +128,7 @@ class Profile : AppCompatActivity() {
         professionRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val refVal = dataSnapshot.getValue(String::class.java)
-                Log.i("myTag", "Profession value is:\t $refVal")
+                Log.i("myTag", "Profession value is: $refVal")
                 val refTV = findViewById<TextView>(R.id.profession)
                 refTV.text = refVal
             }
@@ -140,7 +140,7 @@ class Profile : AppCompatActivity() {
         burningQRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val refVal = dataSnapshot.getValue(String::class.java)
-                Log.i("myTag", "Burning Question value is:\t $refVal")
+                Log.i("myTag", "Burning Question value is: $refVal")
                 val refTV = findViewById<TextView>(R.id.burning_question)
                 refTV.text = refVal
             }
@@ -152,7 +152,7 @@ class Profile : AppCompatActivity() {
         degreeRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val refVal = dataSnapshot.getValue(String::class.java)
-                Log.i("myTag", "Degree value is:\t $refVal")
+                Log.i("myTag", "Degree value is: $refVal")
                 val refTV = findViewById<TextView>(R.id.degree)
                 refTV.text = refVal
             }
@@ -164,7 +164,7 @@ class Profile : AppCompatActivity() {
         graduateYearRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val refVal = dataSnapshot.getValue(String::class.java)
-                Log.i("myTag", "Graduating Year value is:\t $refVal")
+                Log.i("myTag", "Graduating Year value is: $refVal")
                 val refTV = findViewById<TextView>(R.id.graduating_year)
                 refTV.text = refVal
             }
@@ -176,7 +176,7 @@ class Profile : AppCompatActivity() {
         locationRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val refVal = dataSnapshot.getValue(String::class.java)
-                Log.i("myTag", "Location value is:\t $refVal")
+                Log.i("myTag", "Location value is: $refVal")
                 val refTV = findViewById<TextView>(R.id.location)
                 refTV.text = refVal
             }

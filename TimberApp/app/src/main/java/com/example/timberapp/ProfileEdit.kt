@@ -7,70 +7,102 @@ import android.util.Log
 import android.widget.Button
 import android.support.design.widget.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 
+/* Handles all functionality related to the ProfileEdit activity */
 class ProfileEdit : AppCompatActivity() {
 
-    // Link to database
+    // Reference to Firebase database (more info: firebase.google.com)
     private val database = FirebaseDatabase.getInstance()
 
+    /* onCreate runs when activity is loaded */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_edit)
 
+        setUpClickEvents()
+    }
+
+    /* Sets up and handles click events */
+    private fun setUpClickEvents() {
         val saveChangesBtn = findViewById<Button>(R.id.save_changes_btn)
         val discardChangesBtn = findViewById<Button>(R.id.discard_changes_btn)
 
-
-
+        // Write results to Firebase DB, launch Profile activity
         saveChangesBtn.setOnClickListener {
-            // clicked
             Log.i("myTag", "Save Changes clicked!")
-
-
-
-            // write data to DB
-            writeToDB()
-            // (read data from database in profile) -- perhaps always read from db and have default values
-
-            // go back to profile
+            setProfileValues()
             toProfile()
         }
 
+        // DO NOT write results to Firebase DB, launch Profile activity
         discardChangesBtn.setOnClickListener {
-            // clicked
             Log.i("myTag", "Discard Changes clicked!")
-
-            // DO NOT write data to DB
-            // go back to profile
             toProfile()
         }
     }
 
-    private fun writeToDB() {
-        val usernameET = findViewById<TextInputEditText>(R.id.input_user_name_edit)
-
-        // set value to write to
+    /* Handles any changes and stores the new information in the Firebase DB */
+    private fun setProfileValues() {
+        // Instantiate userID from Firebase login info
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
-        val name = user?.displayName
+        val fullName = user?.displayName
 
-        // profile changes
+        // Location references to read from in activity
+        val usernameET = findViewById<TextInputEditText>(R.id.input_user_name_edit)
         val username = usernameET.text.toString()
+        val professionET = findViewById<TextInputEditText>(R.id.input_profession_edit)
+        val profession = professionET.text.toString()
+        val burningQET = findViewById<TextInputEditText>(R.id.input_burningq_edit)
+        val burningQ = burningQET.text.toString()
+        val degreeET = findViewById<TextInputEditText>(R.id.input_degree_edit)
+        val degree = degreeET.text.toString()
+        val graduateYearET = findViewById<TextInputEditText>(R.id.input_graduateyear_edit)
+        val graduateYear = graduateYearET.text.toString()
+        val locationET = findViewById<TextInputEditText>(R.id.input_location_edit)
+        val location = locationET.text.toString()
 
-        val myRef = database.getReference("$uid/Full Name")
-        myRef.setValue("$name")
-        val myRef2 = database.getReference("$uid/UserName")
-        myRef2.setValue("$username")
-
-        Log.i("myTag", "Username: $username")
+        // Write to in Firebase DB if values aren't null
+        if (fullName != null) {
+            val fullNameRef = database.getReference("$uid/Full Name")
+            fullNameRef.setValue(fullName)
+            Log.i("myTag", "Full Name: $fullName")
+        }
+        if (username.isNotEmpty()) {
+            val usernameRef = database.getReference("$uid/Username")
+            usernameRef.setValue(username)
+            Log.i("myTag", "Username: $username")
+        }
+        if (profession.isNotEmpty()) {
+            val professionRef = database.getReference("$uid/Profession")
+            professionRef.setValue(profession)
+            Log.i("myTag", "Profession: $profession")
+        }
+        if (burningQ.isNotEmpty()) {
+            val burningQRef = database.getReference("$uid/Burning Question")
+            burningQRef.setValue(burningQ)
+            Log.i("myTag", "Burning Question: $burningQ")
+        }
+        if (degree.isNotEmpty()) {
+            val degreeRef = database.getReference("$uid/Degree")
+            degreeRef.setValue(degree)
+            Log.i("myTag", "Degree: $degree")
+        }
+        if (graduateYear.isNotEmpty()) {
+            val graduateYearRef = database.getReference("$uid/Graduating Year")
+            graduateYearRef.setValue(graduateYear)
+            Log.i("myTag", "Graduating Year: $graduateYear")
+        }
+        if (location.isNotEmpty()) {
+            val locationRef = database.getReference("$uid/Location")
+            locationRef.setValue(location)
+            Log.i("myTag", "Location: $location")
+        }
     }
 
+    /* Launches Profile activity */
     private fun toProfile() {
-        // now to profile
         val intent = Intent(this, Profile::class.java)
         startActivity(intent)
         Log.i("myTag", "Switched to Profile activity")
