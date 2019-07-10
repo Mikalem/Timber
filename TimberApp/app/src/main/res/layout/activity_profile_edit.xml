@@ -96,7 +96,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/profession"
-                        android:inputType="text"
+                        android:inputType="textCapSentences|textAutoCorrect"
                         android:padding="10dp"
                         android:singleLine="true"
                         android:drawableStart="@drawable/ic_briefcase"
@@ -114,7 +114,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/burning_question"
-                        android:inputType="text"
+                        android:inputType="textCapSentences|textAutoCorrect"
                         android:padding="10dp"
                         android:singleLine="true"
                         android:drawableStart="@drawable/ic_exclamation"
@@ -132,10 +132,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/degree"
-                        android:inputType="text"
+                        android:inputType="textCapSentences|textAutoCorrect"
                         android:padding="10dp"
                         android:singleLine="true"
                         android:drawableStart="@drawable/ic_diploma"
+                        android:drawablePadding="10dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_university"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                <AutoCompleteTextView
+                        android:id="@+id/input_university_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/university"
+                        android:inputType="textCapSentences|textAutoCorrect"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:drawableStart="@drawable/ic_location"
                         android:drawablePadding="10dp"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -163,12 +181,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp">
 
-                <android.support.design.widget.TextInputEditText
+                <AutoCompleteTextView
                         android:id="@+id/input_location_edit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/location"
-                        android:inputType="text"
+                        android:inputType="textCapSentences|textAutoCorrect"
                         android:padding="10dp"
                         android:singleLine="true"
                         android:drawableStart="@drawable/ic_location"

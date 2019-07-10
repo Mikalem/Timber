@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.support.design.widget.TextInputEditText
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -21,6 +23,7 @@ class ProfileEdit : AppCompatActivity() {
         setContentView(R.layout.activity_profile_edit)
 
         setUpClickEvents()
+        autoCompleteArrays()
     }
 
     /* Sets up and handles click events */
@@ -42,6 +45,21 @@ class ProfileEdit : AppCompatActivity() {
         }
     }
 
+    private fun autoCompleteArrays() {
+        // Set up adapter for city_array
+        val locationTV = findViewById<AutoCompleteTextView>(R.id.input_location_edit)
+        val cities: Array<out String> = resources.getStringArray(R.array.city_array)
+        ArrayAdapter(this, android.R.layout.simple_list_item_1, cities).also { adapter ->
+            locationTV.setAdapter(adapter)
+        }
+        // Set up adapter for university_array
+        val universityTV = findViewById<AutoCompleteTextView>(R.id.input_university_edit)
+        val universities: Array<out String> = resources.getStringArray(R.array.university_array)
+        ArrayAdapter(this, android.R.layout.simple_list_item_1, universities).also { adapter ->
+            universityTV.setAdapter(adapter)
+        }
+    }
+
     /* Handles any changes and stores the new information in the Firebase DB */
     private fun setProfileValues() {
         // Instantiate userID from Firebase login info
@@ -58,9 +76,11 @@ class ProfileEdit : AppCompatActivity() {
         val burningQ = burningQET.text.toString()
         val degreeET = findViewById<TextInputEditText>(R.id.input_degree_edit)
         val degree = degreeET.text.toString()
+        val universityET = findViewById<AutoCompleteTextView>(R.id.input_university_edit)
+        val university = universityET.text.toString()
         val graduateYearET = findViewById<TextInputEditText>(R.id.input_graduateyear_edit)
         val graduateYear = graduateYearET.text.toString()
-        val locationET = findViewById<TextInputEditText>(R.id.input_location_edit)
+        val locationET = findViewById<AutoCompleteTextView>(R.id.input_location_edit)
         val location = locationET.text.toString()
 
         // Write to in Firebase DB if values aren't null
@@ -88,6 +108,11 @@ class ProfileEdit : AppCompatActivity() {
             val degreeRef = database.getReference("$uid/Degree")
             degreeRef.setValue(degree)
             Log.i("myTag", "Degree: $degree")
+        }
+        if (university.isNotEmpty()) {
+            val universityRef = database.getReference("$uid/University")
+            universityRef.setValue(university)
+            Log.i("myTag", "University: $university")
         }
         if (graduateYear.isNotEmpty()) {
             val graduateYearRef = database.getReference("$uid/Graduating Year")

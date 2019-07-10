@@ -107,6 +107,7 @@ class Profile : AppCompatActivity() {
         val professionRef = database.getReference("$uid/Profession")
         val burningQRef = database.getReference("$uid/Burning Question")
         val degreeRef = database.getReference("$uid/Degree")
+        val universityRef = database.getReference("$uid/University")
         val graduateYearRef = database.getReference("$uid/Graduating Year")
         val locationRef = database.getReference("$uid/Location")
 
@@ -158,6 +159,18 @@ class Profile : AppCompatActivity() {
             }
             override fun onCancelled(error: DatabaseError) {
                 Log.w("myTag", "Failed to read value: Degree.", error.toException())
+            }
+        })
+        // Read University from the database
+        universityRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val refVal = dataSnapshot.getValue(String::class.java)
+                Log.i("myTag", "University value is: $refVal")
+                val refTV = findViewById<TextView>(R.id.university)
+                refTV.text = refVal
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("myTag", "Failed to read value: University.", error.toException())
             }
         })
         // Read Graduating Year from the database

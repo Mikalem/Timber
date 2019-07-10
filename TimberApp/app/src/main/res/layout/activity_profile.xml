@@ -128,6 +128,17 @@
                         android:drawableStart="@drawable/ic_diploma"
                         android:drawablePadding="10dp"/>
                 <TextView
+                        android:id="@+id/university"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/university"
+                        android:padding="10dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:singleLine="true"
+                        android:drawableStart="@drawable/ic_location"
+                        android:drawablePadding="10dp"/>
+                <TextView
                         android:id="@+id/graduating_year"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
