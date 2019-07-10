@@ -11,13 +11,15 @@ import android.widget.AutoCompleteTextView
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import java.util.regex.Pattern
+import java.util.*
 
 /* Handles all functionality related to the ProfileEdit activity */
 class ProfileEdit : AppCompatActivity() {
 
     // Reference to Firebase database (more info: firebase.google.com)
     private val database = FirebaseDatabase.getInstance()
+    // Graduating year should not be beyond the current year (with 5-yr leeway)
+    private val currentYearPlusFive = Calendar.getInstance().get(Calendar.YEAR) + 5
 
     /* onCreate runs when activity is loaded */
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -126,7 +128,9 @@ class ProfileEdit : AppCompatActivity() {
             Log.d("myTag", "University: $university")
         }
         val yearPattern = "^\\d{4}$"
-        if (graduateYear.isNotEmpty() && graduateYear.matches(yearPattern.toRegex())){
+        if (graduateYear.isNotEmpty()
+            && graduateYear.matches(yearPattern.toRegex())
+            && graduateYear.toInt() <= currentYearPlusFive){
             val graduateYearRef = database.getReference("$uid/Graduating Year")
             graduateYearRef.setValue(graduateYear)
             Log.d("myTag", "Graduating Year: $graduateYear")
@@ -134,7 +138,7 @@ class ProfileEdit : AppCompatActivity() {
         else if (graduateYear.isNotEmpty()){
             Log.d("myTag", "Year change invalid")
             graduateYearET.requestFocus()
-            graduateYearET.error = "A year should be only 4 digits\n(or leave empty)"
+            graduateYearET.error = "The year should be only 4 digits and within the next 5 years\n(or leave empty)"
             return
         }
         if (location.isNotEmpty()) {
