@@ -111,6 +111,11 @@ class Profile : AppCompatActivity() {
         val graduateYearRef = database.getReference("$uid/Graduating Year")
         val locationRef = database.getReference("$uid/Location")
 
+        // Profile header becomes provided full name
+        val fullName = user?.displayName
+        val fullNameRefTV = findViewById<TextView>(R.id.ProjectNameTextView)
+        fullNameRefTV.text = fullName
+
         // Read UserName from the database
         usernameRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
