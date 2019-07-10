@@ -10,80 +10,86 @@ import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 
-//  activity
+// Time interval between back-key presses
+private const val BACK_KEY_TIME_INTERVAL = 1500 // in milliseconds
+// Random value for signed-in users
+private const val RC_SIGN_IN = 123
+
+/* Handles all functionality related to the SignInUp activity */
 class SignInUp : AppCompatActivity() {
 
-    // pressing back on your phone
-    private var backPressedTime : Long = 0
-    // random value for signed-in users
-    val RC_SIGN_IN = 123
+    // Initialize back-key pressed timeStamp
+    private var backPressedTimeStamp : Long = 0
 
-    // onCreate function runs when activity is loaded
+    /* onCreate runs when activity is loaded */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in_up)
 
-        val loginBtn = findViewById<Button>(R.id.loginBtn)
+        userStatus()
 
-        // checks if user is already signed in
+        setUpClickEvents()
+    }
+
+    /* Determines if the user is already signed in */
+    private fun userStatus() {
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
-            // user is signed in
+            // User is signed in, launch Home activity
             Log.i("myTag", "User signed in")
             toHomeActivity()
         } else {
-            // user is not signed in
+            // User is not signed in
             Log.i("myTag", "User not signed in")
         }
+    }
 
-        // Login and go to main program
+    /* Sets up and handles LoginBtn click event */
+    private fun setUpClickEvents() {
+        val loginBtn = findViewById<Button>(R.id.loginBtn)
+
+        // Sign-in the user when clicked
         loginBtn.setOnClickListener {
-            // clicked,
             Log.i("myTag", "Login clicked!")
-            // now sign in
             signIn()
         }
     }
 
-    // pressing back twice exits the app
+    /* Handles usage of the back-key */
     override fun onBackPressed() {
         val backToast = Toast.makeText(applicationContext,
             "Press back again to exit the app",
             Toast.LENGTH_SHORT)
         Log.i("myTag", "Back key pressed")
 
-        // pressed back twice quickly
-        if (backPressedTime + 1500 > System.currentTimeMillis()) {
-            Log.i("myTag", "backPressedTime interval = $backPressedTime")
+        // Pressed back twice within the BACK_KEY_TIME_INTERVAL specification
+        if (backPressedTimeStamp + BACK_KEY_TIME_INTERVAL > System.currentTimeMillis()) {
+            Log.i("myTag", "backPressedTimeStamp = $backPressedTimeStamp")
             backToast.cancel()
             super.onBackPressed()
             return
         }
-        // show toast (first back-key press or second too slow)
+        // First back-key pressed or second+ too slow
         else {
             Log.i("myTag", "Back key pressed again")
             backToast.show()
         }
 
         // first press grabs start time to compare for second press
-        backPressedTime = System.currentTimeMillis()
+        backPressedTimeStamp = System.currentTimeMillis()
     }
 
-    /* starts the second activity */
+    /* Launches Home activity */
     private fun toHomeActivity() {
-
-        // create second activity intent, then startActivity
         val intent = Intent(this, Home::class.java)
         startActivity(intent)
-
         Log.i("myTag", "Switched to Home activity")
 
         finish()
     }
 
-    /* sign-in the user using the firebase UI */
+    /* Signs in user using the Firebase UI */
     private fun signIn() {
-
         // Choose authentication providers:
         // email, phone, google, facebook, twitter
         val providers = arrayListOf(
@@ -99,12 +105,11 @@ class SignInUp : AppCompatActivity() {
             RC_SIGN_IN)
     }
 
-    /* When signIn is complete, will receive the result in onActivityResult */
+    /* When sign-in is complete, will receive the result here */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == RC_SIGN_IN) {
-
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 Log.i("myTag", "Login success")

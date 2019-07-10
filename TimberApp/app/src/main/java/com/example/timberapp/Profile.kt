@@ -15,28 +15,38 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
+/* Handles all functionality related to the Profile (view) activity */
 class Profile : AppCompatActivity() {
 
-    // Link to database
+    // Reference to Firebase database (more info: firebase.google.com)
     private val database = FirebaseDatabase.getInstance()
 
+    /* onCreate runs when activity is loaded */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        // use a toolbar on this activity
-        setSupportActionBar(findViewById(R.id.profile_toolbar))
-        // enable Up button
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        // read DB values if changed
-        readFromDB()
+        setUpToolbar()
+
+        // Read values from Firebase if changes have been made in ProfileEdit
+        setProfileValues()
     }
 
+    /* Handles the toolbar setup */
+    private fun setUpToolbar() {
+        setSupportActionBar(findViewById(R.id.profile_toolbar))
+        // Enable up/back button on toolbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    /* Handles the creation of the toolbar */
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Use toolbar described in app/src/main/res/menu/menu_profile.xml
         menuInflater.inflate(R.menu.menu_profile, menu)
         return true
     }
 
+    /* Handles click events from toolbar */
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.edit_profile -> {
             Log.i("myTag", "Edit clicked")
@@ -49,7 +59,6 @@ class Profile : AppCompatActivity() {
             true
         }
         R.id.action_settings -> {
-            // User chose the "Settings" item, show the app settings UI...
             Log.i("myTag", "Settings clicked")
             Toast.makeText(applicationContext, "No current settings for this app", Toast.LENGTH_SHORT).show()
             true
@@ -59,63 +68,120 @@ class Profile : AppCompatActivity() {
             Toast.makeText(applicationContext, "Haha, no help for you!", Toast.LENGTH_SHORT).show()
             true
         }
-
+        // If we got here, the user's action was not recognized.
         else -> {
-            // If we got here, the user's action was not recognized.
-            // Invoke the superclass to handle it.
             Log.w("myTag", "User action unrecognized")
+            // Invoke the superclass to handle it
             super.onOptionsItemSelected(item)
         }
     }
 
+    /* Launches ProfileEdit activity */
     private fun toProfileEdit() {
-        // now to profile
         val intent = Intent(this, ProfileEdit::class.java)
         startActivity(intent)
         Log.i("myTag", "Switched to ProfileEdit activity")
     }
 
+    /* Signs out user and launches SignInUp activity */
     private fun signOut() {
         AuthUI.getInstance()
             .signOut(this)
             .addOnCompleteListener {
-                // Sign-out successful
                 Log.d("myTag", "Sign-out successful")
-
-                // now back to first activity
                 val intent = Intent(this, SignInUp::class.java)
                 startActivity(intent)
-
                 Log.d("myTag", "Switched to SignInUp activity")
 
                 finish()
             }
     }
 
-    private fun readFromDB() {
-        // instantiate userid
+    /* Handles any changes from ProfileEdit and displays the new information */
+    private fun setProfileValues() {
+        // Instantiate userID from Firebase login info
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
-        //set value to read from
-        val usernameRef = database.getReference("$uid/UserName")
+        // Location references to read from in Firebase
+        val usernameRef = database.getReference("$uid/Username")
+        val professionRef = database.getReference("$uid/Profession")
+        val burningQRef = database.getReference("$uid/Burning Question")
+        val degreeRef = database.getReference("$uid/Degree")
+        val graduateYearRef = database.getReference("$uid/Graduating Year")
+        val locationRef = database.getReference("$uid/Location")
 
-        // Read from the database
+        // Read UserName from the database
         usernameRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                val usernameVal = dataSnapshot.getValue(String::class.java)
-                Log.i("myTag", "Value is: $usernameVal")
-
-                // show value as popup msg
-                Toast.makeText(applicationContext, "Value is: $usernameVal", Toast.LENGTH_SHORT).show()
-                val usernameTV = findViewById<TextView>(R.id.user_name)
-                usernameTV.setText(usernameVal)
+                val refVal = dataSnapshot.getValue(String::class.java)
+                Log.i("myTag", "Username value is:\t $refVal")
+                val refTV = findViewById<TextView>(R.id.user_name)
+                refTV.text = refVal
             }
-
             override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                Log.w("myTag", "Failed to read value.", error.toException())
+                Log.w("myTag", "Failed to read value: Username.", error.toException())
+            }
+        })
+        // Read Profession from the database
+        professionRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val refVal = dataSnapshot.getValue(String::class.java)
+                Log.i("myTag", "Profession value is:\t $refVal")
+                val refTV = findViewById<TextView>(R.id.profession)
+                refTV.text = refVal
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("myTag", "Failed to read value: Profession.", error.toException())
+            }
+        })
+        // Read Burning Question from the database
+        burningQRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val refVal = dataSnapshot.getValue(String::class.java)
+                Log.i("myTag", "Burning Question value is:\t $refVal")
+                val refTV = findViewById<TextView>(R.id.burning_question)
+                refTV.text = refVal
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("myTag", "Failed to read value: Burning Question.", error.toException())
+            }
+        })
+        // Read Degree from the database
+        degreeRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val refVal = dataSnapshot.getValue(String::class.java)
+                Log.i("myTag", "Degree value is:\t $refVal")
+                val refTV = findViewById<TextView>(R.id.degree)
+                refTV.text = refVal
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("myTag", "Failed to read value: Degree.", error.toException())
+            }
+        })
+        // Read Graduating Year from the database
+        graduateYearRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val refVal = dataSnapshot.getValue(String::class.java)
+                Log.i("myTag", "Graduating Year value is:\t $refVal")
+                val refTV = findViewById<TextView>(R.id.graduating_year)
+                refTV.text = refVal
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("myTag", "Failed to read value: Graduating Year.", error.toException())
+            }
+        })
+        // Read Location from the database
+        locationRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val refVal = dataSnapshot.getValue(String::class.java)
+                Log.i("myTag", "Location value is:\t $refVal")
+                val refTV = findViewById<TextView>(R.id.location)
+                refTV.text = refVal
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("myTag", "Failed to read value: Location.", error.toException())
             }
         })
     }
