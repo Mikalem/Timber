@@ -16,19 +16,3548 @@
     <string name="help">Help</string>
     <string name="edit_profile">Edit Profile</string>
     <!-- profile -->
-    <string name="what_you_offer">What you offer</string>
-    <string name="what_you_need">What you need</string>
-    <string name="what_you_want_help_for">What you want help for:</string>
-    <string name="what_you_can_provide_help_for">What you can provide help for:</string>
     <string name="profile">Profile</string>
     <string name="profession">Profession</string>
     <string name="save_changes">Save Changes</string>
     <string name="background_image">Background Image</string>
     <string name="full_name">Full name</string>
+    <string name="user_name">User name</string>
     <string name="burning_question">Burning question</string>
     <string name="degree">Degree</string>
+    <string name="university">University</string>
     <string name="graduating_year">Graduating year</string>
-    <string name="location">Location</string>
+    <string name="location">Current location</string>
     <string name="discard_changes">Discard Changes</string>
-    <string name="user_name">User name</string>
+    <!-- Canadian university list retrieved from [https://www.4icu.org/ca/canadian-universities.htm] -->
+    <string-array name="university_array">
+        <item>Acadia University</item>
+        <item>Algoma University</item>
+        <item>Ambrose University</item>
+        <item>Aurora College</item>
+        <item>Bishop\'s University</item>
+        <item>Brandon University</item>
+        <item>British Columbia Institute of Technology</item>
+        <item>Brock University</item>
+        <item>Burman University</item>
+        <item>Campion College at the University of Regina</item>
+        <item>Canadian Mennonite University</item>
+        <item>Cape Breton University</item>
+        <item>Capilano University</item>
+        <item>Carleton University</item>
+        <item>Collège militaire royal du Canada</item>
+        <item>College of the North Atlantic</item>
+        <item>Collège Universitaire Dominicain</item>
+        <item>Concordia University</item>
+        <item>Concordia University of Edmonton</item>
+        <item>Crandall University</item>
+        <item>Dalhousie University</item>
+        <item>École de Technologie Supérieure</item>
+        <item>École Nationale d\'Administration Publique</item>
+        <item>École Polytechnique de Montréal</item>
+        <item>Emily Carr University of Art and Design</item>
+        <item>First Nations University of Canada</item>
+        <item>HEC Montréal</item>
+        <item>Kingswood University</item>
+        <item>Kwantlen Polytechnic University</item>
+        <item>Lakehead University</item>
+        <item>Laurentian University</item>
+        <item>Luther College at the University of Regina</item>
+        <item>MacEwan University</item>
+        <item>McGill University</item>
+        <item>McMaster University</item>
+        <item>Memorial University of Newfoundland</item>
+        <item>Mount Allison University</item>
+        <item>Mount Royal University</item>
+        <item>Mount Saint Vincent University</item>
+        <item>Nicola Valley Institute of Technology</item>
+        <item>Nipissing University</item>
+        <item>Northern Alberta Institute of Technology</item>
+        <item>NSCAD University</item>
+        <item>OCAD University</item>
+        <item>Queen\'s University</item>
+        <item>Redeemer University College</item>
+        <item>Royal Roads University</item>
+        <item>Ryerson University</item>
+        <item>Saint Mary\'s University</item>
+        <item>SAIT Polytechnic</item>
+        <item>Simon Fraser University</item>
+        <item>St Mary\'s University</item>
+        <item>St. Francis Xavier University</item>
+        <item>St. Stephen\'s University</item>
+        <item>St. Thomas More College</item>
+        <item>St. Thomas University</item>
+        <item>The King’s University</item>
+        <item>The University of British Columbia</item>
+        <item>The University of Western Ontario</item>
+        <item>The University of Winnipeg</item>
+        <item>Thompson Rivers University</item>
+        <item>Trent University</item>
+        <item>Trinity Western University</item>
+        <item>Université de Moncton</item>
+        <item>Université de Montréal</item>
+        <item>Université de Saint-Boniface</item>
+        <item>Université de Sherbrooke</item>
+        <item>Université du Québec</item>
+        <item>Université du Québec à Chicoutimi</item>
+        <item>Université du Québec à Montréal</item>
+        <item>Université du Québec à Rimouski</item>
+        <item>Université du Québec à Trois-Rivières</item>
+        <item>Université du Québec en Abitibi-Témiscamingue</item>
+        <item>Université du Québec en Outaouais</item>
+        <item>Université Laval</item>
+        <item>Université Sainte-Anne</item>
+        <item>University Canada West</item>
+        <item>University of Alberta</item>
+        <item>University of Calgary</item>
+        <item>University of Guelph</item>
+        <item>University of King\'s College</item>
+        <item>University of Lethbridge</item>
+        <item>University of Manitoba</item>
+        <item>University of New Brunswick</item>
+        <item>University of Northern British Columbia</item>
+        <item>University of Ontario Institute of Technology</item>
+        <item>University of Ottawa</item>
+        <item>University of Prince Edward Island</item>
+        <item>University of Regina</item>
+        <item>University of Saskatchewan</item>
+        <item>University of the Fraser Valley</item>
+        <item>University of Toronto</item>
+        <item>University of Victoria</item>
+        <item>University of Waterloo</item>
+        <item>University of Windsor</item>
+        <item>Vancouver Island University</item>
+        <item>Wilfrid Laurier University</item>
+        <item>York University</item>
+        <item>Yorkville University</item>
+    </string-array>
+    <!-- Canadian city list retrieved from [http://www.canada-city.ca/all-cities-in-canada.php] -->
+    <string-array name="city_array">
+        <item>100 Mile House, British Columbia</item>
+        <item>108 Mile House, British Columbia</item>
+        <item>108 Mile Ranch, British Columbia</item>
+        <item>150 Mile House, British Columbia</item>
+        <item>Abbey, Saskatchewan</item>
+        <item>Abbotsford, British Columbia</item>
+        <item>Aberarder, Ontario</item>
+        <item>Abercorn, Quebec</item>
+        <item>Aberdeen, Saskatchewan</item>
+        <item>Abernethy, Saskatchewan</item>
+        <item>Abitibi Canyon, Ontario</item>
+        <item>Acadia Valley, Alberta</item>
+        <item>Acme, Alberta</item>
+        <item>Acton, Ontario</item>
+        <item>Acton Vale, Quebec</item>
+        <item>Adamsville, Quebec</item>
+        <item>Adolphustown, Ontario</item>
+        <item>Advocate Harbour, Nova Scotia</item>
+        <item>Agassiz, British Columbia</item>
+        <item>Agassiz Provincial Forest, Manitoba</item>
+        <item>Aguanish, Quebec</item>
+        <item>Ahousat, British Columbia</item>
+        <item>Ailsa Craig, Ontario</item>
+        <item>Airdrie, Alberta</item>
+        <item>Ajax, Ontario</item>
+        <item>Aklavik, Northwest Territories</item>
+        <item>Alameda, Saskatchewan</item>
+        <item>Alban, Ontario</item>
+        <item>Albanel, Quebec</item>
+        <item>Albert, New Brunswick</item>
+        <item>Albert Mines, New Brunswick</item>
+        <item>Alberta Beach, Alberta</item>
+        <item>Alberton, Prince Edward Island</item>
+        <item>Alder Flats, Alberta</item>
+        <item>Aldergrove, British Columbia</item>
+        <item>Alderville First Nation, Ontario</item>
+        <item>Alert Bay, British Columbia</item>
+        <item>Alexander, Manitoba</item>
+        <item>Alexandria, Ontario</item>
+        <item>Alexis Creek, British Columbia</item>
+        <item>Alfred, Ontario</item>
+        <item>Algoma Mills, Ontario</item>
+        <item>Alida, Saskatchewan</item>
+        <item>Alix, Alberta</item>
+        <item>Alkali Lake, British Columbia</item>
+        <item>Allan, Saskatchewan</item>
+        <item>Allardville, New Brunswick</item>
+        <item>Alliance, Alberta</item>
+        <item>Alliston, Ontario</item>
+        <item>Alma, New Brunswick</item>
+        <item>Alma, Quebec</item>
+        <item>Almonte, Ontario</item>
+        <item>Alonsa, Manitoba</item>
+        <item>Alouette, Quebec</item>
+        <item>Alsask, Saskatchewan</item>
+        <item>Altario, Alberta</item>
+        <item>Altona, Manitoba</item>
+        <item>Alvena, Saskatchewan</item>
+        <item>Alvinston, Ontario</item>
+        <item>Amherst, Nova Scotia</item>
+        <item>Amherstburg, Ontario</item>
+        <item>Amos, Quebec</item>
+        <item>Amqui, Quebec</item>
+        <item>Ancaster, Ontario</item>
+        <item>Andrew, Alberta</item>
+        <item>Aneroid, Saskatchewan</item>
+        <item>Angliers, Quebec</item>
+        <item>Angus, Ontario</item>
+        <item>Anjou, Quebec</item>
+        <item>Annapolis Royal, Nova Scotia</item>
+        <item>Anse-Saint-Jean, Quebec</item>
+        <item>Antigonish, Nova Scotia</item>
+        <item>Anzac, Alberta</item>
+        <item>Appleton, Newfoundland</item>
+        <item>Apsley, Ontario</item>
+        <item>Arborfield, Saskatchewan</item>
+        <item>Arborg, Manitoba</item>
+        <item>Archerwill, Saskatchewan</item>
+        <item>Arcola, Saskatchewan</item>
+        <item>Arden, Ontario</item>
+        <item>Ardrossan, Alberta</item>
+        <item>Argentia, Newfoundland</item>
+        <item>Argyle, Nova Scotia</item>
+        <item>Arichat, Nova Scotia</item>
+        <item>Arkell, Ontario</item>
+        <item>Arkona, Ontario</item>
+        <item>Armagh, Quebec</item>
+        <item>Armstrong, British Columbia</item>
+        <item>Armstrong, Ontario</item>
+        <item>Arnold\'s Cove, Newfoundland</item>
+        <item>Arnprior, Ontario</item>
+        <item>Arrowwood, Alberta</item>
+        <item>Arthur, Ontario</item>
+        <item>Arundel, Quebec</item>
+        <item>Arviat, Nunavut</item>
+        <item>Asbestos, Quebec</item>
+        <item>Ascot, Quebec</item>
+        <item>Ascot Corner, Quebec</item>
+        <item>Ashcroft, British Columbia</item>
+        <item>Ashern, Manitoba</item>
+        <item>Ashmont, Alberta</item>
+        <item>Ashuapmushuan, Quebec</item>
+        <item>Asquith, Saskatchewan</item>
+        <item>Assiniboia, Saskatchewan</item>
+        <item>Assumption, Alberta</item>
+        <item>Aston-Jonction, Quebec</item>
+        <item>Athabasca, Alberta</item>
+        <item>Athens, Ontario</item>
+        <item>Atikokan, Ontario</item>
+        <item>Atlin, British Columbia</item>
+        <item>Attawapiskat, Ontario</item>
+        <item>Atwood, Ontario</item>
+        <item>Auburn, Ontario</item>
+        <item>Aurora, Ontario</item>
+        <item>Austin, Manitoba</item>
+        <item>Avola, British Columbia</item>
+        <item>Avondale, Newfoundland</item>
+        <item>Avonlea, Saskatchewan</item>
+        <item>Avonmore, Ontario</item>
+        <item>Ayer\'s Cliff, Quebec</item>
+        <item>Aylesford, Nova Scotia</item>
+        <item>Aylmer, Ontario</item>
+        <item>Aylmer, Quebec</item>
+        <item>Ayr, Ontario</item>
+        <item>Ayton, Ontario</item>
+        <item>Azilda, Ontario</item>
+        <item>Baddeck, Nova Scotia</item>
+        <item>Baden, Ontario</item>
+        <item>Badger, Newfoundland</item>
+        <item>Bagotville, Quebec</item>
+        <item>Baie Verte, Newfoundland</item>
+        <item>Baie-Comeau, Quebec</item>
+        <item>Baie-de-Shawinigan, Quebec</item>
+        <item>Baie-des-Sables, Quebec</item>
+        <item>Baie-du-Febvre, Quebec</item>
+        <item>Baie-d\'Urfe, Quebec</item>
+        <item>Baie-Johan-Beetz, Quebec</item>
+        <item>Baie-Sainte-Catherine, Quebec</item>
+        <item>Baie-St-Paul, Quebec</item>
+        <item>Baie-Ste-Anne, New Brunswick</item>
+        <item>Baie-Trinite, Quebec</item>
+        <item>Bailieboro, Ontario</item>
+        <item>Baker Brook, New Brunswick</item>
+        <item>Baker Lake, Nunavut</item>
+        <item>Bala, Ontario</item>
+        <item>Balcarres, Saskatchewan</item>
+        <item>Baldur, Manitoba</item>
+        <item>Balfour, British Columbia</item>
+        <item>Balgonie, Saskatchewan</item>
+        <item>Balmertown, Ontario</item>
+        <item>Balmoral, New Brunswick</item>
+        <item>Baltimore, Ontario</item>
+        <item>Bamfield, British Columbia</item>
+        <item>Bancroft, Ontario</item>
+        <item>Banff, Alberta</item>
+        <item>Barachois, Quebec</item>
+        <item>Barkmere, Quebec</item>
+        <item>Barons, Alberta</item>
+        <item>Barraute, Quebec</item>
+        <item>Barrhead, Alberta</item>
+        <item>Barrie, Ontario</item>
+        <item>Barriere, British Columbia</item>
+        <item>Barry\'s Bay, Ontario</item>
+        <item>Barwick, Ontario</item>
+        <item>Bashaw, Alberta</item>
+        <item>Bass River, Nova Scotia</item>
+        <item>Bassano, Alberta</item>
+        <item>Basswood, Manitoba</item>
+        <item>Batawa, Ontario</item>
+        <item>Batchawana Bay, Ontario</item>
+        <item>Bath, New Brunswick</item>
+        <item>Bath, Ontario</item>
+        <item>Bathurst, New Brunswick</item>
+        <item>Batiscan, Quebec</item>
+        <item>Batteau, Newfoundland</item>
+        <item>Battle Harbour, Newfoundland</item>
+        <item>Battleford, Saskatchewan</item>
+        <item>Bauline, Newfoundland</item>
+        <item>Bawlf, Alberta</item>
+        <item>Bay Bulls, Newfoundland</item>
+        <item>Bay de Verde, Newfoundland</item>
+        <item>Bay L\'Argent, Newfoundland</item>
+        <item>Bay Roberts, Newfoundland</item>
+        <item>Bayfield, Ontario</item>
+        <item>Baysville, Ontario</item>
+        <item>Beach Grove, British Columbia</item>
+        <item>Beachburg, Ontario</item>
+        <item>Beachville, Ontario</item>
+        <item>Beaconsfield, Quebec</item>
+        <item>Beamsville, Ontario</item>
+        <item>Bear Canyon, Alberta</item>
+        <item>Bear Lake, British Columbia</item>
+        <item>Bear River, Nova Scotia</item>
+        <item>Beardmore, Ontario</item>
+        <item>Bearskin Lake, Ontario</item>
+        <item>Bearskin Lake First Nation, Ontario</item>
+        <item>Bear\'s Passage, Ontario</item>
+        <item>Beaucanton, Quebec</item>
+        <item>Beauceville, Quebec</item>
+        <item>Beauharnois, Quebec</item>
+        <item>Beaulac-Garthby, Quebec</item>
+        <item>Beaumont, Alberta</item>
+        <item>Beaumont, Newfoundland</item>
+        <item>Beaumont, Quebec</item>
+        <item>Beauport, Quebec</item>
+        <item>Beaupre, Quebec</item>
+        <item>Beausejour, Manitoba</item>
+        <item>Beauval, Saskatchewan</item>
+        <item>Beaver Cove, British Columbia</item>
+        <item>Beaver Creek, Yukon</item>
+        <item>Beaverdell, British Columbia</item>
+        <item>Beaverlodge, Alberta</item>
+        <item>Beaverton, Ontario</item>
+        <item>Becancour, Quebec</item>
+        <item>Bedeque, Prince Edward Island</item>
+        <item>Bedford, Quebec</item>
+        <item>Beechy, Saskatchewan</item>
+        <item>Beeton, Ontario</item>
+        <item>Beiseker, Alberta</item>
+        <item>Bell Island, Newfoundland</item>
+        <item>Bella Bella, British Columbia</item>
+        <item>Bella Coola, British Columbia</item>
+        <item>Belle Neige, Quebec</item>
+        <item>Belle River, Ontario</item>
+        <item>Belledune, New Brunswick</item>
+        <item>Bellefeuille, Quebec</item>
+        <item>Belleoram, Newfoundland</item>
+        <item>Belleterre, Quebec</item>
+        <item>Belleville, Ontario</item>
+        <item>Bellevue, Newfoundland</item>
+        <item>Belmont, Manitoba</item>
+        <item>Belmont, Ontario</item>
+        <item>Beloeil, Quebec</item>
+        <item>Bengough, Saskatchewan</item>
+        <item>Benito, Manitoba</item>
+        <item>Benoit\'s Cove, Newfoundland</item>
+        <item>Bentley, Alberta</item>
+        <item>Berens River, Manitoba</item>
+        <item>Beresford, New Brunswick</item>
+        <item>Bergeronnes, Quebec</item>
+        <item>Berthierville, Quebec</item>
+        <item>Berwick, Nova Scotia</item>
+        <item>Berwyn, Alberta</item>
+        <item>Bethany, Ontario</item>
+        <item>Bethesda, Ontario</item>
+        <item>Bethune, Saskatchewan</item>
+        <item>Betsiamites, Quebec</item>
+        <item>Beulah, Manitoba</item>
+        <item>Biencourt, Quebec</item>
+        <item>Bienfait, Saskatchewan</item>
+        <item>Big River, Saskatchewan</item>
+        <item>Big Trout Lake, Ontario</item>
+        <item>Big Valley, Alberta</item>
+        <item>Biggar, Saskatchewan</item>
+        <item>Binbrook, Ontario</item>
+        <item>Bindloss, Alberta</item>
+        <item>Binscarth, Manitoba</item>
+        <item>Birch Hills, Saskatchewan</item>
+        <item>Birch Island, Ontario</item>
+        <item>Birchy Bay, Newfoundland</item>
+        <item>Birsay, Saskatchewan</item>
+        <item>Birtle, Manitoba</item>
+        <item>Biscotasing, Ontario</item>
+        <item>Bishopton, Quebec</item>
+        <item>Bishop\'s Falls, Newfoundland</item>
+        <item>Bissett, Manitoba</item>
+        <item>Black Creek, British Columbia</item>
+        <item>Black Diamond, Alberta</item>
+        <item>Black Duck Cove, Newfoundland</item>
+        <item>Black Lake, Quebec</item>
+        <item>Black Point, British Columbia</item>
+        <item>Black Tickle, Newfoundland</item>
+        <item>Blackfalds, Alberta</item>
+        <item>Blackie, Alberta</item>
+        <item>Blacks Harbour, New Brunswick</item>
+        <item>Blackstock, Ontario</item>
+        <item>Blackville, New Brunswick</item>
+        <item>Blaine Lake, Saskatchewan</item>
+        <item>Blainville, Quebec</item>
+        <item>Blanc-Sablon, Quebec</item>
+        <item>Blandford, Nova Scotia</item>
+        <item>Blenheim, Ontario</item>
+        <item>Blezard Valley, Ontario</item>
+        <item>Blind River, Ontario</item>
+        <item>Bloomfield, Ontario</item>
+        <item>Blue Ridge, Alberta</item>
+        <item>Blue River, British Columbia</item>
+        <item>Blyth, Ontario</item>
+        <item>Bob Quinn Lake, British Columbia</item>
+        <item>Bobcaygeon, Ontario</item>
+        <item>Boiestown, New Brunswick</item>
+        <item>Bois-des-Filion, Quebec</item>
+        <item>Boisbriand, Quebec</item>
+        <item>Boischatel, Quebec</item>
+        <item>Boisdale, Nova Scotia</item>
+        <item>Boissevain, Manitoba</item>
+        <item>Bolton, Ontario</item>
+        <item>Bon Accord, Alberta</item>
+        <item>Bonanza, Alberta</item>
+        <item>Bonaventure, Quebec</item>
+        <item>Bonavista, Newfoundland</item>
+        <item>Bonfield, Ontario</item>
+        <item>Bonne-Esperance, Quebec</item>
+        <item>Bonnyville, Alberta</item>
+        <item>Borden, Ontario</item>
+        <item>Borden, Prince Edward Island</item>
+        <item>Borden, Saskatchewan</item>
+        <item>Boston Bar, British Columbia</item>
+        <item>Boswell, British Columbia</item>
+        <item>Bothwell, Ontario</item>
+        <item>Botwood, Newfoundland</item>
+        <item>Boucherville, Quebec</item>
+        <item>Bouchette, Quebec</item>
+        <item>Bouctouche, New Brunswick</item>
+        <item>Boularderie, Nova Scotia</item>
+        <item>Bourget, Ontario</item>
+        <item>Bow Island, Alberta</item>
+        <item>Bowden, Alberta</item>
+        <item>Bowen Island, British Columbia</item>
+        <item>Bowmanville, Ontario</item>
+        <item>Bowser, British Columbia</item>
+        <item>Boyd\'s Cove, Newfoundland</item>
+        <item>Boyle, Alberta</item>
+        <item>Bracebridge, Ontario</item>
+        <item>Bradford, Ontario</item>
+        <item>Bradford West Gwillimbury, Ontario</item>
+        <item>Braeside, Ontario</item>
+        <item>Bragg Creek, Alberta</item>
+        <item>Brampton, Ontario</item>
+        <item>Branch, Newfoundland</item>
+        <item>Brandon, Manitoba</item>
+        <item>Brantford, Ontario</item>
+        <item>Breakeyville, Quebec</item>
+        <item>Brechin, Ontario</item>
+        <item>Bredenbury, Saskatchewan</item>
+        <item>Brent\'s Cove, Newfoundland</item>
+        <item>Breslau, Ontario</item>
+        <item>Breton, Alberta</item>
+        <item>Bridge Lake, British Columbia</item>
+        <item>Bridgenorth, Ontario</item>
+        <item>Bridgetown, Nova Scotia</item>
+        <item>Bridgewater, Nova Scotia</item>
+        <item>Briercrest, Saskatchewan</item>
+        <item>Brigden, Ontario</item>
+        <item>Brigham, Quebec</item>
+        <item>Bright, Ontario</item>
+        <item>Brighton, Ontario</item>
+        <item>Brights Grove, Ontario</item>
+        <item>Brigus, Newfoundland</item>
+        <item>Britannia Beach, British Columbia</item>
+        <item>Britt, Ontario</item>
+        <item>Broadview, Saskatchewan</item>
+        <item>Brochet, Manitoba</item>
+        <item>Brock, Saskatchewan</item>
+        <item>Brocket, Alberta</item>
+        <item>Brockville, Ontario</item>
+        <item>Brome, Quebec</item>
+        <item>Bromont, Quebec</item>
+        <item>Bromptonville, Quebec</item>
+        <item>Brookdale, Manitoba</item>
+        <item>Brookfield, Nova Scotia</item>
+        <item>Brooklin, Ontario</item>
+        <item>Brooks, Alberta</item>
+        <item>Brossard, Quebec</item>
+        <item>Browns Flat, New Brunswick</item>
+        <item>Brownsburg, Quebec</item>
+        <item>Brownsville, Ontario</item>
+        <item>Brownvale, Alberta</item>
+        <item>Bruce Mines, Ontario</item>
+        <item>Bruderheim, Alberta</item>
+        <item>Bruno, Saskatchewan</item>
+        <item>Brussels, Ontario</item>
+        <item>Bryson, Quebec</item>
+        <item>Buchanan, Saskatchewan</item>
+        <item>Buchans, Newfoundland</item>
+        <item>Buckhorn, Ontario</item>
+        <item>Buckingham, Quebec</item>
+        <item>Buffalo Narrows, Saskatchewan</item>
+        <item>Burdett, Alberta</item>
+        <item>Burford, Ontario</item>
+        <item>Burgeo, Newfoundland</item>
+        <item>Burgessville, Ontario</item>
+        <item>Burin, Newfoundland</item>
+        <item>Burk\'s Falls, Ontario</item>
+        <item>Burleigh Falls, Ontario</item>
+        <item>Burlington, Newfoundland</item>
+        <item>Burlington, Ontario</item>
+        <item>Burnaby, British Columbia</item>
+        <item>Burns Lake, British Columbia</item>
+        <item>Burnt Islands, Newfoundland</item>
+        <item>Burstall, Saskatchewan</item>
+        <item>Burwash Landing, Yukon</item>
+        <item>Bury, Quebec</item>
+        <item>Byemoor, Alberta</item>
+        <item>Cabano, Quebec</item>
+        <item>Cabri, Saskatchewan</item>
+        <item>Cache Bay, Ontario</item>
+        <item>Cache Creek, British Columbia</item>
+        <item>Cacouna, Quebec</item>
+        <item>Cadillac, Quebec</item>
+        <item>Cadillac, Saskatchewan</item>
+        <item>Cadomin, Alberta</item>
+        <item>Calabogie, Ontario</item>
+        <item>Calder, Saskatchewan</item>
+        <item>Caledon, Ontario</item>
+        <item>Caledon East, Ontario</item>
+        <item>Caledonia, Ontario</item>
+        <item>Calgary, Alberta</item>
+        <item>Callander, Ontario</item>
+        <item>Calling Lake, Alberta</item>
+        <item>Calmar, Alberta</item>
+        <item>Calstock, Ontario</item>
+        <item>Calumet, Quebec</item>
+        <item>Cambray, Ontario</item>
+        <item>Cambridge, Ontario</item>
+        <item>Cambridge Bay, Nunavut</item>
+        <item>Cameron, Ontario</item>
+        <item>Camlachie, Ontario</item>
+        <item>Campbell River, British Columbia</item>
+        <item>Campbellford, Ontario</item>
+        <item>Campbellton, New Brunswick</item>
+        <item>Campbellton, Newfoundland</item>
+        <item>Campbellville, Ontario</item>
+        <item>Campbell\'s Bay, Quebec</item>
+        <item>Camperville, Manitoba</item>
+        <item>Campobello Island, New Brunswick</item>
+        <item>Camrose, Alberta</item>
+        <item>Canal Flats, British Columbia</item>
+        <item>Candiac, Quebec</item>
+        <item>Canmore, Alberta</item>
+        <item>Canning, Nova Scotia</item>
+        <item>Cannington, Ontario</item>
+        <item>Canoe Narrows, Saskatchewan</item>
+        <item>Canora, Saskatchewan</item>
+        <item>Canso, Nova Scotia</item>
+        <item>Canterbury, New Brunswick</item>
+        <item>Cantley, Quebec</item>
+        <item>Canwood, Saskatchewan</item>
+        <item>Cap-a-l\'Aigle, Quebec</item>
+        <item>Cap-aux-Meules, Quebec</item>
+        <item>Cap-Chat, Quebec</item>
+        <item>Cap-de-la-Madeleine, Quebec</item>
+        <item>Cap-des-Rosiers, Quebec</item>
+        <item>Cap-Pele, New Brunswick</item>
+        <item>Cap-Rouge, Quebec</item>
+        <item>Cap-Saint-Ignace, Quebec</item>
+        <item>Cape Broyle, Newfoundland</item>
+        <item>Cape Dorset, Nunavut</item>
+        <item>Caplan, Quebec</item>
+        <item>Capreol, Ontario</item>
+        <item>Caradoc First Nation, Ontario</item>
+        <item>Caramat, Ontario</item>
+        <item>Caraquet, New Brunswick</item>
+        <item>Carberry, Manitoba</item>
+        <item>Carbon, Alberta</item>
+        <item>Carbonear, Newfoundland</item>
+        <item>Carcross, Yukon</item>
+        <item>Cardiff, Ontario</item>
+        <item>Cardigan, Prince Edward Island</item>
+        <item>Cardinal, Ontario</item>
+        <item>Cardston, Alberta</item>
+        <item>Cargill, Ontario</item>
+        <item>Caribou, Nova Scotia</item>
+        <item>Carievale, Saskatchewan</item>
+        <item>Carignan, Quebec</item>
+        <item>Carillon, Quebec</item>
+        <item>Carleton, Nova Scotia</item>
+        <item>Carleton, Quebec</item>
+        <item>Carleton Place, Ontario</item>
+        <item>Carlyle, Saskatchewan</item>
+        <item>Carmacks, Yukon</item>
+        <item>Carman, Manitoba</item>
+        <item>Carmangay, Alberta</item>
+        <item>Carmanville, Newfoundland</item>
+        <item>Carnarvon, Ontario</item>
+        <item>Carnduff, Saskatchewan</item>
+        <item>Caroline, Alberta</item>
+        <item>Caron, Saskatchewan</item>
+        <item>Carp, Ontario</item>
+        <item>Carrot River, Saskatchewan</item>
+        <item>Carseland, Alberta</item>
+        <item>Carstairs, Alberta</item>
+        <item>Cartier, Ontario</item>
+        <item>Cartwright, Manitoba</item>
+        <item>Cartwright, Newfoundland</item>
+        <item>Casselman, Ontario</item>
+        <item>Cassiar, British Columbia</item>
+        <item>Castlegar, British Columbia</item>
+        <item>Castlemore, Ontario</item>
+        <item>Castleton, Ontario</item>
+        <item>Castor, Alberta</item>
+        <item>Cat Lake, Ontario</item>
+        <item>Catalina, Newfoundland</item>
+        <item>Causapscal, Quebec</item>
+        <item>Cavan, Ontario</item>
+        <item>Cayley, Alberta</item>
+        <item>Cayuga, Ontario</item>
+        <item>Celista, British Columbia</item>
+        <item>Central Butte, Saskatchewan</item>
+        <item>Centralia, Ontario</item>
+        <item>Centreville, New Brunswick</item>
+        <item>Centreville-Wareham-Trinity, Newfoundland</item>
+        <item>Cereal, Alberta</item>
+        <item>Cessford, Alberta</item>
+        <item>Ceylon, Saskatchewan</item>
+        <item>Chalk River, Ontario</item>
+        <item>Chambly, Quebec</item>
+        <item>Chambord, Quebec</item>
+        <item>Champion, Alberta</item>
+        <item>Champlain, Quebec</item>
+        <item>Chance Cove, Newfoundland</item>
+        <item>Chandler, Quebec</item>
+        <item>Change islands, Newfoundland</item>
+        <item>Chapais, Quebec</item>
+        <item>Chapeau, Quebec</item>
+        <item>Chapel Arm, Newfoundland</item>
+        <item>Chapleau, Ontario</item>
+        <item>Chaplin, Saskatchewan</item>
+        <item>Charette, Quebec</item>
+        <item>Charlemagne, Quebec</item>
+        <item>Charlesbourg, Quebec</item>
+        <item>Charlevoix, Quebec</item>
+        <item>Charlottetown, Newfoundland</item>
+        <item>Charlottetown, Prince Edward Island</item>
+        <item>Charlton, Ontario</item>
+        <item>Charny, Quebec</item>
+        <item>Chartierville, Quebec</item>
+        <item>Chase, British Columbia</item>
+        <item>Chateau-Richer, Quebec</item>
+        <item>Chateauguay, Quebec</item>
+        <item>Chatham, New Brunswick</item>
+        <item>Chatham, Ontario</item>
+        <item>Chatsworth, Ontario</item>
+        <item>Chauvin, Alberta</item>
+        <item>Chelmsford, Ontario</item>
+        <item>Chelsea, Nova Scotia</item>
+        <item>Chelsea, Quebec</item>
+        <item>Chemainus, British Columbia</item>
+        <item>Cheneville, Quebec</item>
+        <item>Chesley, Ontario</item>
+        <item>Chester, Nova Scotia</item>
+        <item>Chesterfield Inlet, Nunavut</item>
+        <item>Chestermere, Alberta</item>
+        <item>Chesterville, Ontario</item>
+        <item>Chesterville, Quebec</item>
+        <item>Cheticamp, Nova Scotia</item>
+        <item>Chetwynd, British Columbia</item>
+        <item>Cheverie, Nova Scotia</item>
+        <item>Chevery, Quebec</item>
+        <item>Chibougamau, Quebec</item>
+        <item>Chicoutimi, Quebec</item>
+        <item>Chiefs Point First Nation, Ontario</item>
+        <item>Chilliwack, British Columbia</item>
+        <item>Chipewyan Lake, Alberta</item>
+        <item>Chipman, Alberta</item>
+        <item>Chipman, New Brunswick</item>
+        <item>Chippewas of Kettle/Stony Poin, Ontario</item>
+        <item>Chippewas Of Sarnia First Nati, Ontario</item>
+        <item>Chisasibi, Quebec</item>
+        <item>Choiceland, Saskatchewan</item>
+        <item>Chomedey, Quebec</item>
+        <item>Christian Island, Ontario</item>
+        <item>Christina Lake, British Columbia</item>
+        <item>Christopher Lake, Saskatchewan</item>
+        <item>Churchbridge, Saskatchewan</item>
+        <item>Churchill, Manitoba</item>
+        <item>Churchill Falls, Newfoundland</item>
+        <item>Chute-aux-Outardes, Quebec</item>
+        <item>Chute-des-Passes, Quebec</item>
+        <item>Clair, New Brunswick</item>
+        <item>Clairmont, Alberta</item>
+        <item>Claremont, Ontario</item>
+        <item>Clarence Creek, Ontario</item>
+        <item>Clarence-Rockland, Ontario</item>
+        <item>Clarenville, Newfoundland</item>
+        <item>Clarenville-Shoal Harbour, Newfoundland</item>
+        <item>Claresholm, Alberta</item>
+        <item>Clarington, Ontario</item>
+        <item>Clarke\'s Beach, Newfoundland</item>
+        <item>Clarks Corners, New Brunswick</item>
+        <item>Clarkson, Ontario</item>
+        <item>Clarksville, Nova Scotia</item>
+        <item>Clark\'s Harbour, Nova Scotia</item>
+        <item>Clavet, Saskatchewan</item>
+        <item>Clearwater, British Columbia</item>
+        <item>Clearwater Bay, Ontario</item>
+        <item>Clericy, Quebec</item>
+        <item>Clermont, Quebec</item>
+        <item>Clifford, Ontario</item>
+        <item>Climax, Saskatchewan</item>
+        <item>Clinton, British Columbia</item>
+        <item>Clinton, Ontario</item>
+        <item>Clive, Alberta</item>
+        <item>Cloridorme, Quebec</item>
+        <item>Cloud Bay, Ontario</item>
+        <item>Clova, Quebec</item>
+        <item>Clyde, Alberta</item>
+        <item>Coaldale, Alberta</item>
+        <item>Coalhurst, Alberta</item>
+        <item>Coaticook, Quebec</item>
+        <item>Cobalt, Ontario</item>
+        <item>Cobble Hill, British Columbia</item>
+        <item>Cobden, Ontario</item>
+        <item>Coboconk, Ontario</item>
+        <item>Cobourg, Ontario</item>
+        <item>Cocagne, New Brunswick</item>
+        <item>Cochenour, Ontario</item>
+        <item>Cochin, Saskatchewan</item>
+        <item>Cochrane, Alberta</item>
+        <item>Cochrane, Ontario</item>
+        <item>Coderre, Saskatchewan</item>
+        <item>Codroy, Newfoundland</item>
+        <item>Coe Hill, Ontario</item>
+        <item>Colborne, Ontario</item>
+        <item>Colchester, Ontario</item>
+        <item>Cold Lake, Alberta</item>
+        <item>Cold Springs, Ontario</item>
+        <item>Coldwater, Ontario</item>
+        <item>Coleville, Saskatchewan</item>
+        <item>Colliers, Newfoundland</item>
+        <item>Collingwood, Ontario</item>
+        <item>Collingwood Corner, Nova Scotia</item>
+        <item>Colombier, Quebec</item>
+        <item>Colonsay, Saskatchewan</item>
+        <item>Colwood, British Columbia</item>
+        <item>Comber, Ontario</item>
+        <item>Come By Chance, Newfoundland</item>
+        <item>Comfort Cove-Newstead, Newfoundland</item>
+        <item>Comox, British Columbia</item>
+        <item>Compton, Quebec</item>
+        <item>Conception Bay South, Newfoundland</item>
+        <item>Conception Harbour, Newfoundland</item>
+        <item>Conche, Newfoundland</item>
+        <item>Concord, Ontario</item>
+        <item>Coniston, Ontario</item>
+        <item>Conklin, Alberta</item>
+        <item>Connaught, Ontario</item>
+        <item>Conne River, Newfoundland</item>
+        <item>Conquest, Saskatchewan</item>
+        <item>Consort, Alberta</item>
+        <item>Constance Bay, Ontario</item>
+        <item>Constance Lake First Nation, Ontario</item>
+        <item>Consul, Saskatchewan</item>
+        <item>Contrecoeur, Quebec</item>
+        <item>Cookshire, Quebec</item>
+        <item>Cookstown, Ontario</item>
+        <item>Cooksville, Ontario</item>
+        <item>Cook\'s Harbour, Newfoundland</item>
+        <item>Coquitlam, British Columbia</item>
+        <item>Coral Harbour, Nunavut</item>
+        <item>Cormorant, Manitoba</item>
+        <item>Corner Brook, Newfoundland</item>
+        <item>Cornwall, Ontario</item>
+        <item>Cornwall, Prince Edward Island</item>
+        <item>Coronach, Saskatchewan</item>
+        <item>Coronation, Alberta</item>
+        <item>Corunna, Ontario</item>
+        <item>Cote-St-Luc, Quebec</item>
+        <item>Coteau-du-Lac, Quebec</item>
+        <item>Cottam, Ontario</item>
+        <item>Cottlesville, Newfoundland</item>
+        <item>Courcelette, Quebec</item>
+        <item>Courcelles, Quebec</item>
+        <item>Courtenay, British Columbia</item>
+        <item>Courtice, Ontario</item>
+        <item>Courtright, Ontario</item>
+        <item>Coutts, Alberta</item>
+        <item>Covehead, Prince Edward Island</item>
+        <item>Cow Head, Newfoundland</item>
+        <item>Cowan, Manitoba</item>
+        <item>Cowansville, Quebec</item>
+        <item>Cowichan Bay, British Columbia</item>
+        <item>Cowley, Alberta</item>
+        <item>Crabtree, Quebec</item>
+        <item>Craigmyle, Alberta</item>
+        <item>Craik, Saskatchewan</item>
+        <item>Cranberry Portage, Manitoba</item>
+        <item>Cranbrook, British Columbia</item>
+        <item>Crandall, Manitoba</item>
+        <item>Crapaud, Prince Edward Island</item>
+        <item>Crawford Bay, British Columbia</item>
+        <item>Crediton, Ontario</item>
+        <item>Creelman, Saskatchewan</item>
+        <item>Creemore, Ontario</item>
+        <item>Creighton, Saskatchewan</item>
+        <item>Cremona, Alberta</item>
+        <item>Crescent Beach, British Columbia</item>
+        <item>Creston, British Columbia</item>
+        <item>Cross Lake, Manitoba</item>
+        <item>Crossfield, Alberta</item>
+        <item>Crowsnest Pass, Alberta</item>
+        <item>Crysler, Ontario</item>
+        <item>Crystal Beach, Ontario</item>
+        <item>Crystal City, Manitoba</item>
+        <item>Cudworth, Saskatchewan</item>
+        <item>Cumberland, British Columbia</item>
+        <item>Cumberland, Ontario</item>
+        <item>Cumberland House, Saskatchewan</item>
+        <item>Cupar, Saskatchewan</item>
+        <item>Cupids, Newfoundland</item>
+        <item>Cut Knife, Saskatchewan</item>
+        <item>Cypress River, Manitoba</item>
+        <item>Czar, Alberta</item>
+        <item>Dalhousie, New Brunswick</item>
+        <item>Dalmeny, Saskatchewan</item>
+        <item>Daniel\'s Harbour, Newfoundland</item>
+        <item>Danville, Quebec</item>
+        <item>Darlingford, Manitoba</item>
+        <item>Dartmouth, Nova Scotia</item>
+        <item>Dashwood, Ontario</item>
+        <item>Dauphin, Manitoba</item>
+        <item>Daveluyville, Quebec</item>
+        <item>Davidson, Saskatchewan</item>
+        <item>Davis Inlet, Newfoundland</item>
+        <item>Dawson, Yukon</item>
+        <item>Dawson Creek, British Columbia</item>
+        <item>Daysland, Alberta</item>
+        <item>Dease Lake, British Columbia</item>
+        <item>Deauville, Quebec</item>
+        <item>Debden, Saskatchewan</item>
+        <item>Debec, New Brunswick</item>
+        <item>Debert, Nova Scotia</item>
+        <item>DeBolt, Alberta</item>
+        <item>Deep River, Ontario</item>
+        <item>Deer Lake, Newfoundland</item>
+        <item>Deer Lake, Ontario</item>
+        <item>Deerbrook, Ontario</item>
+        <item>Degelis, Quebec</item>
+        <item>Delaware of the Thames(Moravia, Ontario</item>
+        <item>Delburne, Alberta</item>
+        <item>Delhi, Ontario</item>
+        <item>Delia, Alberta</item>
+        <item>Delisle, Quebec</item>
+        <item>Delisle, Saskatchewan</item>
+        <item>Deloraine, Manitoba</item>
+        <item>Delson, Quebec</item>
+        <item>Delta, British Columbia</item>
+        <item>Delta, Ontario</item>
+        <item>Denbigh, Ontario</item>
+        <item>Denzil, Saskatchewan</item>
+        <item>Derwent, Alberta</item>
+        <item>Desbarats, Ontario</item>
+        <item>Desbiens, Quebec</item>
+        <item>Deschaillons-sur-Saint-Laurent, Quebec</item>
+        <item>Deseronto, Ontario</item>
+        <item>Destruction Bay, Yukon</item>
+        <item>Deux-Montagnes, Quebec</item>
+        <item>Deux-Rivieres, Ontario</item>
+        <item>Devlin, Ontario</item>
+        <item>Devon, Alberta</item>
+        <item>Dewberry, Alberta</item>
+        <item>Didsbury, Alberta</item>
+        <item>Dieppe, New Brunswick</item>
+        <item>Digby, Nova Scotia</item>
+        <item>Dillon, Saskatchewan</item>
+        <item>Dingwall, Nova Scotia</item>
+        <item>Dinsmore, Saskatchewan</item>
+        <item>Disraeli, Quebec</item>
+        <item>Dixonville, Alberta</item>
+        <item>Doaktown, New Brunswick</item>
+        <item>Dodsland, Saskatchewan</item>
+        <item>Dokis, Ontario</item>
+        <item>Dokis First Nation, Ontario</item>
+        <item>Dolbeau-Mistassini, Quebec</item>
+        <item>Dollard-des-Ormeaux, Quebec</item>
+        <item>Dominion City, Manitoba</item>
+        <item>Domremy, Saskatchewan</item>
+        <item>Donald, British Columbia</item>
+        <item>Donalda, Alberta</item>
+        <item>Donnacona, Quebec</item>
+        <item>Donnelly, Alberta</item>
+        <item>Dorchester, New Brunswick</item>
+        <item>Dorchester, Ontario</item>
+        <item>Dorion, Ontario</item>
+        <item>Dorset, Ontario</item>
+        <item>Dorval, Quebec</item>
+        <item>Douglas, Ontario</item>
+        <item>Douglas Lake, British Columbia</item>
+        <item>Douglastown, Ontario</item>
+        <item>Dover, Newfoundland</item>
+        <item>Drake, Saskatchewan</item>
+        <item>Drayton, Ontario</item>
+        <item>Drayton Valley, Alberta</item>
+        <item>Dresden, Ontario</item>
+        <item>Drumbo, Ontario</item>
+        <item>Drumheller, Alberta</item>
+        <item>Drummondville, Quebec</item>
+        <item>Dryden, Ontario</item>
+        <item>Dublin, Ontario</item>
+        <item>Dubreuilville, Ontario</item>
+        <item>Dubuc, Saskatchewan</item>
+        <item>Dubuisson, Quebec</item>
+        <item>Duchess, Alberta</item>
+        <item>Duck Lake, Saskatchewan</item>
+        <item>Dugald, Manitoba</item>
+        <item>Duncan, British Columbia</item>
+        <item>Dunchurch, Ontario</item>
+        <item>Dundalk, Ontario</item>
+        <item>Dundas, Ontario</item>
+        <item>Dundee, Nova Scotia</item>
+        <item>Dundurn, Saskatchewan</item>
+        <item>Dungannon, Ontario</item>
+        <item>Dunham, Quebec</item>
+        <item>Dunnville, Ontario</item>
+        <item>Dunsford, Ontario</item>
+        <item>Dunster, British Columbia</item>
+        <item>Duparquet, Quebec</item>
+        <item>Dupuy, Quebec</item>
+        <item>Durham, Ontario</item>
+        <item>Dutton, Ontario</item>
+        <item>Duvernay, Quebec</item>
+        <item>Dwight, Ontario</item>
+        <item>Dyer\'s Bay, Ontario</item>
+        <item>Dysart, Saskatchewan</item>
+        <item>D\'Arcy, British Columbia</item>
+        <item>Eagle Lake First Nation, Ontario</item>
+        <item>Eagle River, Ontario</item>
+        <item>Eaglesham, Alberta</item>
+        <item>Ear Falls, Ontario</item>
+        <item>Earl Grey, Saskatchewan</item>
+        <item>Earlton, Ontario</item>
+        <item>East Angus, Quebec</item>
+        <item>East Bay, Nova Scotia</item>
+        <item>East Broughton, Quebec</item>
+        <item>East Coulee, Alberta</item>
+        <item>East Farnham, Quebec</item>
+        <item>East Gwillimbury, Ontario</item>
+        <item>East Hereford, Quebec</item>
+        <item>East Pine, British Columbia</item>
+        <item>East Point, Prince Edward Island</item>
+        <item>East York, Ontario</item>
+        <item>Eastend, Saskatchewan</item>
+        <item>Easterville, Manitoba</item>
+        <item>Eastmain, Quebec</item>
+        <item>Eastman, Quebec</item>
+        <item>Eastport, Newfoundland</item>
+        <item>Eastwood, Ontario</item>
+        <item>Eatonia, Saskatchewan</item>
+        <item>Echo Bay, Ontario</item>
+        <item>Eckville, Alberta</item>
+        <item>Ecum Secum, Nova Scotia</item>
+        <item>Edam, Saskatchewan</item>
+        <item>Eddystone, Manitoba</item>
+        <item>Edgerton, Alberta</item>
+        <item>Edmonton, Alberta</item>
+        <item>Edmundston, New Brunswick</item>
+        <item>Edson, Alberta</item>
+        <item>Edwin, Manitoba</item>
+        <item>Edzo, Northwest Territories</item>
+        <item>Eganville, Ontario</item>
+        <item>Elbow, Saskatchewan</item>
+        <item>Eldon, Prince Edward Island</item>
+        <item>Elfros, Saskatchewan</item>
+        <item>Elgin, Manitoba</item>
+        <item>Elgin, Ontario</item>
+        <item>Elie, Manitoba</item>
+        <item>Elizabethtown, Ontario</item>
+        <item>Elk Lake, Ontario</item>
+        <item>Elk Point, Alberta</item>
+        <item>Elkford, British Columbia</item>
+        <item>Elkhorn, Manitoba</item>
+        <item>Elko, British Columbia</item>
+        <item>Elkwater, Alberta</item>
+        <item>Elliot Lake, Ontario</item>
+        <item>Elliston, Newfoundland</item>
+        <item>Elm Creek, Manitoba</item>
+        <item>Elmira, Ontario</item>
+        <item>Elmsdale, Nova Scotia</item>
+        <item>Elmvale, Ontario</item>
+        <item>Elnora, Alberta</item>
+        <item>Elora, Ontario</item>
+        <item>Elrose, Saskatchewan</item>
+        <item>Embree, Newfoundland</item>
+        <item>Embro, Ontario</item>
+        <item>Embrun, Ontario</item>
+        <item>Emerson, Manitoba</item>
+        <item>Emeryville, Ontario</item>
+        <item>Emo, Ontario</item>
+        <item>Empress, Alberta</item>
+        <item>Emsdale, Ontario</item>
+        <item>Enchant, Alberta</item>
+        <item>Enderby, British Columbia</item>
+        <item>Englee, Newfoundland</item>
+        <item>Englehart, Ontario</item>
+        <item>English Harbour East, Newfoundland</item>
+        <item>Enterprise, Northwest Territories</item>
+        <item>Enterprise, Ontario</item>
+        <item>Entrelacs, Quebec</item>
+        <item>Erickson, Manitoba</item>
+        <item>Eriksdale, Manitoba</item>
+        <item>Erin, Ontario</item>
+        <item>Eskasoni, Nova Scotia</item>
+        <item>Espanola, Ontario</item>
+        <item>Essex, Ontario</item>
+        <item>Estaire, Ontario</item>
+        <item>Esterel, Quebec</item>
+        <item>Esterhazy, Saskatchewan</item>
+        <item>Estevan, Saskatchewan</item>
+        <item>Estevan Point, British Columbia</item>
+        <item>Eston, Saskatchewan</item>
+        <item>Ethelbert, Manitoba</item>
+        <item>Etobicoke, Ontario</item>
+        <item>Etzikom, Alberta</item>
+        <item>Eugenia, Ontario</item>
+        <item>Evain, Quebec</item>
+        <item>Evansburg, Alberta</item>
+        <item>Exeter, Ontario</item>
+        <item>Exshaw, Alberta</item>
+        <item>Eyebrow, Saskatchewan</item>
+        <item>Fabre, Quebec</item>
+        <item>Fabreville, Quebec</item>
+        <item>Fair Haven, Newfoundland</item>
+        <item>Fairmont Hot Springs, British Columbia</item>
+        <item>Fairview, Alberta</item>
+        <item>Falardeau, Quebec</item>
+        <item>Falcon Lake, Manitoba</item>
+        <item>Falher, Alberta</item>
+        <item>Falkland, British Columbia</item>
+        <item>Farnham, Quebec</item>
+        <item>Faro, Yukon</item>
+        <item>Fassett, Quebec</item>
+        <item>Fauquier, British Columbia</item>
+        <item>Fauquier, Ontario</item>
+        <item>Faust, Alberta</item>
+        <item>Fenelon Falls, Ontario</item>
+        <item>Fenwick, Ontario</item>
+        <item>Fergus, Ontario</item>
+        <item>Ferintosh, Alberta</item>
+        <item>Ferland, Quebec</item>
+        <item>Ferme-Neuve, Quebec</item>
+        <item>Fermeuse, Newfoundland</item>
+        <item>Fermont, Quebec</item>
+        <item>Fernie, British Columbia</item>
+        <item>Feversham, Ontario</item>
+        <item>Field, British Columbia</item>
+        <item>Field, Ontario</item>
+        <item>Fillmore, Saskatchewan</item>
+        <item>Finch, Ontario</item>
+        <item>Fingal, Ontario</item>
+        <item>Fisher Branch, Manitoba</item>
+        <item>Fisher River, Manitoba</item>
+        <item>Fisherville, Ontario</item>
+        <item>Flamborough, Ontario</item>
+        <item>Flanders, Ontario</item>
+        <item>Flatbush, Alberta</item>
+        <item>Flatrock, British Columbia</item>
+        <item>Flatrock, Newfoundland</item>
+        <item>Fleming, Saskatchewan</item>
+        <item>Flesherton, Ontario</item>
+        <item>Fleur de Lys, Newfoundland</item>
+        <item>Fleurimont, Quebec</item>
+        <item>Flin Flon, Manitoba</item>
+        <item>Florenceville, New Brunswick</item>
+        <item>Flower\'s Cove, Newfoundland</item>
+        <item>Foam Lake, Saskatchewan</item>
+        <item>Fogo, Newfoundland</item>
+        <item>Foley, Ontario</item>
+        <item>Foleyet, Ontario</item>
+        <item>Fond-du-Lac, Saskatchewan</item>
+        <item>Fords Mills, New Brunswick</item>
+        <item>Foremost, Alberta</item>
+        <item>Forest, Ontario</item>
+        <item>Forest Grove, British Columbia</item>
+        <item>Forestburg, Alberta</item>
+        <item>Forestville, Quebec</item>
+        <item>Fork River, Manitoba</item>
+        <item>Fort Albany, Ontario</item>
+        <item>Fort Assiniboine, Alberta</item>
+        <item>Fort Chipewyan, Alberta</item>
+        <item>Fort Erie, Ontario</item>
+        <item>Fort Frances, Ontario</item>
+        <item>Fort Fraser, British Columbia</item>
+        <item>Fort Good Hope, Northwest Territories</item>
+        <item>Fort Hope, Ontario</item>
+        <item>Fort Liard, Northwest Territories</item>
+        <item>Fort MacKay, Alberta</item>
+        <item>Fort Macleod, Alberta</item>
+        <item>Fort McMurray, Alberta</item>
+        <item>Fort McPherson, Northwest Territories</item>
+        <item>Fort Nelson, British Columbia</item>
+        <item>Fort Providence, Northwest Territories</item>
+        <item>Fort Qu\'Appelle, Saskatchewan</item>
+        <item>Fort Saskatchewan, Alberta</item>
+        <item>Fort Severn, Ontario</item>
+        <item>Fort Severn First Nation, Ontario</item>
+        <item>Fort Simpson, Northwest Territories</item>
+        <item>Fort Smith, Northwest Territories</item>
+        <item>Fort St. James, British Columbia</item>
+        <item>Fort St. John, British Columbia</item>
+        <item>Fort Vermilion, Alberta</item>
+        <item>Fort William First Nation, Ontario</item>
+        <item>Fort-Coulonge, Quebec</item>
+        <item>Forteau, Newfoundland</item>
+        <item>Fortierville, Quebec</item>
+        <item>Fortune, Newfoundland</item>
+        <item>Fossambault-sur-le-Lac, Quebec</item>
+        <item>Fox Cove-Mortier, Newfoundland</item>
+        <item>Fox Creek, Alberta</item>
+        <item>Fox Lake, Alberta</item>
+        <item>Fox Valley, Saskatchewan</item>
+        <item>Foxboro, Ontario</item>
+        <item>Foxwarren, Manitoba</item>
+        <item>Foymount, Ontario</item>
+        <item>Frampton, Quebec</item>
+        <item>Francis, Saskatchewan</item>
+        <item>Frankford, Ontario</item>
+        <item>Franklin Centre, Quebec</item>
+        <item>Fraser Lake, British Columbia</item>
+        <item>Fredericton, New Brunswick</item>
+        <item>Fredericton Junction, New Brunswick</item>
+        <item>Freelton, Ontario</item>
+        <item>Freeport, Nova Scotia</item>
+        <item>Frelighsburg, Quebec</item>
+        <item>French River First Nation, Ontario</item>
+        <item>French Village, Nova Scotia</item>
+        <item>Frenchmans Island, Newfoundland</item>
+        <item>Freshwater, Newfoundland</item>
+        <item>Frobisher, Saskatchewan</item>
+        <item>Frontier, Saskatchewan</item>
+        <item>Fruitvale, British Columbia</item>
+        <item>Fugereville, Quebec</item>
+        <item>Gabarus, Nova Scotia</item>
+        <item>Gabriola, British Columbia</item>
+        <item>Gadsby, Alberta</item>
+        <item>Gagetown, New Brunswick</item>
+        <item>Gainsborough, Saskatchewan</item>
+        <item>Galahad, Alberta</item>
+        <item>Galiano Island, British Columbia</item>
+        <item>Galt, Ontario</item>
+        <item>Gambo, Newfoundland</item>
+        <item>Gananoque, Ontario</item>
+        <item>Gander, Newfoundland</item>
+        <item>Ganges, British Columbia</item>
+        <item>Garden Hill, Ontario</item>
+        <item>Garden River First Nation, Ontario</item>
+        <item>Garnish, Newfoundland</item>
+        <item>Garson, Ontario</item>
+        <item>Gaspe, Quebec</item>
+        <item>Gatineau, Quebec</item>
+        <item>Gaultois, Newfoundland</item>
+        <item>Gentilly, Quebec</item>
+        <item>Georgetown, Ontario</item>
+        <item>Georgetown, Prince Edward Island</item>
+        <item>Georgina, Ontario</item>
+        <item>Geraldton, Ontario</item>
+        <item>Gibbons, Alberta</item>
+        <item>Gibsons, British Columbia</item>
+        <item>Gift Lake, Alberta</item>
+        <item>Gilbert Plains, Manitoba</item>
+        <item>Gillam, Manitoba</item>
+        <item>Gilmour, Ontario</item>
+        <item>Gimli, Manitoba</item>
+        <item>Girardville, Quebec</item>
+        <item>Girouxville, Alberta</item>
+        <item>Giscome, British Columbia</item>
+        <item>Gjoa Haven, Nunavut</item>
+        <item>Glace Bay, Nova Scotia</item>
+        <item>Gladstone, Manitoba</item>
+        <item>Glaslyn, Saskatchewan</item>
+        <item>Glassville, New Brunswick</item>
+        <item>Gleichen, Alberta</item>
+        <item>Glen Ewen, Saskatchewan</item>
+        <item>Glen Robertson, Ontario</item>
+        <item>Glen Water, Ontario</item>
+        <item>Glen Williams, Ontario</item>
+        <item>Glenavon, Saskatchewan</item>
+        <item>Glenboro, Manitoba</item>
+        <item>Glencoe, Ontario</item>
+        <item>Glendon, Alberta</item>
+        <item>Glenella, Manitoba</item>
+        <item>Glenwood, Alberta</item>
+        <item>Glenwood, Newfoundland</item>
+        <item>Gloucester, Ontario</item>
+        <item>Glovertown, Newfoundland</item>
+        <item>Godbout, Quebec</item>
+        <item>Goderich, Ontario</item>
+        <item>Gods Lake Narrows, Manitoba</item>
+        <item>Gogama, Ontario</item>
+        <item>Gold Bridge, British Columbia</item>
+        <item>Gold River, British Columbia</item>
+        <item>Goldboro, Nova Scotia</item>
+        <item>Golden, British Columbia</item>
+        <item>Golden Lake, Ontario</item>
+        <item>Good Hope Lake, British Columbia</item>
+        <item>Gooderham, Ontario</item>
+        <item>Goodeve, Saskatchewan</item>
+        <item>Goodsoil, Saskatchewan</item>
+        <item>Goose Bay, Newfoundland</item>
+        <item>Gore Bay, Ontario</item>
+        <item>Gormley, Ontario</item>
+        <item>Gorrie, Ontario</item>
+        <item>Goshen, Nova Scotia</item>
+        <item>Goulais River, Ontario</item>
+        <item>Govan, Saskatchewan</item>
+        <item>Gowganda, Ontario</item>
+        <item>Gracefield, Quebec</item>
+        <item>Grafton, Ontario</item>
+        <item>Granby, Quebec</item>
+        <item>Grand Bank, Newfoundland</item>
+        <item>Grand Bay, New Brunswick</item>
+        <item>Grand Beach, Manitoba</item>
+        <item>Grand Bend, Ontario</item>
+        <item>Grand Centre, Alberta</item>
+        <item>Grand Etang, Nova Scotia</item>
+        <item>Grand Falls, New Brunswick</item>
+        <item>Grand Falls, Newfoundland</item>
+        <item>Grand Falls-Windsor, Newfoundland</item>
+        <item>Grand Forks, British Columbia</item>
+        <item>Grand Lake, Nova Scotia</item>
+        <item>Grand Manan, New Brunswick</item>
+        <item>Grand Narrows, Nova Scotia</item>
+        <item>Grand Rapids, Manitoba</item>
+        <item>Grand Valley, Ontario</item>
+        <item>Grand-Mere, Quebec</item>
+        <item>Grand-Remous, Quebec</item>
+        <item>Grand-Sault, New Brunswick</item>
+        <item>Grande Cache, Alberta</item>
+        <item>Grande Prairie, Alberta</item>
+        <item>Grande-Anse, New Brunswick</item>
+        <item>Grande-Entree, Quebec</item>
+        <item>Grande-Riviere, Quebec</item>
+        <item>Grande-Vallee, Quebec</item>
+        <item>Grandes-Bergeronnes, Quebec</item>
+        <item>Grandes-Piles, Quebec</item>
+        <item>Grandview, Manitoba</item>
+        <item>Granisle, British Columbia</item>
+        <item>Granton, Ontario</item>
+        <item>Granum, Alberta</item>
+        <item>Grasmere, British Columbia</item>
+        <item>Grassland, Alberta</item>
+        <item>Grassy Lake, Alberta</item>
+        <item>Grassy Narrows, Ontario</item>
+        <item>Grassy Narrows First Nation, Ontario</item>
+        <item>Grassy Plains, British Columbia</item>
+        <item>Gravelbourg, Saskatchewan</item>
+        <item>Gravenhurst, Ontario</item>
+        <item>Grayson, Saskatchewan</item>
+        <item>Great Harbour Deep, Newfoundland</item>
+        <item>Great Village, Nova Scotia</item>
+        <item>Green Island Cove, Newfoundland</item>
+        <item>Green Lake, Saskatchewan</item>
+        <item>Greenfield Park, Quebec</item>
+        <item>Greenspond, Newfoundland</item>
+        <item>Greensville, Ontario</item>
+        <item>Greenville, British Columbia</item>
+        <item>Greenwood, British Columbia</item>
+        <item>Greenwood, Nova Scotia</item>
+        <item>Grenfell, Saskatchewan</item>
+        <item>Grenville, Quebec</item>
+        <item>Gretna, Manitoba</item>
+        <item>Grimsby, Ontario</item>
+        <item>Grimshaw, Alberta</item>
+        <item>Grouard, Alberta</item>
+        <item>Guelph, Ontario</item>
+        <item>Guigues, Quebec</item>
+        <item>Gull Bay, Ontario</item>
+        <item>Gull Bay First Nation, Ontario</item>
+        <item>Gull Lake, Saskatchewan</item>
+        <item>Guysborough, Nova Scotia</item>
+        <item>Gypsumville, Manitoba</item>
+        <item>Hadashville, Manitoba</item>
+        <item>Hafford, Saskatchewan</item>
+        <item>Hagersville, Ontario</item>
+        <item>Hague, Saskatchewan</item>
+        <item>Haileybury, Ontario</item>
+        <item>Haines Junction, Yukon</item>
+        <item>Hairy Hill, Alberta</item>
+        <item>Haldimand, Ontario</item>
+        <item>Haliburton, Ontario</item>
+        <item>Halifax, Nova Scotia</item>
+        <item>Halkirk, Alberta</item>
+        <item>Halton Hills, Ontario</item>
+        <item>Ham-Nord, Quebec</item>
+        <item>Hamilton, Ontario</item>
+        <item>Hamiota, Manitoba</item>
+        <item>Hammond, Quebec</item>
+        <item>Hampden, Newfoundland</item>
+        <item>Hampstead, New Brunswick</item>
+        <item>Hampstead, Quebec</item>
+        <item>Hampton, New Brunswick</item>
+        <item>Hampton, Ontario</item>
+        <item>Hanley, Saskatchewan</item>
+        <item>Hanmer, Ontario</item>
+        <item>Hanna, Alberta</item>
+        <item>Hanover, Ontario</item>
+        <item>Hantsport, Nova Scotia</item>
+        <item>Hant\'s Harbour, Newfoundland</item>
+        <item>Happy Valley-Goose Bay, Newfoundland</item>
+        <item>Harbour Breton, Newfoundland</item>
+        <item>Harbour Grace, Newfoundland</item>
+        <item>Harbour Main-Chapel Cove-Lakev, Newfoundland</item>
+        <item>Hardisty, Alberta</item>
+        <item>Hare Bay, Newfoundland</item>
+        <item>Harewood, New Brunswick</item>
+        <item>Harrietsville, Ontario</item>
+        <item>Harrington Harbour, Quebec</item>
+        <item>Harris, Saskatchewan</item>
+        <item>Harriston, Ontario</item>
+        <item>Harrow, Ontario</item>
+        <item>Harrowsmith, Ontario</item>
+        <item>Hartland, New Brunswick</item>
+        <item>Hartley Bay, British Columbia</item>
+        <item>Hartney, Manitoba</item>
+        <item>Hastings, Ontario</item>
+        <item>Havelock, New Brunswick</item>
+        <item>Havelock, Ontario</item>
+        <item>Havre-Aubert, Quebec</item>
+        <item>Havre-aux-Maisons, Quebec</item>
+        <item>Havre-St-Pierre, Quebec</item>
+        <item>Hawarden, Saskatchewan</item>
+        <item>Hawk Junction, Ontario</item>
+        <item>Hawkesbury, Ontario</item>
+        <item>Hawke\'s Bay, Newfoundland</item>
+        <item>Hay Lakes, Alberta</item>
+        <item>Hay River, Northwest Territories</item>
+        <item>Hays, Alberta</item>
+        <item>Hazelton, British Columbia</item>
+        <item>Hazlet, Saskatchewan</item>
+        <item>Hearst, Ontario</item>
+        <item>Heart\'s Content, Newfoundland</item>
+        <item>Heart\'s Delight-Islington, Newfoundland</item>
+        <item>Heart\'s Desire, Newfoundland</item>
+        <item>Heatherton, Nova Scotia</item>
+        <item>Hebertville, Quebec</item>
+        <item>Hebertville-Station, Quebec</item>
+        <item>Hecla, Manitoba</item>
+        <item>Hedley, British Columbia</item>
+        <item>Heinsburg, Alberta</item>
+        <item>Heisler, Alberta</item>
+        <item>Hemlo, Ontario</item>
+        <item>Hemlock Valley, British Columbia</item>
+        <item>Hemmingford, Quebec</item>
+        <item>Hendrix Lake, British Columbia</item>
+        <item>Henryville, Quebec</item>
+        <item>Hensall, Ontario</item>
+        <item>Henvey Inlet First Nation, Ontario</item>
+        <item>Hepburn, Saskatchewan</item>
+        <item>Hepworth, Ontario</item>
+        <item>Herbert, Saskatchewan</item>
+        <item>Herschel, Saskatchewan</item>
+        <item>Hespeler, Ontario</item>
+        <item>Hickman\'s Harbour, Newfoundland</item>
+        <item>Hickson, Ontario</item>
+        <item>High Level, Alberta</item>
+        <item>High Prairie, Alberta</item>
+        <item>High River, Alberta</item>
+        <item>Highgate, Ontario</item>
+        <item>Hilda, Alberta</item>
+        <item>Hillgrade, Newfoundland</item>
+        <item>Hillsborough, New Brunswick</item>
+        <item>Hillsburgh, Ontario</item>
+        <item>Hillview, Newfoundland</item>
+        <item>Hines Creek, Alberta</item>
+        <item>Hinton, Alberta</item>
+        <item>Hixon, British Columbia</item>
+        <item>Hobbema, Alberta</item>
+        <item>Hodgeville, Saskatchewan</item>
+        <item>Holberg, British Columbia</item>
+        <item>Holden, Alberta</item>
+        <item>Holdfast, Saskatchewan</item>
+        <item>Holland, Manitoba</item>
+        <item>Holland Landing, Ontario</item>
+        <item>Holstein, Ontario</item>
+        <item>Holyrood, Newfoundland</item>
+        <item>Honey Harbour, Ontario</item>
+        <item>Hope, British Columbia</item>
+        <item>Hopedale, Newfoundland</item>
+        <item>Hopewell, Nova Scotia</item>
+        <item>Hornepayne, Ontario</item>
+        <item>Horsefly, British Columbia</item>
+        <item>Houston, British Columbia</item>
+        <item>Howick, Quebec</item>
+        <item>Howley, Newfoundland</item>
+        <item>Hoyt, New Brunswick</item>
+        <item>Hubbards, Nova Scotia</item>
+        <item>Hudson, Ontario</item>
+        <item>Hudson, Quebec</item>
+        <item>Hudson Bay, Saskatchewan</item>
+        <item>Hudson\'s Hope, British Columbia</item>
+        <item>Hughenden, Alberta</item>
+        <item>Hull, Quebec</item>
+        <item>Humber Arm South, Newfoundland</item>
+        <item>Humboldt, Saskatchewan</item>
+        <item>Humphrey, Ontario</item>
+        <item>Hunter River, Prince Edward Island</item>
+        <item>Huntingdon, Quebec</item>
+        <item>Huntsville, Ontario</item>
+        <item>Hussar, Alberta</item>
+        <item>Hythe, Alberta</item>
+        <item>Iberville, Quebec</item>
+        <item>Ignace, Ontario</item>
+        <item>Ilderton, Ontario</item>
+        <item>Ile-a-la-Crosse, Saskatchewan</item>
+        <item>Ile-aux-Coudres, Quebec</item>
+        <item>Iles-de-la-Madeleine, Quebec</item>
+        <item>Ilford, Manitoba</item>
+        <item>Imperial, Saskatchewan</item>
+        <item>Indian Head, Saskatchewan</item>
+        <item>Indian Tickle, Newfoundland</item>
+        <item>Ingersoll, Ontario</item>
+        <item>Ingleside, Ontario</item>
+        <item>Ingonish, Nova Scotia</item>
+        <item>Innerkip, Ontario</item>
+        <item>Innisfail, Alberta</item>
+        <item>Innisfil, Ontario</item>
+        <item>Innisfree, Alberta</item>
+        <item>Inukjuak, Quebec</item>
+        <item>Inuvik, Northwest Territories</item>
+        <item>Inverary, Ontario</item>
+        <item>Invermay, Saskatchewan</item>
+        <item>Invermere, British Columbia</item>
+        <item>Inverness, Nova Scotia</item>
+        <item>Inverness, Quebec</item>
+        <item>Inwood, Manitoba</item>
+        <item>Inwood, Ontario</item>
+        <item>Iqaluit, Nunavut</item>
+        <item>Irma, Alberta</item>
+        <item>Iron Bridge, Ontario</item>
+        <item>Iron Springs, Alberta</item>
+        <item>Iroquois, Ontario</item>
+        <item>Iroquois Falls, Ontario</item>
+        <item>Irricana, Alberta</item>
+        <item>Irvine, Alberta</item>
+        <item>Iskut, British Columbia</item>
+        <item>Island Harbour, Newfoundland</item>
+        <item>Island Lake, Manitoba</item>
+        <item>Islay, Alberta</item>
+        <item>Isle aux Morts, Newfoundland</item>
+        <item>Ituna, Saskatchewan</item>
+        <item>Jackson\'s Arm, Newfoundland</item>
+        <item>Jacquet River, New Brunswick</item>
+        <item>Jaffray, British Columbia</item>
+        <item>Jaffray Melick, Ontario</item>
+        <item>Jamestown, Newfoundland</item>
+        <item>Jansen, Saskatchewan</item>
+        <item>Jarvie, Alberta</item>
+        <item>Jarvis, Ontario</item>
+        <item>Jasper, Alberta</item>
+        <item>Jasper, Ontario</item>
+        <item>Jean Marie River, Northwest Territories</item>
+        <item>Jellicoe, Ontario</item>
+        <item>Jenner, Alberta</item>
+        <item>Jockvale, Ontario</item>
+        <item>Joe Batt\'s Arm-Barr\'d Islands-, Newfoundland</item>
+        <item>Johnstown, Ontario</item>
+        <item>Joliette, Quebec</item>
+        <item>Jonquiere, Quebec</item>
+        <item>Jordan, Ontario</item>
+        <item>Joussard, Alberta</item>
+        <item>Joutel, Quebec</item>
+        <item>Kakisa, Northwest Territories</item>
+        <item>Kaministiquia, Ontario</item>
+        <item>Kamiskotia, Ontario</item>
+        <item>Kamloops, British Columbia</item>
+        <item>Kamsack, Saskatchewan</item>
+        <item>Kananaskis, Alberta</item>
+        <item>Kanata, Ontario</item>
+        <item>Kangiqsualujjuaq, Quebec</item>
+        <item>Kangirsuk, Quebec</item>
+        <item>Kapuskasing, Ontario</item>
+        <item>Kasabonika First Nation, Ontario</item>
+        <item>Kashechewan First Nation, Ontario</item>
+        <item>Kaslo, British Columbia</item>
+        <item>Kateville, Quebec</item>
+        <item>Kazabazua, Quebec</item>
+        <item>Kearney, Ontario</item>
+        <item>Kedgwick, New Brunswick</item>
+        <item>Keene, Ontario</item>
+        <item>Keephills, Alberta</item>
+        <item>Keewatin, Ontario</item>
+        <item>Keg River, Alberta</item>
+        <item>Kelliher, Saskatchewan</item>
+        <item>Kelowna, British Columbia</item>
+        <item>Kelvington, Saskatchewan</item>
+        <item>Kelwood, Manitoba</item>
+        <item>Kemano, British Columbia</item>
+        <item>Kemptville, Ontario</item>
+        <item>Kenaston, Saskatchewan</item>
+        <item>Kennedy, Saskatchewan</item>
+        <item>Kennetcook, Nova Scotia</item>
+        <item>Kenora, Ontario</item>
+        <item>Kenosee, Saskatchewan</item>
+        <item>Kensington, Prince Edward Island</item>
+        <item>Kent Centre, Ontario</item>
+        <item>Kenton, Manitoba</item>
+        <item>Kentville, Nova Scotia</item>
+        <item>Kenzieville, Nova Scotia</item>
+        <item>Keremeos, British Columbia</item>
+        <item>Kerrobert, Saskatchewan</item>
+        <item>Kerwood, Ontario</item>
+        <item>Keswick, New Brunswick</item>
+        <item>Keswick, Ontario</item>
+        <item>Ketch Harbour, Nova Scotia</item>
+        <item>Key Lake, Saskatchewan</item>
+        <item>Killaloe, Ontario</item>
+        <item>Killam, Alberta</item>
+        <item>Killarney, Manitoba</item>
+        <item>Killarney, Ontario</item>
+        <item>Kimberley, British Columbia</item>
+        <item>Kincaid, Saskatchewan</item>
+        <item>Kincardine, Ontario</item>
+        <item>Kincolith, British Columbia</item>
+        <item>Kindersley, Saskatchewan</item>
+        <item>King City, Ontario</item>
+        <item>Kingfisher Lake, Ontario</item>
+        <item>Kingfisher Lake First Nation, Ontario</item>
+        <item>Kingsbury, Quebec</item>
+        <item>Kingsey Falls, Quebec</item>
+        <item>Kingston, Nova Scotia</item>
+        <item>Kingston, Ontario</item>
+        <item>Kingsville, Ontario</item>
+        <item>King\'s Cove, Newfoundland</item>
+        <item>King\'s Point, Newfoundland</item>
+        <item>Kinistino, Saskatchewan</item>
+        <item>Kinmount, Ontario</item>
+        <item>Kintore, Ontario</item>
+        <item>Kinuso, Alberta</item>
+        <item>Kipling, Saskatchewan</item>
+        <item>Kippens, Newfoundland</item>
+        <item>Kirkfield, Ontario</item>
+        <item>Kirkland, Quebec</item>
+        <item>Kirkland Lake, Ontario</item>
+        <item>Kirkton, Ontario</item>
+        <item>Kisbey, Saskatchewan</item>
+        <item>Kitchener, Ontario</item>
+        <item>Kitimat, British Columbia</item>
+        <item>Kitkatla, British Columbia</item>
+        <item>Kitsault, British Columbia</item>
+        <item>Kitscoty, Alberta</item>
+        <item>Kitwanga, British Columbia</item>
+        <item>Kleinburg, Ontario</item>
+        <item>Klemtu, British Columbia</item>
+        <item>Knowlton, Quebec</item>
+        <item>Kugluktuk, Northwest Territories</item>
+        <item>Kuujjuaq, Quebec</item>
+        <item>Kyle, Saskatchewan</item>
+        <item>Kyuquot, British Columbia</item>
+        <item>La Baie, Quebec</item>
+        <item>La Broquerie, Manitoba</item>
+        <item>La Corne, Quebec</item>
+        <item>La Crete, Alberta</item>
+        <item>La Dore, Quebec</item>
+        <item>La Grande, Quebec</item>
+        <item>La Guadeloupe, Quebec</item>
+        <item>La Loche, Saskatchewan</item>
+        <item>La Malbaie, Quebec</item>
+        <item>La Martre, Quebec</item>
+        <item>La Minerve, Quebec</item>
+        <item>La Patrie, Quebec</item>
+        <item>La Plaine, Quebec</item>
+        <item>La Pocatiere, Quebec</item>
+        <item>La Prairie, Quebec</item>
+        <item>La Reine, Quebec</item>
+        <item>La Romaine, Quebec</item>
+        <item>La Ronge, Saskatchewan</item>
+        <item>La Sarre, Quebec</item>
+        <item>La Scie, Newfoundland</item>
+        <item>La Tuque, Quebec</item>
+        <item>Labelle, Quebec</item>
+        <item>Labrador City, Newfoundland</item>
+        <item>Lac Brochet, Manitoba</item>
+        <item>Lac du Bonnet, Manitoba</item>
+        <item>Lac Kenogami, Quebec</item>
+        <item>Lac La Biche, Alberta</item>
+        <item>Lac la Croix, Ontario</item>
+        <item>Lac la Hache, British Columbia</item>
+        <item>Lac Seul First Nation, Ontario</item>
+        <item>Lac-au-Saumon, Quebec</item>
+        <item>Lac-aux-Sables, Quebec</item>
+        <item>Lac-Bouchette, Quebec</item>
+        <item>Lac-Brome, Quebec</item>
+        <item>Lac-Delage, Quebec</item>
+        <item>Lac-des-Ecorces, Quebec</item>
+        <item>Lac-Drolet, Quebec</item>
+        <item>Lac-du-Cerf, Quebec</item>
+        <item>Lac-Edouard, Quebec</item>
+        <item>Lac-Etchemin, Quebec</item>
+        <item>Lac-Frontiere, Quebec</item>
+        <item>Lac-Poulin, Quebec</item>
+        <item>Lac-Saguay, Quebec</item>
+        <item>Lac-Sergent, Quebec</item>
+        <item>Lac-St-Joseph, Quebec</item>
+        <item>Lachenaie, Quebec</item>
+        <item>Lachine, Quebec</item>
+        <item>Lachute, Quebec</item>
+        <item>Lacolle, Quebec</item>
+        <item>Lacombe, Alberta</item>
+        <item>Ladle Cove, Newfoundland</item>
+        <item>Ladysmith, British Columbia</item>
+        <item>Lafleche, Saskatchewan</item>
+        <item>Lafontaine, Ontario</item>
+        <item>Lafontaine, Quebec</item>
+        <item>Lagoon City, Ontario</item>
+        <item>LaHave, Nova Scotia</item>
+        <item>Laird, Saskatchewan</item>
+        <item>Lake Alma, Saskatchewan</item>
+        <item>Lake Charlotte, Nova Scotia</item>
+        <item>Lake Cowichan, British Columbia</item>
+        <item>Lake Lenore, Saskatchewan</item>
+        <item>Lake Louise, Alberta</item>
+        <item>Lake Megantic, Quebec</item>
+        <item>Lakefield, Ontario</item>
+        <item>Lamaline, Newfoundland</item>
+        <item>Lambeth, Ontario</item>
+        <item>Lambton, Quebec</item>
+        <item>Lameque, New Brunswick</item>
+        <item>Lamont, Alberta</item>
+        <item>Lampman, Saskatchewan</item>
+        <item>Lanark, Ontario</item>
+        <item>Lancaster, Ontario</item>
+        <item>Landis, Saskatchewan</item>
+        <item>Lang, Saskatchewan</item>
+        <item>Langara, British Columbia</item>
+        <item>Langdon, Alberta</item>
+        <item>Langenburg, Saskatchewan</item>
+        <item>Langham, Saskatchewan</item>
+        <item>Langley, British Columbia</item>
+        <item>Langruth, Manitoba</item>
+        <item>Langton, Ontario</item>
+        <item>Lanigan, Saskatchewan</item>
+        <item>Lanoraie, Quebec</item>
+        <item>Lansdowne, Ontario</item>
+        <item>Lansdowne House, Ontario</item>
+        <item>Lantzville, British Columbia</item>
+        <item>Larder Lake, Ontario</item>
+        <item>Lark Harbour, Newfoundland</item>
+        <item>Larrys River, Nova Scotia</item>
+        <item>LaSalle, Ontario</item>
+        <item>LaSalle, Quebec</item>
+        <item>Lashburn, Saskatchewan</item>
+        <item>Latchford, Ontario</item>
+        <item>Laterriere, Quebec</item>
+        <item>Latulipe, Quebec</item>
+        <item>Laurentides, Quebec</item>
+        <item>Laurier-Station, Quebec</item>
+        <item>Laurierville, Quebec</item>
+        <item>Laval, Quebec</item>
+        <item>Laval des Rapides, Quebec</item>
+        <item>Laval Ouest, Quebec</item>
+        <item>Lavaltrie, Quebec</item>
+        <item>Laverlochere, Quebec</item>
+        <item>Lavoy, Alberta</item>
+        <item>Lawn, Newfoundland</item>
+        <item>Lawrencetown, Nova Scotia</item>
+        <item>Lawrenceville, Quebec</item>
+        <item>Le Bic, Quebec</item>
+        <item>Le Gardeur, Quebec</item>
+        <item>Leader, Saskatchewan</item>
+        <item>Leaf Rapids, Manitoba</item>
+        <item>Leamington, Ontario</item>
+        <item>Leask, Saskatchewan</item>
+        <item>Lebel-sur-Quevillon, Quebec</item>
+        <item>Leclercville, Quebec</item>
+        <item>Leduc, Alberta</item>
+        <item>Lefroy, Ontario</item>
+        <item>Legal, Alberta</item>
+        <item>Lemberg, Saskatchewan</item>
+        <item>LeMoyne, Quebec</item>
+        <item>Lennoxville, Quebec</item>
+        <item>Leoville, Saskatchewan</item>
+        <item>Leroy, Saskatchewan</item>
+        <item>Lery, Quebec</item>
+        <item>Les Boules, Quebec</item>
+        <item>Les Cedres, Quebec</item>
+        <item>Les Coteaux, Quebec</item>
+        <item>Les Eboulements, Quebec</item>
+        <item>Les Escoumins, Quebec</item>
+        <item>Les Mechins, Quebec</item>
+        <item>Leslieville, Alberta</item>
+        <item>Lestock, Saskatchewan</item>
+        <item>Lethbridge, Alberta</item>
+        <item>Levack, Ontario</item>
+        <item>Levis, Quebec</item>
+        <item>Lewisporte, Newfoundland</item>
+        <item>Libau, Manitoba</item>
+        <item>Liberty, Saskatchewan</item>
+        <item>Likely, British Columbia</item>
+        <item>Lillooet, British Columbia</item>
+        <item>Limerick, Saskatchewan</item>
+        <item>Lincoln, Ontario</item>
+        <item>Lindsay, Ontario</item>
+        <item>Lintlaw, Saskatchewan</item>
+        <item>Linwood, Ontario</item>
+        <item>Lion\'s Head, Ontario</item>
+        <item>Lipton, Saskatchewan</item>
+        <item>Listowel, Ontario</item>
+        <item>Little Bay, Newfoundland</item>
+        <item>Little Bay Islands, Newfoundland</item>
+        <item>Little Britain, Ontario</item>
+        <item>Little Burnt Bay, Newfoundland</item>
+        <item>Little Catalina, Newfoundland</item>
+        <item>Little Current, Ontario</item>
+        <item>Little Fort, British Columbia</item>
+        <item>Little Grand Rapids, Manitoba</item>
+        <item>Little Heart\'s Ease, Newfoundland</item>
+        <item>Lively, Ontario</item>
+        <item>Liverpool, Nova Scotia</item>
+        <item>Lloydminster, Alberta</item>
+        <item>Lloydminster, Saskatchewan</item>
+        <item>Lockeport, Nova Scotia</item>
+        <item>Lockport, Manitoba</item>
+        <item>Lodgepole, Alberta</item>
+        <item>Logan Lake, British Columbia</item>
+        <item>Logy Bay-Middle Cove-Outer Cov, Newfoundland</item>
+        <item>Lombardy, Ontario</item>
+        <item>Lomond, Alberta</item>
+        <item>London, Ontario</item>
+        <item>Long Harbour-Mount Arlington H, Newfoundland</item>
+        <item>Long Lac, Ontario</item>
+        <item>Long Lake First Nation, Ontario</item>
+        <item>Long Point, Ontario</item>
+        <item>Long Pond, Newfoundland</item>
+        <item>Long Sault, Ontario</item>
+        <item>Longlac, Ontario</item>
+        <item>Longueuil, Quebec</item>
+        <item>Longview, Alberta</item>
+        <item>Loon Lake, Saskatchewan</item>
+        <item>Loos, British Columbia</item>
+        <item>Loreburn, Saskatchewan</item>
+        <item>Loretteville, Quebec</item>
+        <item>Lorne, Ontario</item>
+        <item>Lorraine, Quebec</item>
+        <item>Lorrainville, Quebec</item>
+        <item>Lougheed, Alberta</item>
+        <item>Louisbourg, Nova Scotia</item>
+        <item>Louisdale, Nova Scotia</item>
+        <item>Louiseville, Quebec</item>
+        <item>Lourdes, Newfoundland</item>
+        <item>Lourdes de Blanc Sablon, Quebec</item>
+        <item>Louvicourt, Quebec</item>
+        <item>Low, Quebec</item>
+        <item>Lower Island Cove, Newfoundland</item>
+        <item>Lower Post, British Columbia</item>
+        <item>Lucan, Ontario</item>
+        <item>Luceville, Quebec</item>
+        <item>Lucknow, Ontario</item>
+        <item>Lucky Lake, Saskatchewan</item>
+        <item>Lumby, British Columbia</item>
+        <item>Lumsden, Newfoundland</item>
+        <item>Lumsden, Saskatchewan</item>
+        <item>Lundar, Manitoba</item>
+        <item>Lunenburg, Nova Scotia</item>
+        <item>Luseland, Saskatchewan</item>
+        <item>Luskville, Quebec</item>
+        <item>Lyn, Ontario</item>
+        <item>Lynden, Ontario</item>
+        <item>Lynn Lake, Manitoba</item>
+        <item>Lyster, Quebec</item>
+        <item>Lytton, British Columbia</item>
+        <item>L\'Acadie, Quebec</item>
+        <item>L\'Ancienne-Lorette, Quebec</item>
+        <item>L\'Ange-Gardien, Quebec</item>
+        <item>L\'Annonciation, Quebec</item>
+        <item>L\'Anse-au-Loup, Newfoundland</item>
+        <item>L\'Ardoise, Nova Scotia</item>
+        <item>L\'Assomption, Quebec</item>
+        <item>L\'Avenir, Quebec</item>
+        <item>L\'Epiphanie, Quebec</item>
+        <item>L\'Ile-Aux-Noix, Quebec</item>
+        <item>L\'Ile-Bizard, Quebec</item>
+        <item>L\'Ile-Cadieux, Quebec</item>
+        <item>L\'Ile-Dorval, Quebec</item>
+        <item>L\'Ile-d\'Entree, Quebec</item>
+        <item>L\'Ile-Perrot, Quebec</item>
+        <item>L\'Île-Verte, Quebec</item>
+        <item>L\'Islet, Quebec</item>
+        <item>L\'Orignal, Ontario</item>
+        <item>Ma-Me-O Beach, Alberta</item>
+        <item>Maberly, Ontario</item>
+        <item>Mabou, Nova Scotia</item>
+        <item>Macamic, Quebec</item>
+        <item>Maccan, Nova Scotia</item>
+        <item>Macdiarmid, Ontario</item>
+        <item>Maces Bay, New Brunswick</item>
+        <item>MacGregor, Manitoba</item>
+        <item>Mackenzie, British Columbia</item>
+        <item>Macklin, Saskatchewan</item>
+        <item>Macrorie, Saskatchewan</item>
+        <item>MacTier, Ontario</item>
+        <item>Madoc, Ontario</item>
+        <item>Madsen, Ontario</item>
+        <item>Mafeking, Manitoba</item>
+        <item>Magnetawan, Ontario</item>
+        <item>Magnetawan First Nation, Ontario</item>
+        <item>Magog, Quebec</item>
+        <item>Magrath, Alberta</item>
+        <item>Mahone Bay, Nova Scotia</item>
+        <item>Maidstone, Ontario</item>
+        <item>Maidstone, Saskatchewan</item>
+        <item>Main Brook, Newfoundland</item>
+        <item>Maitland, Nova Scotia</item>
+        <item>Maitland, Ontario</item>
+        <item>Makkovik, Newfoundland</item>
+        <item>Malartic, Quebec</item>
+        <item>Mallorytown, Ontario</item>
+        <item>Malton, Ontario</item>
+        <item>Manic-Cinq, Quebec</item>
+        <item>Manigotagan, Manitoba</item>
+        <item>Manitou, Manitoba</item>
+        <item>Manitouwadge, Ontario</item>
+        <item>Manitowaning, Ontario</item>
+        <item>Maniwaki, Quebec</item>
+        <item>Mankota, Saskatchewan</item>
+        <item>Manning, Alberta</item>
+        <item>Mannville, Alberta</item>
+        <item>Manor, Saskatchewan</item>
+        <item>Manotick, Ontario</item>
+        <item>Manouane, Quebec</item>
+        <item>Manseau, Quebec</item>
+        <item>Mansonville, Quebec</item>
+        <item>Manyberries, Alberta</item>
+        <item>Maple, Ontario</item>
+        <item>Maple Creek, Saskatchewan</item>
+        <item>Maple Grove, Quebec</item>
+        <item>Maple Ridge, British Columbia</item>
+        <item>Marathon, Ontario</item>
+        <item>Marcelin, Saskatchewan</item>
+        <item>Margaree Forks, Nova Scotia</item>
+        <item>Margo, Saskatchewan</item>
+        <item>Maria, Quebec</item>
+        <item>Marieville, Quebec</item>
+        <item>Marion Bridge, Nova Scotia</item>
+        <item>Markdale, Ontario</item>
+        <item>Markham, Ontario</item>
+        <item>Markstay, Ontario</item>
+        <item>Marlboro, Alberta</item>
+        <item>Marmora, Ontario</item>
+        <item>Marquis, Saskatchewan</item>
+        <item>Marsden, Saskatchewan</item>
+        <item>Marsh Lake, Yukon</item>
+        <item>Marshall, Saskatchewan</item>
+        <item>Marsoui, Quebec</item>
+        <item>Marten Falls First Nation, Ontario</item>
+        <item>Marten River, Ontario</item>
+        <item>Martensville, Saskatchewan</item>
+        <item>Martintown, Ontario</item>
+        <item>Marwayne, Alberta</item>
+        <item>Maryfield, Saskatchewan</item>
+        <item>Marystown, Newfoundland</item>
+        <item>Mary\'s Harbour, Newfoundland</item>
+        <item>Mascouche, Quebec</item>
+        <item>Maskinonge, Quebec</item>
+        <item>Masset, British Columbia</item>
+        <item>Massey, Ontario</item>
+        <item>Massey Drive, Newfoundland</item>
+        <item>Masson-Angers, Quebec</item>
+        <item>Massueville, Quebec</item>
+        <item>Mastigouche, Quebec</item>
+        <item>Matachewan, Ontario</item>
+        <item>Matagami, Quebec</item>
+        <item>Matane, Quebec</item>
+        <item>Matapedia, Quebec</item>
+        <item>Matheson, Ontario</item>
+        <item>Mattawa, Ontario</item>
+        <item>Mattice, Ontario</item>
+        <item>Maxville, Ontario</item>
+        <item>Mayerthorpe, Alberta</item>
+        <item>Maymont, Saskatchewan</item>
+        <item>Maynooth, Ontario</item>
+        <item>Mayo, Yukon</item>
+        <item>McAdam, New Brunswick</item>
+        <item>McAuley, Manitoba</item>
+        <item>McBride, British Columbia</item>
+        <item>McCreary, Manitoba</item>
+        <item>McDonalds Corners, Ontario</item>
+        <item>McGregor, Ontario</item>
+        <item>McIver\'s, Newfoundland</item>
+        <item>McKellar, Ontario</item>
+        <item>McLeese Lake, British Columbia</item>
+        <item>McLennan, Alberta</item>
+        <item>McLeod Lake, British Columbia</item>
+        <item>Mcmasterville, Quebec</item>
+        <item>Meacham, Saskatchewan</item>
+        <item>Meadow Lake, Saskatchewan</item>
+        <item>Meaford, Ontario</item>
+        <item>Meander River, Alberta</item>
+        <item>Meath Park, Saskatchewan</item>
+        <item>Medicine Hat, Alberta</item>
+        <item>Meductic, New Brunswick</item>
+        <item>Melbourne, Ontario</item>
+        <item>Melbourne, Quebec</item>
+        <item>Melfort, Saskatchewan</item>
+        <item>Melita, Manitoba</item>
+        <item>Mellin, Quebec</item>
+        <item>Melocheville, Quebec</item>
+        <item>Melrose, Nova Scotia</item>
+        <item>Melville, Saskatchewan</item>
+        <item>Memramcook, New Brunswick</item>
+        <item>Meota, Saskatchewan</item>
+        <item>Mercier, Quebec</item>
+        <item>Merigomish, Nova Scotia</item>
+        <item>Merlin, Ontario</item>
+        <item>Merrickville, Ontario</item>
+        <item>Merritt, British Columbia</item>
+        <item>Metabetchouan, Quebec</item>
+        <item>Metcalfe, Ontario</item>
+        <item>Meteghan, Nova Scotia</item>
+        <item>Metis-sur-Mer, Quebec</item>
+        <item>Miami, Manitoba</item>
+        <item>Mica Creek, British Columbia</item>
+        <item>Midale, Saskatchewan</item>
+        <item>Middle Lake, Saskatchewan</item>
+        <item>Middleton, Nova Scotia</item>
+        <item>Midland, Ontario</item>
+        <item>Midway, British Columbia</item>
+        <item>Milden, Saskatchewan</item>
+        <item>Mildmay, Ontario</item>
+        <item>Milestone, Saskatchewan</item>
+        <item>Milford Bay, Ontario</item>
+        <item>Milk River, Alberta</item>
+        <item>Millbrook, Ontario</item>
+        <item>Millertown, Newfoundland</item>
+        <item>Millet, Alberta</item>
+        <item>Millhaven, Ontario</item>
+        <item>Milltown-Head of Bay D\'Espoir, Newfoundland</item>
+        <item>Millville, New Brunswick</item>
+        <item>Milo, Alberta</item>
+        <item>Milton, Ontario</item>
+        <item>Milverton, Ontario</item>
+        <item>Minaki, Ontario</item>
+        <item>Minburn, Alberta</item>
+        <item>Mindemoya, Ontario</item>
+        <item>Minden, Ontario</item>
+        <item>Mine Centre, Ontario</item>
+        <item>Ming\'s Bight, Newfoundland</item>
+        <item>Miniota, Manitoba</item>
+        <item>Minnedosa, Manitoba</item>
+        <item>Minto, Manitoba</item>
+        <item>Minto, New Brunswick</item>
+        <item>Minton, Saskatchewan</item>
+        <item>Mirabel, Quebec</item>
+        <item>Miramichi, New Brunswick</item>
+        <item>Mirror, Alberta</item>
+        <item>Miscou Island, New Brunswick</item>
+        <item>Missanabie, Ontario</item>
+        <item>Mission, British Columbia</item>
+        <item>Mississauga, Ontario</item>
+        <item>Mistassini, Quebec</item>
+        <item>Mistatim, Saskatchewan</item>
+        <item>Mitchell, Ontario</item>
+        <item>Mohawks Of The Bay of Quinte F, Ontario</item>
+        <item>Moisie, Quebec</item>
+        <item>Molanosa, Saskatchewan</item>
+        <item>Monastery, Nova Scotia</item>
+        <item>Moncton, New Brunswick</item>
+        <item>Monkstown, Newfoundland</item>
+        <item>Monkton, Ontario</item>
+        <item>Mont Bechervaise, Quebec</item>
+        <item>Mont St Grégoire, Quebec</item>
+        <item>Mont-Joli, Quebec</item>
+        <item>Mont-Laurier, Quebec</item>
+        <item>Mont-Louis, Quebec</item>
+        <item>Mont-Rolland, Quebec</item>
+        <item>Mont-Royal, Quebec</item>
+        <item>Mont-St-Hilaire, Quebec</item>
+        <item>Mont-St-Pierre, Quebec</item>
+        <item>Mont-Tremblant, Quebec</item>
+        <item>Montague, Prince Edward Island</item>
+        <item>Montebello, Quebec</item>
+        <item>Montmagny, Quebec</item>
+        <item>Montmartre, Saskatchewan</item>
+        <item>Montney, British Columbia</item>
+        <item>Montreal, Quebec</item>
+        <item>Montreal - Est, Quebec</item>
+        <item>Montréal - Nord, Quebec</item>
+        <item>Montréal - Ouest, Quebec</item>
+        <item>Moonbeam, Ontario</item>
+        <item>Moonstone, Ontario</item>
+        <item>Mooretown, Ontario</item>
+        <item>Moose Creek, Ontario</item>
+        <item>Moose Factory, Ontario</item>
+        <item>Moose Jaw, Saskatchewan</item>
+        <item>Moose Lake, Manitoba</item>
+        <item>Moosomin, Saskatchewan</item>
+        <item>Moosonee, Ontario</item>
+        <item>Morden, Manitoba</item>
+        <item>Morell, Prince Edward Island</item>
+        <item>Morin-Heights, Quebec</item>
+        <item>Morinville, Alberta</item>
+        <item>Morley, Alberta</item>
+        <item>Morrin, Alberta</item>
+        <item>Morris, Manitoba</item>
+        <item>Morrisburg, Ontario</item>
+        <item>Morse, Saskatchewan</item>
+        <item>Morson, Ontario</item>
+        <item>Mortlach, Saskatchewan</item>
+        <item>Mossbank, Saskatchewan</item>
+        <item>Mount Albert, Ontario</item>
+        <item>Mount Brydges, Ontario</item>
+        <item>Mount Carmel-Mitchells Brook-S, Newfoundland</item>
+        <item>Mount Forest, Ontario</item>
+        <item>Mount Hope, Ontario</item>
+        <item>Mount Moriah, Newfoundland</item>
+        <item>Mount Pearl, Newfoundland</item>
+        <item>Mount Pleasant, Ontario</item>
+        <item>Mount Stewart, Prince Edward Island</item>
+        <item>Mount Uniacke, Nova Scotia</item>
+        <item>Moyie, British Columbia</item>
+        <item>Mulgrave, Nova Scotia</item>
+        <item>Mulhurst, Alberta</item>
+        <item>Muncho Lake, British Columbia</item>
+        <item>Mundare, Alberta</item>
+        <item>Murdochville, Quebec</item>
+        <item>Murray River, Prince Edward Island</item>
+        <item>Musgrave Harbour, Newfoundland</item>
+        <item>Musgravetown, Newfoundland</item>
+        <item>Muskoka, Ontario</item>
+        <item>Muskoka Falls, Ontario</item>
+        <item>Muskrat Dam, Ontario</item>
+        <item>Muskrat Dam First Nation, Ontario</item>
+        <item>Musquodoboit Harbour, Nova Scotia</item>
+        <item>Mutton Bay, Quebec</item>
+        <item>Myrnam, Alberta</item>
+        <item>M\'Chigeeng, Ontario</item>
+        <item>Nackawic, New Brunswick</item>
+        <item>Nahanni Butte, Northwest Territories</item>
+        <item>Naicam, Saskatchewan</item>
+        <item>Nain, Newfoundland</item>
+        <item>Nairn, Ontario</item>
+        <item>Naiscoutaing First Nation, Ontario</item>
+        <item>Nakina, Ontario</item>
+        <item>Nakusp, British Columbia</item>
+        <item>Namao, Alberta</item>
+        <item>Nampa, Alberta</item>
+        <item>Nanaimo, British Columbia</item>
+        <item>Nantes, Quebec</item>
+        <item>Nanticoke, Ontario</item>
+        <item>Nanton, Alberta</item>
+        <item>Napanee, Ontario</item>
+        <item>Napierville, Quebec</item>
+        <item>Naramata, British Columbia</item>
+        <item>Natashquan, Quebec</item>
+        <item>Navan, Ontario</item>
+        <item>Nedelec, Quebec</item>
+        <item>Neepawa, Manitoba</item>
+        <item>Neguac, New Brunswick</item>
+        <item>Neidpath, Saskatchewan</item>
+        <item>Neilburg, Saskatchewan</item>
+        <item>Nelson, British Columbia</item>
+        <item>Nelson House, Manitoba</item>
+        <item>Nepean, Ontario</item>
+        <item>Nephton, Ontario</item>
+        <item>Nestor Falls, Ontario</item>
+        <item>Neudorf, Saskatchewan</item>
+        <item>Neustadt, Ontario</item>
+        <item>Neuville, Quebec</item>
+        <item>Neville, Saskatchewan</item>
+        <item>New Aiyansh, British Columbia</item>
+        <item>New Carlisle, Quebec</item>
+        <item>New Dayton, Alberta</item>
+        <item>New Denmark, New Brunswick</item>
+        <item>New Denver, British Columbia</item>
+        <item>New Dundee, Ontario</item>
+        <item>New Germany, Nova Scotia</item>
+        <item>New Glasgow, Nova Scotia</item>
+        <item>New Glasgow, Quebec</item>
+        <item>New Hamburg, Ontario</item>
+        <item>New Harbour, Newfoundland</item>
+        <item>New Haven, Prince Edward Island</item>
+        <item>New Liskeard, Ontario</item>
+        <item>New London, Prince Edward Island</item>
+        <item>New Norway, Alberta</item>
+        <item>New Perlican, Newfoundland</item>
+        <item>New Richmond, Quebec</item>
+        <item>New Ross, Nova Scotia</item>
+        <item>New Sarepta, Alberta</item>
+        <item>New Tecumseth, Ontario</item>
+        <item>New Waterford, Nova Scotia</item>
+        <item>New Westminster, British Columbia</item>
+        <item>New-Wes-Valley, Newfoundland</item>
+        <item>Newbrook, Alberta</item>
+        <item>Newburgh, Ontario</item>
+        <item>Newcastle, Ontario</item>
+        <item>Newdale, Manitoba</item>
+        <item>Newmarket, Ontario</item>
+        <item>Newport, Quebec</item>
+        <item>Newtonville, Ontario</item>
+        <item>Niagara Falls, Ontario</item>
+        <item>Niagara-on-the-Lake, Ontario</item>
+        <item>Nickel Centre, Ontario</item>
+        <item>Nicolet, Quebec</item>
+        <item>Nimpo Lake, British Columbia</item>
+        <item>Nipawin, Saskatchewan</item>
+        <item>Nipigon, Ontario</item>
+        <item>Nipissing First Nation, Ontario</item>
+        <item>Nippers Harbour, Newfoundland</item>
+        <item>Nisku, Alberta</item>
+        <item>Niton Junction, Alberta</item>
+        <item>Niverville, Manitoba</item>
+        <item>Nobel, Ontario</item>
+        <item>Nobleford, Alberta</item>
+        <item>Nobleton, Ontario</item>
+        <item>Noel, Nova Scotia</item>
+        <item>Noelville, Ontario</item>
+        <item>Nokomis, Saskatchewan</item>
+        <item>Norbertville, Quebec</item>
+        <item>Nordegg, Alberta</item>
+        <item>Norman Wells, Northwest Territories</item>
+        <item>Normandin, Quebec</item>
+        <item>Norman\'s Cove-Long Cove, Newfoundland</item>
+        <item>Normetal, Quebec</item>
+        <item>Norquay, Saskatchewan</item>
+        <item>Norris Arm, Newfoundland</item>
+        <item>North Augusta, Ontario</item>
+        <item>North Battleford, Saskatchewan</item>
+        <item>North Bay, Ontario</item>
+        <item>North Gower, Ontario</item>
+        <item>North Hatley, Quebec</item>
+        <item>North Portal, Saskatchewan</item>
+        <item>North Saanich, British Columbia</item>
+        <item>North Spirit Lake, Ontario</item>
+        <item>North Sydney, Nova Scotia</item>
+        <item>North Vancouver, British Columbia</item>
+        <item>North West River, Newfoundland</item>
+        <item>North York, Ontario</item>
+        <item>Northbrook, Ontario</item>
+        <item>Northern Arm, Newfoundland</item>
+        <item>Norton, New Brunswick</item>
+        <item>Norval, Ontario</item>
+        <item>Norway House, Manitoba</item>
+        <item>Norwich, Ontario</item>
+        <item>Norwood, Ontario</item>
+        <item>Notre Dame de Bonsecours, Quebec</item>
+        <item>Notre Dame de Lourdes, Manitoba</item>
+        <item>Notre Dame de Lourdes, Quebec</item>
+        <item>Notre Dame De L\'Ile Perrot, Quebec</item>
+        <item>Notre Dame des Laurentides, Quebec</item>
+        <item>Notre Dame Des Prairies, Quebec</item>
+        <item>Notre Dame Du Portage, Quebec</item>
+        <item>Notre-Dame-de-la-Paix, Quebec</item>
+        <item>Notre-Dame-de-la-Salette, Quebec</item>
+        <item>Notre-Dame-de-Stanbridge, Quebec</item>
+        <item>Notre-Dame-du-Bon-Conseil, Quebec</item>
+        <item>Notre-Dame-du-Lac, Quebec</item>
+        <item>Notre-Dame-du-Laus, Quebec</item>
+        <item>Notre-Dame-du-Nord, Quebec</item>
+        <item>Nouvelle, Quebec</item>
+        <item>Oak Lake, Manitoba</item>
+        <item>Oak Ridges, Ontario</item>
+        <item>Oak River, Manitoba</item>
+        <item>Oakville, Manitoba</item>
+        <item>Oakville, Ontario</item>
+        <item>Oakwood, Ontario</item>
+        <item>Oba, Ontario</item>
+        <item>Ocean Falls, British Columbia</item>
+        <item>Ocean Park, British Columbia</item>
+        <item>Ochre River, Manitoba</item>
+        <item>Odessa, Ontario</item>
+        <item>Odessa, Saskatchewan</item>
+        <item>Ogema, Saskatchewan</item>
+        <item>Ogoki, Ontario</item>
+        <item>Ohsweken, Ontario</item>
+        <item>Oil Springs, Ontario</item>
+        <item>Ojibways of Hiawatha First Nat, Ontario</item>
+        <item>Ojibways of Walpole Island Fir, Ontario</item>
+        <item>Oka, Quebec</item>
+        <item>Okanagan Falls, British Columbia</item>
+        <item>Okotoks, Alberta</item>
+        <item>Old Crow, Yukon</item>
+        <item>Old Perlican, Newfoundland</item>
+        <item>Olds, Alberta</item>
+        <item>Oliver, British Columbia</item>
+        <item>Omemee, Ontario</item>
+        <item>Omerville, Quebec</item>
+        <item>Onaping Falls, Ontario</item>
+        <item>Oneida First Nation, Ontario</item>
+        <item>Onoway, Alberta</item>
+        <item>Opasatika, Ontario</item>
+        <item>Ophir, Ontario</item>
+        <item>Orangeville, Ontario</item>
+        <item>Orford, Quebec</item>
+        <item>Orillia, Ontario</item>
+        <item>Orleans, Ontario</item>
+        <item>Ormiston, Saskatchewan</item>
+        <item>Ormstown, Quebec</item>
+        <item>Oro, Ontario</item>
+        <item>Oromocto, New Brunswick</item>
+        <item>Orono, Ontario</item>
+        <item>Orrville, Ontario</item>
+        <item>Osgoode, Ontario</item>
+        <item>Oshawa, Ontario</item>
+        <item>Osler, Saskatchewan</item>
+        <item>Osoyoos, British Columbia</item>
+        <item>Ottawa, Ontario</item>
+        <item>Otterburn Park, Quebec</item>
+        <item>Otterville, Ontario</item>
+        <item>Outlook, Saskatchewan</item>
+        <item>Outremont, Quebec</item>
+        <item>Owen Sound, Ontario</item>
+        <item>Oxbow, Saskatchewan</item>
+        <item>Oxdrift, Ontario</item>
+        <item>Oxford, Nova Scotia</item>
+        <item>Oxford House, Manitoba</item>
+        <item>Oxford Mills, Ontario</item>
+        <item>Oyama, British Columbia</item>
+        <item>Oyen, Alberta</item>
+        <item>O\'Leary, Prince Edward Island</item>
+        <item>Packs Harbour, Newfoundland</item>
+        <item>Pacquet, Newfoundland</item>
+        <item>Paddockwood, Saskatchewan</item>
+        <item>Paisley, Ontario</item>
+        <item>Pakenham, Ontario</item>
+        <item>Palgrave, Ontario</item>
+        <item>Palmarolle, Quebec</item>
+        <item>Palmer Rapids, Ontario</item>
+        <item>Palmerston, Ontario</item>
+        <item>Pangman, Saskatchewan</item>
+        <item>Papineauville, Quebec</item>
+        <item>Paquette Corner, Ontario</item>
+        <item>Paquetville, New Brunswick</item>
+        <item>Paradise, Newfoundland</item>
+        <item>Paradise Hill, Saskatchewan</item>
+        <item>Paradise River, Newfoundland</item>
+        <item>Paradise Valley, Alberta</item>
+        <item>Parent, Quebec</item>
+        <item>Parham, Ontario</item>
+        <item>Paris, Ontario</item>
+        <item>Parkhill, Ontario</item>
+        <item>Parksville, British Columbia</item>
+        <item>Parrsboro, Nova Scotia</item>
+        <item>Parry Sound, Ontario</item>
+        <item>Parson, British Columbia</item>
+        <item>Pasadena, Newfoundland</item>
+        <item>Pass Lake, Ontario</item>
+        <item>Patuanak, Saskatchewan</item>
+        <item>Paynton, Saskatchewan</item>
+        <item>Peace River, Alberta</item>
+        <item>Peachland, British Columbia</item>
+        <item>Peawanuck, Ontario</item>
+        <item>Peerless Lake, Alberta</item>
+        <item>Peers, Alberta</item>
+        <item>Pefferlaw, Ontario</item>
+        <item>Peggy\'s Cove, Nova Scotia</item>
+        <item>Peguis, Manitoba</item>
+        <item>Pelee Island, Ontario</item>
+        <item>Pelham, Ontario</item>
+        <item>Pelican Narrows, Saskatchewan</item>
+        <item>Pelican Rapids, Manitoba</item>
+        <item>Pelly, Saskatchewan</item>
+        <item>Pelly Crossing, Yukon</item>
+        <item>Pemberton, British Columbia</item>
+        <item>Pembroke, Ontario</item>
+        <item>Penetanguishene, Ontario</item>
+        <item>Penhold, Alberta</item>
+        <item>Pennant, Saskatchewan</item>
+        <item>Pense, Saskatchewan</item>
+        <item>Penticton, British Columbia</item>
+        <item>Perce, Quebec</item>
+        <item>Perdue, Saskatchewan</item>
+        <item>Peribonka, Quebec</item>
+        <item>Perkins, Quebec</item>
+        <item>Perrault Falls, Ontario</item>
+        <item>Perth, Ontario</item>
+        <item>Perth-Andover, New Brunswick</item>
+        <item>Petawawa, Ontario</item>
+        <item>Peterborough, Ontario</item>
+        <item>Peterview, Newfoundland</item>
+        <item>Petit Rocher, New Brunswick</item>
+        <item>Petitcodiac, New Brunswick</item>
+        <item>Petite-Riviere-St-Francois, Quebec</item>
+        <item>Petrolia, Ontario</item>
+        <item>Petty Harbour-Maddox Cove, Newfoundland</item>
+        <item>Philipsburg, Quebec</item>
+        <item>Piapot, Saskatchewan</item>
+        <item>Pickering, Ontario</item>
+        <item>Pickle Lake, Ontario</item>
+        <item>Picton, Ontario</item>
+        <item>Pictou, Nova Scotia</item>
+        <item>Picture Butte, Alberta</item>
+        <item>Pierceland, Saskatchewan</item>
+        <item>Pierrefonds, Quebec</item>
+        <item>Pierreville, Quebec</item>
+        <item>Pikangikum First Nation, Ontario</item>
+        <item>Pikwitonei, Manitoba</item>
+        <item>Pilot Butte, Saskatchewan</item>
+        <item>Pilot Mound, Manitoba</item>
+        <item>Pinawa, Manitoba</item>
+        <item>Pincher Creek, Alberta</item>
+        <item>Pincourt, Quebec</item>
+        <item>Pine Dock, Manitoba</item>
+        <item>Pine Falls, Manitoba</item>
+        <item>Pine River, Manitoba</item>
+        <item>Pineal Lake, Ontario</item>
+        <item>Pinehouse, Saskatchewan</item>
+        <item>Piney, Manitoba</item>
+        <item>Pintendre, Quebec</item>
+        <item>Pitt Meadows, British Columbia</item>
+        <item>Placentia, Newfoundland</item>
+        <item>Plaisance, Quebec</item>
+        <item>Plamondon, Alberta</item>
+        <item>Plantagenet, Ontario</item>
+        <item>Plaster Rock, New Brunswick</item>
+        <item>Plate Cove East, Newfoundland</item>
+        <item>Plato, Saskatchewan</item>
+        <item>Plattsville, Ontario</item>
+        <item>Pleasant Park, Ontario</item>
+        <item>Plenty, Saskatchewan</item>
+        <item>Plessisville, Quebec</item>
+        <item>Plevna, Ontario</item>
+        <item>Plum Coulee, Manitoba</item>
+        <item>Plumas, Manitoba</item>
+        <item>Pohenegamook, Quebec</item>
+        <item>Point Grondine First Nation, Ontario</item>
+        <item>Point Leamington, Newfoundland</item>
+        <item>Point Pelee, Ontario</item>
+        <item>Pointe au Baril, Ontario</item>
+        <item>Pointe Aux Trembles, Quebec</item>
+        <item>Pointe du Bois, Manitoba</item>
+        <item>Pointe-a-la-Croix, Quebec</item>
+        <item>Pointe-au-Pere, Quebec</item>
+        <item>Pointe-aux-Outardes, Quebec</item>
+        <item>Pointe-Calumet, Quebec</item>
+        <item>Pointe-Claire, Quebec</item>
+        <item>Pointe-des-Cascades, Quebec</item>
+        <item>Pointe-des-Monts, Quebec</item>
+        <item>Pointe-Fortune, Quebec</item>
+        <item>Pointe-Lebel, Quebec</item>
+        <item>Ponoka, Alberta</item>
+        <item>Pont-Rouge, Quebec</item>
+        <item>Pont-Viau, Quebec</item>
+        <item>Ponteix, Saskatchewan</item>
+        <item>Pontiac, Quebec</item>
+        <item>Pool\'s Cove, Newfoundland</item>
+        <item>Poplar River, Manitoba</item>
+        <item>Poplarfield, Manitoba</item>
+        <item>Porcupine Plain, Saskatchewan</item>
+        <item>Port Alberni, British Columbia</item>
+        <item>Port Alice, British Columbia</item>
+        <item>Port au Choix, Newfoundland</item>
+        <item>Port au Port West-Aguathuna-Fe, Newfoundland</item>
+        <item>Port Aux Basques, Newfoundland</item>
+        <item>Port Bickerton, Nova Scotia</item>
+        <item>Port Blandford, Newfoundland</item>
+        <item>Port Burwell, Ontario</item>
+        <item>Port Carling, Ontario</item>
+        <item>Port Clements, British Columbia</item>
+        <item>Port Colborne, Ontario</item>
+        <item>Port Coquitlam, British Columbia</item>
+        <item>Port Credit, Ontario</item>
+        <item>Port Cunnington, Ontario</item>
+        <item>Port Dover, Ontario</item>
+        <item>Port Dufferin, Nova Scotia</item>
+        <item>Port Edward, British Columbia</item>
+        <item>Port Elgin, New Brunswick</item>
+        <item>Port Elgin, Ontario</item>
+        <item>Port Franks, Ontario</item>
+        <item>Port Greville, Nova Scotia</item>
+        <item>Port Hardy, British Columbia</item>
+        <item>Port Hawkesbury, Nova Scotia</item>
+        <item>Port Hood, Nova Scotia</item>
+        <item>Port Hope, Ontario</item>
+        <item>Port Hope Simpson, Newfoundland</item>
+        <item>Port La Tour, Nova Scotia</item>
+        <item>Port Lambton, Ontario</item>
+        <item>Port Loring, Ontario</item>
+        <item>Port Maitland, Nova Scotia</item>
+        <item>Port McNeill, British Columbia</item>
+        <item>Port McNicoll, Ontario</item>
+        <item>Port Mellon, British Columbia</item>
+        <item>Port Moody, British Columbia</item>
+        <item>Port Morien, Nova Scotia</item>
+        <item>Port Mouton, Nova Scotia</item>
+        <item>Port Perry, Ontario</item>
+        <item>Port Renfrew, British Columbia</item>
+        <item>Port Rexton, Newfoundland</item>
+        <item>Port Robinson, Ontario</item>
+        <item>Port Rowan, Ontario</item>
+        <item>Port Saunders, Newfoundland</item>
+        <item>Port Stanley, Ontario</item>
+        <item>Port Sydney, Ontario</item>
+        <item>Port Union, Newfoundland</item>
+        <item>Port-Cartier, Quebec</item>
+        <item>Port-Daniel, Quebec</item>
+        <item>Port-Menier, Quebec</item>
+        <item>Portage la Prairie, Manitoba</item>
+        <item>Portage-du-Fort, Quebec</item>
+        <item>Portland, Ontario</item>
+        <item>Portneuf, Quebec</item>
+        <item>Portugal Cove-St. Philip\'s, Newfoundland</item>
+        <item>Poste-de-la-Baleine, Quebec</item>
+        <item>Postville, Newfoundland</item>
+        <item>Pouce Coupe, British Columbia</item>
+        <item>Pouch Cove, Newfoundland</item>
+        <item>Powassan, Ontario</item>
+        <item>Powell River, British Columbia</item>
+        <item>Preeceville, Saskatchewan</item>
+        <item>Prelate, Saskatchewan</item>
+        <item>Prescott, Ontario</item>
+        <item>Prespatou, British Columbia</item>
+        <item>Preston, Ontario</item>
+        <item>Prevost, Quebec</item>
+        <item>Price, Quebec</item>
+        <item>Prince Albert, Saskatchewan</item>
+        <item>Prince George, British Columbia</item>
+        <item>Prince Rupert, British Columbia</item>
+        <item>Princeton, British Columbia</item>
+        <item>Princeton, Newfoundland</item>
+        <item>Princeton, Ontario</item>
+        <item>Princeville, Quebec</item>
+        <item>Prophet River, British Columbia</item>
+        <item>Provost, Alberta</item>
+        <item>Prud\'homme, Saskatchewan</item>
+        <item>Pubnico, Nova Scotia</item>
+        <item>Puce, Ontario</item>
+        <item>Pugwash, Nova Scotia</item>
+        <item>Punnichy, Saskatchewan</item>
+        <item>Puvirnituq, Quebec</item>
+        <item>Quadra Island, British Columbia</item>
+        <item>Qualicum Beach, British Columbia</item>
+        <item>Quebec, Quebec</item>
+        <item>Queen Charlotte, British Columbia</item>
+        <item>Queensport, Nova Scotia</item>
+        <item>Queenston, Ontario</item>
+        <item>Queensville, Ontario</item>
+        <item>Quesnel, British Columbia</item>
+        <item>Quill Lake, Saskatchewan</item>
+        <item>Quispamsis, New Brunswick</item>
+        <item>Quyon, Quebec</item>
+        <item>Qu\'Appelle, Saskatchewan</item>
+        <item>Rabbit Lake, Saskatchewan</item>
+        <item>Radisson, Quebec</item>
+        <item>Radisson, Saskatchewan</item>
+        <item>Radium Hot Springs, British Columbia</item>
+        <item>Radville, Saskatchewan</item>
+        <item>Radway, Alberta</item>
+        <item>Rae, Northwest Territories</item>
+        <item>Rae Lakes, Northwest Territories</item>
+        <item>Rainbow Lake, Alberta</item>
+        <item>Rainy Lake First Nation, Ontario</item>
+        <item>Rainy River, Ontario</item>
+        <item>Raith, Ontario</item>
+        <item>Raleigh, Newfoundland</item>
+        <item>Ralston, Alberta</item>
+        <item>Ramea, Newfoundland</item>
+        <item>Ramore, Ontario</item>
+        <item>Rankin Inlet, Nunavut</item>
+        <item>Rapid City, Manitoba</item>
+        <item>Rathwell, Manitoba</item>
+        <item>Rawdon, Quebec</item>
+        <item>Raymond, Alberta</item>
+        <item>Raymore, Saskatchewan</item>
+        <item>Rayside-Balfour, Ontario</item>
+        <item>Red Bank, New Brunswick</item>
+        <item>Red Bay, Newfoundland</item>
+        <item>Red Deer, Alberta</item>
+        <item>Red Lake, Ontario</item>
+        <item>Red Rock, British Columbia</item>
+        <item>Red Rock, Ontario</item>
+        <item>Red Sucker Lake, Manitoba</item>
+        <item>Redbridge, Ontario</item>
+        <item>Redcliff, Alberta</item>
+        <item>Redditt, Ontario</item>
+        <item>Redvers, Saskatchewan</item>
+        <item>Redwater, Alberta</item>
+        <item>Reefs Harbour, Newfoundland</item>
+        <item>Regina, Saskatchewan</item>
+        <item>Regina Beach, Saskatchewan</item>
+        <item>Remigny, Quebec</item>
+        <item>Rencontre East, Newfoundland</item>
+        <item>Renfrew, Ontario</item>
+        <item>Rennie, Manitoba</item>
+        <item>Repentigny, Quebec</item>
+        <item>Réserve faunique de Rimouski, Quebec</item>
+        <item>Réserve faunique la Vérendrye, Quebec</item>
+        <item>Réserves fauniques de Matane e, Quebec</item>
+        <item>Resolute, Nunavut</item>
+        <item>Reston, Manitoba</item>
+        <item>Restoule, Ontario</item>
+        <item>Revelstoke, British Columbia</item>
+        <item>Rhein, Saskatchewan</item>
+        <item>Riceton, Saskatchewan</item>
+        <item>Richelieu, Quebec</item>
+        <item>Richibucto, New Brunswick</item>
+        <item>Richmond, British Columbia</item>
+        <item>Richmond, Ontario</item>
+        <item>Richmond, Quebec</item>
+        <item>Richmond Hill, Ontario</item>
+        <item>Richmound, Saskatchewan</item>
+        <item>Ridgedale, Saskatchewan</item>
+        <item>Ridgetown, Ontario</item>
+        <item>Ridgeway, Ontario</item>
+        <item>Rigaud, Quebec</item>
+        <item>Rigolet, Newfoundland</item>
+        <item>Rimbey, Alberta</item>
+        <item>Rimouski, Quebec</item>
+        <item>Rimouski-Est, Quebec</item>
+        <item>Riondel, British Columbia</item>
+        <item>Ripley, Ontario</item>
+        <item>Ripon, Quebec</item>
+        <item>Riske Creek, British Columbia</item>
+        <item>River Hebert, Nova Scotia</item>
+        <item>River John, Nova Scotia</item>
+        <item>River of Ponds, Newfoundland</item>
+        <item>Riverhurst, Saskatchewan</item>
+        <item>Riverport, Nova Scotia</item>
+        <item>Rivers, Manitoba</item>
+        <item>Riverton, Manitoba</item>
+        <item>Riverview, New Brunswick</item>
+        <item>Riviere-a-Pierre, Quebec</item>
+        <item>Riviere-au-Renard, Quebec</item>
+        <item>Riviere-au-Tonnerre, Quebec</item>
+        <item>Riviere-Beaudette, Quebec</item>
+        <item>Riviere-Bleue, Quebec</item>
+        <item>Riviere-du-Loup, Quebec</item>
+        <item>Riviere-Heva, Quebec</item>
+        <item>Riviere-St-Jean, Quebec</item>
+        <item>Robb, Alberta</item>
+        <item>Robertsonville, Quebec</item>
+        <item>Robert\'s Arm, Newfoundland</item>
+        <item>Roberval, Quebec</item>
+        <item>Roblin, Manitoba</item>
+        <item>Rocanville, Saskatchewan</item>
+        <item>Rochebaucourt, Quebec</item>
+        <item>Rochester, Alberta</item>
+        <item>Rock Creek, British Columbia</item>
+        <item>Rock Forest, Quebec</item>
+        <item>Rockglen, Saskatchewan</item>
+        <item>Rockland, Ontario</item>
+        <item>Rockwood, Ontario</item>
+        <item>Rocky Harbour, Newfoundland</item>
+        <item>Rocky Mountain House, Alberta</item>
+        <item>Rockyford, Alberta</item>
+        <item>Roddickton, Newfoundland</item>
+        <item>Rodney, Ontario</item>
+        <item>Rogersville, New Brunswick</item>
+        <item>Roland, Manitoba</item>
+        <item>Rolla, British Columbia</item>
+        <item>Rollet, Quebec</item>
+        <item>Rolling Hills, Alberta</item>
+        <item>Rolphton, Ontario</item>
+        <item>Rondeau, Ontario</item>
+        <item>Rorketon, Manitoba</item>
+        <item>Rosalind, Alberta</item>
+        <item>Rose Blanche-Harbour Le Cou, Newfoundland</item>
+        <item>Rose Valley, Saskatchewan</item>
+        <item>Rosebud, Alberta</item>
+        <item>Rosemere, Quebec</item>
+        <item>Roseneath, Ontario</item>
+        <item>Rosetown, Saskatchewan</item>
+        <item>Ross River, Yukon</item>
+        <item>Rossburn, Manitoba</item>
+        <item>Rosseau, Ontario</item>
+        <item>Rossland, British Columbia</item>
+        <item>Rosthern, Saskatchewan</item>
+        <item>Rothesay, New Brunswick</item>
+        <item>Rougemont, Quebec</item>
+        <item>Rouleau, Saskatchewan</item>
+        <item>Rouyn-Noranda, Quebec</item>
+        <item>Roxboro, Quebec</item>
+        <item>Roxton Falls, Quebec</item>
+        <item>Roxton Pond, Quebec</item>
+        <item>Rumsey, Alberta</item>
+        <item>Rushoon, Newfoundland</item>
+        <item>Russell, Manitoba</item>
+        <item>Russell, Ontario</item>
+        <item>Rusticoville, Prince Edward Island</item>
+        <item>Ruthven, Ontario</item>
+        <item>Rycroft, Alberta</item>
+        <item>Ryley, Alberta</item>
+        <item>Saanich, British Columbia</item>
+        <item>Sabrevois, Quebec</item>
+        <item>Sachigo First Nation Reserve 1, Ontario</item>
+        <item>Sackville, New Brunswick</item>
+        <item>Sacre Coeur, Quebec</item>
+        <item>Saint Alexandre D\'Iberville, Quebec</item>
+        <item>Saint Alphonse de Granby, Quebec</item>
+        <item>Saint Amable, Quebec</item>
+        <item>Saint Andrews, New Brunswick</item>
+        <item>Saint Antoine Des Laurentides, Quebec</item>
+        <item>Saint Antoine Sur Richelieu, Quebec</item>
+        <item>Saint Antonin, Quebec</item>
+        <item>Saint Athanase, Quebec</item>
+        <item>Saint Calixte, Quebec</item>
+        <item>Saint Charles Borromee, Quebec</item>
+        <item>Saint Charles Sur Richelieu, Quebec</item>
+        <item>Saint Christophe D\'Arthabaska, Quebec</item>
+        <item>Saint Clair Beach, Ontario</item>
+        <item>Saint Colomban, Quebec</item>
+        <item>Saint Denis De Brompton, Quebec</item>
+        <item>Saint Denis Sur Richelieu, Quebec</item>
+        <item>Saint Esprit, Quebec</item>
+        <item>Saint Etienne de Beauharnois, Quebec</item>
+        <item>Saint Etienne de Lauzon, Quebec</item>
+        <item>Saint Gerard Majella, Quebec</item>
+        <item>Saint Isidore de la Prairie, Quebec</item>
+        <item>Saint Jean Baptiste, Quebec</item>
+        <item>Saint Jean D\'Orleans, Quebec</item>
+        <item>Saint Joachim, Quebec</item>
+        <item>Saint John, New Brunswick</item>
+        <item>Saint Joseph De La Pointe De L, Quebec</item>
+        <item>Saint Laurent D\'Orleans, Quebec</item>
+        <item>Saint Lazare De Vaudreuil, Quebec</item>
+        <item>Saint Lin Laurentides, Quebec</item>
+        <item>Saint Marc Sur Richelieu, Quebec</item>
+        <item>Saint Mathias Sur Richelieu, Quebec</item>
+        <item>Saint Mathieu de Beloeil, Quebec</item>
+        <item>Saint Mathieu de la Prairie, Quebec</item>
+        <item>Saint Maurice, Quebec</item>
+        <item>Saint Norbert D\'Arthabaska, Quebec</item>
+        <item>Saint Paul D\'Industrie, Quebec</item>
+        <item>Saint Philippe, Quebec</item>
+        <item>Saint Pierre D\'Orleans, Quebec</item>
+        <item>Saint Robert, Quebec</item>
+        <item>Saint Roch De L\'Achigan, Quebec</item>
+        <item>Saint Roch De Richelieu, Quebec</item>
+        <item>Saint Sulpice, Quebec</item>
+        <item>Saint Thomas, Quebec</item>
+        <item>Saint Urbain Premier, Quebec</item>
+        <item>Saint Valere, Quebec</item>
+        <item>Saint Victoire de Sorel, Quebec</item>
+        <item>Saint-Alexis-de-Montcalm, Quebec</item>
+        <item>Saint-Côme, Quebec</item>
+        <item>Saint-Donat, Quebec</item>
+        <item>Saint-Élie, Quebec</item>
+        <item>Saint-Élie-d\'Orford, Quebec</item>
+        <item>Saint-Ferdinand, Quebec</item>
+        <item>Saint-Ferréol-les-neiges, Quebec</item>
+        <item>Saint-Hubert, Quebec</item>
+        <item>Saint-Hyacinthe, Quebec</item>
+        <item>Saint-Michel-des-Saints, Quebec</item>
+        <item>Sainte Angele De Monnoir, Quebec</item>
+        <item>Sainte Ann De Sorel, Quebec</item>
+        <item>Sainte Brigide D\'Iberville, Quebec</item>
+        <item>Sainte Cecile De Milton, Quebec</item>
+        <item>Sainte Dorotheé, Quebec</item>
+        <item>Sainte Famille, Quebec</item>
+        <item>Sainte Marie Salome, Quebec</item>
+        <item>Sainte Marthe Du Cap, Quebec</item>
+        <item>Sainte Sophie, Quebec</item>
+        <item>Sainte Therese De Blainville, Quebec</item>
+        <item>Salaberry-de-Valleyfield, Quebec</item>
+        <item>Salem, Ontario</item>
+        <item>Salisbury, New Brunswick</item>
+        <item>Salluit, Quebec</item>
+        <item>Salmo, British Columbia</item>
+        <item>Salmon Arm, British Columbia</item>
+        <item>Salmon Cove, Newfoundland</item>
+        <item>Salmon Valley, British Columbia</item>
+        <item>Salt Springs, Nova Scotia</item>
+        <item>Saltcoats, Saskatchewan</item>
+        <item>Salvage, Newfoundland</item>
+        <item>Sandspit, British Columbia</item>
+        <item>Sandwich, Ontario</item>
+        <item>Sandy Bay, Saskatchewan</item>
+        <item>Sandy Cove Acres, Ontario</item>
+        <item>Sandy Lake, Manitoba</item>
+        <item>Sandy Lake, Ontario</item>
+        <item>Sandy Lake First Nation, Ontario</item>
+        <item>Sanford, Manitoba</item>
+        <item>Sangudo, Alberta</item>
+        <item>Sanmaur, Quebec</item>
+        <item>Sapawe, Ontario</item>
+        <item>Sarnia, Ontario</item>
+        <item>Saskatchewan River Crossing, Alberta</item>
+        <item>Saskatoon, Saskatchewan</item>
+        <item>Sauble Beach, Ontario</item>
+        <item>Saugeen First Nation, Ontario</item>
+        <item>Saulnierville, Nova Scotia</item>
+        <item>Sault Ste. Marie, Ontario</item>
+        <item>Sault-au-Mouton, Quebec</item>
+        <item>Savant Lake, Ontario</item>
+        <item>Savona, British Columbia</item>
+        <item>Sawyerville, Quebec</item>
+        <item>Sayabec, Quebec</item>
+        <item>Sayward, British Columbia</item>
+        <item>Scarborough, Ontario</item>
+        <item>Sceptre, Saskatchewan</item>
+        <item>Schefferville, Quebec</item>
+        <item>Schomberg, Ontario</item>
+        <item>Schreiber, Ontario</item>
+        <item>Schuler, Alberta</item>
+        <item>Scotland, Ontario</item>
+        <item>Scotstown, Quebec</item>
+        <item>Scott, Saskatchewan</item>
+        <item>Seaforth, Ontario</item>
+        <item>Seal Cove, Newfoundland</item>
+        <item>Searchmont, Ontario</item>
+        <item>Seba Beach, Alberta</item>
+        <item>Sebright, Ontario</item>
+        <item>Sebringville, Ontario</item>
+        <item>Sechelt, British Columbia</item>
+        <item>Sedgewick, Alberta</item>
+        <item>Sedley, Saskatchewan</item>
+        <item>Seeleys Bay, Ontario</item>
+        <item>Selby, Ontario</item>
+        <item>Seldom-Little Seldom, Newfoundland</item>
+        <item>Selkirk, Manitoba</item>
+        <item>Selkirk, Ontario</item>
+        <item>Semans, Saskatchewan</item>
+        <item>Senneterre, Quebec</item>
+        <item>Senneville, Quebec</item>
+        <item>Sept-Iles, Quebec</item>
+        <item>Serpent River First Nation, Ontario</item>
+        <item>Seven Persons, Alberta</item>
+        <item>Severn Bridge, Ontario</item>
+        <item>Sexsmith, Alberta</item>
+        <item>Shakespeare, Ontario</item>
+        <item>Shalalth, British Columbia</item>
+        <item>Shamattawa, Manitoba</item>
+        <item>Shannonville, Ontario</item>
+        <item>Sharbot Lake, Ontario</item>
+        <item>Shaunavon, Saskatchewan</item>
+        <item>Shawanaga First Nation, Ontario</item>
+        <item>Shawbridge, Quebec</item>
+        <item>Shawinigan, Quebec</item>
+        <item>Shawinigan-Sud, Quebec</item>
+        <item>Shawville, Quebec</item>
+        <item>Shebandowan, Ontario</item>
+        <item>Shedden, Ontario</item>
+        <item>Shediac, New Brunswick</item>
+        <item>Shefford, Quebec</item>
+        <item>Sheho, Saskatchewan</item>
+        <item>Shelburne, Nova Scotia</item>
+        <item>Shelburne, Ontario</item>
+        <item>Shell Lake, Saskatchewan</item>
+        <item>Shellbrook, Saskatchewan</item>
+        <item>Sherbrooke, Nova Scotia</item>
+        <item>Sherbrooke, Quebec</item>
+        <item>Sherwood Park, Alberta</item>
+        <item>Shigawake, Quebec</item>
+        <item>Shilo, Manitoba</item>
+        <item>Shippagan, New Brunswick</item>
+        <item>Shipshaw, Quebec</item>
+        <item>Shoal Lake, Manitoba</item>
+        <item>Shubenacadie, Nova Scotia</item>
+        <item>Sibbald, Alberta</item>
+        <item>Sicamous, British Columbia</item>
+        <item>Sidney, British Columbia</item>
+        <item>Sidney, Manitoba</item>
+        <item>Sifton, Manitoba</item>
+        <item>Sillery, Quebec</item>
+        <item>Silver Valley, Alberta</item>
+        <item>Silver Water, Ontario</item>
+        <item>Simcoe, Ontario</item>
+        <item>Simpson, Saskatchewan</item>
+        <item>Sintaluta, Saskatchewan</item>
+        <item>Sioux Lookout, Ontario</item>
+        <item>Sioux Narrows, Ontario</item>
+        <item>Six Nations of the Grand River, Ontario</item>
+        <item>Skookumchuck, British Columbia</item>
+        <item>Slave Lake, Alberta</item>
+        <item>Slocan, British Columbia</item>
+        <item>Small Point-Broad Cove-Blackhe, Newfoundland</item>
+        <item>Smeaton, Saskatchewan</item>
+        <item>Smiley, Saskatchewan</item>
+        <item>Smith, Alberta</item>
+        <item>Smithers, British Columbia</item>
+        <item>Smiths Falls, Ontario</item>
+        <item>Smithville, Ontario</item>
+        <item>Smoky Lake, Alberta</item>
+        <item>Smooth Rock Falls, Ontario</item>
+        <item>Snelgrove, Ontario</item>
+        <item>Snow Lake, Manitoba</item>
+        <item>Snowflake, Manitoba</item>
+        <item>Sointula, British Columbia</item>
+        <item>Sombra, Ontario</item>
+        <item>Somerset, Manitoba</item>
+        <item>Sooke, British Columbia</item>
+        <item>Sorel-Tracy, Quebec</item>
+        <item>Sorrento, British Columbia</item>
+        <item>Souris, Manitoba</item>
+        <item>Souris, Prince Edward Island</item>
+        <item>South Brook, Newfoundland</item>
+        <item>South Indian Lake, Manitoba</item>
+        <item>South Lake, Prince Edward Island</item>
+        <item>South Mountain, Ontario</item>
+        <item>South River, Newfoundland</item>
+        <item>South River, Ontario</item>
+        <item>South Slocan, British Columbia</item>
+        <item>Southampton, Nova Scotia</item>
+        <item>Southampton, Ontario</item>
+        <item>Southend, Saskatchewan</item>
+        <item>Southern Harbour, Newfoundland</item>
+        <item>Southey, Saskatchewan</item>
+        <item>Spalding, Saskatchewan</item>
+        <item>Spaniard\'s Bay, Newfoundland</item>
+        <item>Spanish, Ontario</item>
+        <item>Sparta, Ontario</item>
+        <item>Sparwood, British Columbia</item>
+        <item>Speers, Saskatchewan</item>
+        <item>Spencerville, Ontario</item>
+        <item>Spences Bridge, British Columbia</item>
+        <item>Sperling, Manitoba</item>
+        <item>Spillimacheen, British Columbia</item>
+        <item>Spirit River, Alberta</item>
+        <item>Spiritwood, Saskatchewan</item>
+        <item>Split Lake, Manitoba</item>
+        <item>Spotted Island, Newfoundland</item>
+        <item>Sprague, Manitoba</item>
+        <item>Springdale, Newfoundland</item>
+        <item>Springfield, New Brunswick</item>
+        <item>Springfield, Nova Scotia</item>
+        <item>Springhill, Nova Scotia</item>
+        <item>Springside, Saskatchewan</item>
+        <item>Spruce Grove, Alberta</item>
+        <item>Spruce View, Alberta</item>
+        <item>Sprucedale, Ontario</item>
+        <item>Spy Hill, Saskatchewan</item>
+        <item>Squamish, British Columbia</item>
+        <item>Squatec, Quebec</item>
+        <item>St-Adelphe, Quebec</item>
+        <item>St-Adolphe-de-Dudswell, Quebec</item>
+        <item>St-Adolphe-d\'Howard, Quebec</item>
+        <item>St-Agapit, Quebec</item>
+        <item>St-Aime, Quebec</item>
+        <item>St-Albert, Quebec</item>
+        <item>St-Alexandre-de-Kamouraska, Quebec</item>
+        <item>St-Alexis-de-Matapedia, Quebec</item>
+        <item>St-Alexis-des-Monts, Quebec</item>
+        <item>St-Alphonse-Rodriguez, Quebec</item>
+        <item>St-Andre, Quebec</item>
+        <item>St-Andre-Avellin, Quebec</item>
+        <item>St-Andre-du-Lac-St-Jean, Quebec</item>
+        <item>St-Andre-Est, Quebec</item>
+        <item>St-Anselme, Quebec</item>
+        <item>St-Antoine, New Brunswick</item>
+        <item>St-Antoine, Quebec</item>
+        <item>St-Antoine-de-Tilly, Quebec</item>
+        <item>St-Apollinaire, Quebec</item>
+        <item>St-Augustin-de-Desmaures, Quebec</item>
+        <item>St-Barnabe, Quebec</item>
+        <item>St-Barthelemy, Quebec</item>
+        <item>St-Basile, New Brunswick</item>
+        <item>St-Basile-le-Grand, Quebec</item>
+        <item>St-Basile-Sud, Quebec</item>
+        <item>St-Blaise-sur-Richelieu, Quebec</item>
+        <item>St-Boniface-de-Shawinigan, Quebec</item>
+        <item>St-Bruno, Quebec</item>
+        <item>St-Bruno-de-Montarville, Quebec</item>
+        <item>St-Calixte-de-Kilkenny, Quebec</item>
+        <item>St-Casimir, Quebec</item>
+        <item>St-Celestin, Quebec</item>
+        <item>St-Cesaire, Quebec</item>
+        <item>St-Charles-de-Bellechasse, Quebec</item>
+        <item>St-Chrysostome, Quebec</item>
+        <item>St-Clet, Quebec</item>
+        <item>St-Constant, Quebec</item>
+        <item>St-Cyrille-de-Wendover, Quebec</item>
+        <item>St-Damase, Quebec</item>
+        <item>St-Damien-de-Buckland, Quebec</item>
+        <item>St-Denis, Quebec</item>
+        <item>St-Edouard-de-Lotbiniere, Quebec</item>
+        <item>St-Eleuthere, Quebec</item>
+        <item>St-Emile, Quebec</item>
+        <item>St-Emile-de-Suffolk, Quebec</item>
+        <item>St-Ephrem-de-Beauce, Quebec</item>
+        <item>St-Ephrem-de-Tring, Quebec</item>
+        <item>St-Eugene, Ontario</item>
+        <item>St-Eugene-de-Guigues, Quebec</item>
+        <item>St-Eustache, Quebec</item>
+        <item>St-Fabien-de-Panet, Quebec</item>
+        <item>St-Felicien, Quebec</item>
+        <item>St-Felix-de-Kingsey, Quebec</item>
+        <item>St-Felix-de-Valois, Quebec</item>
+        <item>St-Fidele-de-Mont-Murray, Quebec</item>
+        <item>St-Flavien, Quebec</item>
+        <item>St-Francois-du-Lac, Quebec</item>
+        <item>St-Fulgence, Quebec</item>
+        <item>St-Gabriel, Quebec</item>
+        <item>St-Gabriel-de-Brandon, Quebec</item>
+        <item>St-Gedeon, Quebec</item>
+        <item>St-Georges, Quebec</item>
+        <item>St-Georges-de-Beauce, Quebec</item>
+        <item>St-Georges-de-Cacouna, Quebec</item>
+        <item>St-Gerard, Quebec</item>
+        <item>St-Germain-de-Grantham, Quebec</item>
+        <item>St-Gregoire-de-Greenlay, Quebec</item>
+        <item>St-Guillaume, Quebec</item>
+        <item>St-Hilarion, Quebec</item>
+        <item>St-Hippolyte, Quebec</item>
+        <item>St-Honore-de-Beauce, Quebec</item>
+        <item>St-Honore-de-Chicoutimi, Quebec</item>
+        <item>St-Hugues, Quebec</item>
+        <item>St-Irenee, Quebec</item>
+        <item>St-Isidore, New Brunswick</item>
+        <item>St-Jacques, Quebec</item>
+        <item>St-Jean-Chrysostome, Quebec</item>
+        <item>St-Jean-de-Dieu, Quebec</item>
+        <item>St-Jean-de-Matha, Quebec</item>
+        <item>St-Jean-Port-Joli, Quebec</item>
+        <item>St-Jean-sur-Richelieu, Quebec</item>
+        <item>St-Jerome, Quebec</item>
+        <item>St-Joseph-de-Beauce, Quebec</item>
+        <item>St-Joseph-de-la-Rive, Quebec</item>
+        <item>St-Joseph-de-Sorel, Quebec</item>
+        <item>St-Jovite, Quebec</item>
+        <item>St-Jude, Quebec</item>
+        <item>St-Just-de-Bretenieres, Quebec</item>
+        <item>St-Lambert, Quebec</item>
+        <item>St-Lambert-de-Lauzon, Quebec</item>
+        <item>St-Laurent, Quebec</item>
+        <item>St-Leon-le-Grand, Quebec</item>
+        <item>St-Leonard, Quebec</item>
+        <item>St-Leonard-d\'Aston, Quebec</item>
+        <item>St-Liboire, Quebec</item>
+        <item>St-Lin, Quebec</item>
+        <item>St-Louis de Kent, New Brunswick</item>
+        <item>St-Louis-de-France, Quebec</item>
+        <item>St-Luc, Quebec</item>
+        <item>St-Ludger, Quebec</item>
+        <item>St-Magloire, Quebec</item>
+        <item>St-Malachie, Quebec</item>
+        <item>St-Malo, Quebec</item>
+        <item>St-Marc-des-Carrieres, Quebec</item>
+        <item>St-Methode-de-Frontenac, Quebec</item>
+        <item>St-Michel-de-Bellechasse, Quebec</item>
+        <item>St-Moose, Quebec</item>
+        <item>St-Nazaire-d\'Acton, Quebec</item>
+        <item>St-Nicolas, Quebec</item>
+        <item>St-Noel, Quebec</item>
+        <item>St-Odilon-de-Cranbourne, Quebec</item>
+        <item>St-Ours, Quebec</item>
+        <item>St-Pacome, Quebec</item>
+        <item>St-Pamphile, Quebec</item>
+        <item>St-Pascal, Quebec</item>
+        <item>St-Patrice-de-Beaurivage, Quebec</item>
+        <item>St-Paul-de-Montminy, Quebec</item>
+        <item>St-Paul-d\'Abbotsford, Quebec</item>
+        <item>St-Paulin, Quebec</item>
+        <item>St-Philippe-de-Neri, Quebec</item>
+        <item>St-Pie, Quebec</item>
+        <item>St-Pie-de-Guire, Quebec</item>
+        <item>St-Pierre, Quebec</item>
+        <item>St-Pierre-de-Wakefield, Quebec</item>
+        <item>St-Pierre-Jolys, Manitoba</item>
+        <item>St-Pierre-les-Becquets, Quebec</item>
+        <item>St-Polycarpe, Quebec</item>
+        <item>St-Prime, Quebec</item>
+        <item>St-Prosper-de-Dorchester, Quebec</item>
+        <item>St-Quentin, New Brunswick</item>
+        <item>St-Raymond, Quebec</item>
+        <item>St-Redempteur, Quebec</item>
+        <item>St-Remi, Quebec</item>
+        <item>St-Rene-de-Matane, Quebec</item>
+        <item>St-Roch-de-Mekinac, Quebec</item>
+        <item>St-Roch-des-Aulnaies, Quebec</item>
+        <item>St-Romuald, Quebec</item>
+        <item>St-Sauveur, Quebec</item>
+        <item>St-Sauveur-des-Monts, Quebec</item>
+        <item>St-Simeon, Quebec</item>
+        <item>St-Simon-de-Bagot, Quebec</item>
+        <item>St-Simon-de-Rimouski, Quebec</item>
+        <item>St-Sylvere, Quebec</item>
+        <item>St-Sylvestre, Quebec</item>
+        <item>St-Theophile, Quebec</item>
+        <item>St-Thomas-d\'Aquin, Quebec</item>
+        <item>St-Timothee, Quebec</item>
+        <item>St-Tite, Quebec</item>
+        <item>St-Tite-des-Caps, Quebec</item>
+        <item>St-Ubalde, Quebec</item>
+        <item>St-Ulric, Quebec</item>
+        <item>St-Urbain, Quebec</item>
+        <item>St-Victor, Quebec</item>
+        <item>St-Wenceslas, Quebec</item>
+        <item>St-Zacharie, Quebec</item>
+        <item>St-Zenon, Quebec</item>
+        <item>St-Zephirin, Quebec</item>
+        <item>St-Zotique, Quebec</item>
+        <item>St. Alban\'s, Newfoundland</item>
+        <item>St. Albert, Alberta</item>
+        <item>St. Ambroise de Chicoutimi, Quebec</item>
+        <item>St. Anthony, Newfoundland</item>
+        <item>St. Basile de Portneuf, Quebec</item>
+        <item>St. Benedict, Saskatchewan</item>
+        <item>St. Bernard de Dorchester, Quebec</item>
+        <item>St. Bernard\'s-Jacques Fontaine, Newfoundland</item>
+        <item>St. Brendan\'s, Newfoundland</item>
+        <item>St. Bride\'s, Newfoundland</item>
+        <item>St. Brieux, Saskatchewan</item>
+        <item>St. Catharines, Ontario</item>
+        <item>St. Charles, Ontario</item>
+        <item>St. Claude, Manitoba</item>
+        <item>St. Clements, Ontario</item>
+        <item>St. Come de Kennebec, Quebec</item>
+        <item>St. Davids, Ontario</item>
+        <item>St. Edouard de Frampton, Quebec</item>
+        <item>St. Fabien de Rimouski, Quebec</item>
+        <item>St. Ferdinand d\'Halifax, Quebec</item>
+        <item>St. Fidele, Quebec</item>
+        <item>St. Francois Xavier, Manitoba</item>
+        <item>St. Gabriel de Rimouski, Quebec</item>
+        <item>St. Gedeon de Beauce, Quebec</item>
+        <item>St. George, New Brunswick</item>
+        <item>St. George, Ontario</item>
+        <item>St. George\'s, Newfoundland</item>
+        <item>St. Gregoire de Nicolet, Quebec</item>
+        <item>St. Gregor, Saskatchewan</item>
+        <item>St. Henri de Levis, Quebec</item>
+        <item>St. Honore, Quebec</item>
+        <item>St. Isidore de Prescott, Ontario</item>
+        <item>St. Jacobs, Ontario</item>
+        <item>St. Jacques-Coomb\'s Cove, Newfoundland</item>
+        <item>St. Jean Baptiste, Manitoba</item>
+        <item>St. John\'s, Newfoundland</item>
+        <item>St. Laurent, Manitoba</item>
+        <item>St. Lawrence, Newfoundland</item>
+        <item>St. Lazare, Manitoba</item>
+        <item>St. Leon De Chic., Quebec</item>
+        <item>St. Leonard, New Brunswick</item>
+        <item>St. Lewis, Newfoundland</item>
+        <item>St. Louis, Saskatchewan</item>
+        <item>St. Lunaire-Griquet, Newfoundland</item>
+        <item>St. Margaret Village, Nova Scotia</item>
+        <item>St. Martin de Beauce, Quebec</item>
+        <item>St. Martins, New Brunswick</item>
+        <item>St. Marys, Ontario</item>
+        <item>St. Mary\'s, Newfoundland</item>
+        <item>St. Michael, Alberta</item>
+        <item>St. Moise, Quebec</item>
+        <item>St. Paul, Alberta</item>
+        <item>St. Peters, Prince Edward Island</item>
+        <item>St. Peter\'s, Nova Scotia</item>
+        <item>St. Raphael de Bellechasse, Quebec</item>
+        <item>St. Regis, Ontario</item>
+        <item>St. Sebastien, Quebec</item>
+        <item>St. Stanislas de Champlain, Quebec</item>
+        <item>St. Stephen, New Brunswick</item>
+        <item>St. Theodore de Chertsey, Quebec</item>
+        <item>St. Thomas, Ontario</item>
+        <item>St. Victor de Beauce, Quebec</item>
+        <item>St. Vincent de Paul, Quebec</item>
+        <item>St. Vincent\'s-St. Stephen\'s-Pe, Newfoundland</item>
+        <item>St. Walburg, Saskatchewan</item>
+        <item>Stand Off, Alberta</item>
+        <item>Standard, Alberta</item>
+        <item>Stanley, New Brunswick</item>
+        <item>Stanley Mission, Saskatchewan</item>
+        <item>Stanstead, Quebec</item>
+        <item>Star City, Saskatchewan</item>
+        <item>Starbuck, Manitoba</item>
+        <item>Stavely, Alberta</item>
+        <item>Stayner, Ontario</item>
+        <item>Ste-Adele, Quebec</item>
+        <item>Ste-Agathe, Quebec</item>
+        <item>Ste-Agathe-des-Monts, Quebec</item>
+        <item>Ste-Agathe-Sud, Quebec</item>
+        <item>Ste-Anne-de-Beaupre, Quebec</item>
+        <item>Ste-Anne-de-Bellevue, Quebec</item>
+        <item>Ste-Anne-de-la-Perade, Quebec</item>
+        <item>Ste-Anne-de-Madawaska, New Brunswick</item>
+        <item>Ste-Anne-de-Portneuf, Quebec</item>
+        <item>Ste-Anne-des-Monts, Quebec</item>
+        <item>Ste-Anne-des-Plaines, Quebec</item>
+        <item>Ste-Anne-du-Lac, Quebec</item>
+        <item>Ste-Blandine, Quebec</item>
+        <item>Ste-Brigitte-de-Laval, Quebec</item>
+        <item>Ste-Catherine, Quebec</item>
+        <item>Ste-Clotilde-de-Horton, Quebec</item>
+        <item>Ste-Eulalie, Quebec</item>
+        <item>Ste-Felicite, Quebec</item>
+        <item>Ste-Foy, Quebec</item>
+        <item>Ste-Genevieve, Quebec</item>
+        <item>Ste-Helene-de-Bagot, Quebec</item>
+        <item>Ste-Henedine, Quebec</item>
+        <item>Ste-Jeanne-d\'Arc, Quebec</item>
+        <item>Ste-Julie, Quebec</item>
+        <item>Ste-Julie-de-Vercheres, Quebec</item>
+        <item>Ste-Julienne, Quebec</item>
+        <item>Ste-Justine, Quebec</item>
+        <item>Ste-Lucie-de-Beauregard, Quebec</item>
+        <item>Ste-Madeleine, Quebec</item>
+        <item>Ste-Marguerite, Quebec</item>
+        <item>Ste-Marie-de-Beauce, Quebec</item>
+        <item>Ste-Marie-de-Blandford, Quebec</item>
+        <item>Ste-Marthe, Quebec</item>
+        <item>Ste-Marthe-sur-le-Lac, Quebec</item>
+        <item>Ste-Perpetue, Quebec</item>
+        <item>Ste-Petronille, Quebec</item>
+        <item>Ste-Rosalie, Quebec</item>
+        <item>Ste-Rose, Quebec</item>
+        <item>Ste-Rose-de-Watford, Quebec</item>
+        <item>Ste-Rose-du-Nord, Quebec</item>
+        <item>Ste-Sophie-de-Levrard, Quebec</item>
+        <item>Ste-Thecle, Quebec</item>
+        <item>Ste-Therese, Quebec</item>
+        <item>Ste-Veronique, Quebec</item>
+        <item>Ste-Victoire, Quebec</item>
+        <item>Ste. Agathe, Manitoba</item>
+        <item>Ste. Agathe de Lotbiniere, Quebec</item>
+        <item>Ste. Angele de Laval, Quebec</item>
+        <item>Ste. Cecile Masham, Quebec</item>
+        <item>Ste. Claire de Dorchester, Quebec</item>
+        <item>Ste. Croix de Lotbiniere, Quebec</item>
+        <item>Ste. Gertrude, Quebec</item>
+        <item>Ste. Justine de Newton, Quebec</item>
+        <item>Ste. Martine, Quebec</item>
+        <item>Ste. Methode de Frontenac, Quebec</item>
+        <item>Ste. Monique de Nicolet, Quebec</item>
+        <item>Ste. Rose du Lac, Manitoba</item>
+        <item>Steady Brook, Newfoundland</item>
+        <item>Steep Rock, Manitoba</item>
+        <item>Steinbach, Manitoba</item>
+        <item>Stellarton, Nova Scotia</item>
+        <item>Stephenville, Newfoundland</item>
+        <item>Stephenville Crossing, Newfoundland</item>
+        <item>Stettler, Alberta</item>
+        <item>Stevensville, Ontario</item>
+        <item>Stewart, British Columbia</item>
+        <item>Stewarttown, Ontario</item>
+        <item>Stewiacke, Nova Scotia</item>
+        <item>Stirling, Alberta</item>
+        <item>Stirling, Ontario</item>
+        <item>Stockholm, Saskatchewan</item>
+        <item>Stoke, Quebec</item>
+        <item>Stoke\'s Bay, Ontario</item>
+        <item>Stoneham, Quebec</item>
+        <item>Stonewall, Manitoba</item>
+        <item>Stoney Creek, Ontario</item>
+        <item>Stoney Point, Ontario</item>
+        <item>Stony Plain, Alberta</item>
+        <item>Stony Rapids, Saskatchewan</item>
+        <item>Storthoaks, Saskatchewan</item>
+        <item>Stouffville, Ontario</item>
+        <item>Stoughton, Saskatchewan</item>
+        <item>Straffordville, Ontario</item>
+        <item>Strasbourg, Saskatchewan</item>
+        <item>Stratford, Ontario</item>
+        <item>Stratford, Prince Edward Island</item>
+        <item>Stratford, Quebec</item>
+        <item>Strathclair, Manitoba</item>
+        <item>Strathmore, Alberta</item>
+        <item>Strathroy, Ontario</item>
+        <item>Stratton, Ontario</item>
+        <item>Streetsville, Ontario</item>
+        <item>Strome, Alberta</item>
+        <item>Strongfield, Saskatchewan</item>
+        <item>Stroud, Ontario</item>
+        <item>Stukely-Sud, Quebec</item>
+        <item>Sturgeon Falls, Ontario</item>
+        <item>Sturgis, Saskatchewan</item>
+        <item>Sudbury, Ontario</item>
+        <item>Sultan, Ontario</item>
+        <item>Summer Beaver, Ontario</item>
+        <item>Summerford, Newfoundland</item>
+        <item>Summerland, British Columbia</item>
+        <item>Summerside, Newfoundland</item>
+        <item>Summerside, Prince Edward Island</item>
+        <item>Summerville, New Brunswick</item>
+        <item>Summit Lake, British Columbia</item>
+        <item>Sunderland, Ontario</item>
+        <item>Sundre, Alberta</item>
+        <item>Sundridge, Ontario</item>
+        <item>Sunnyside, Newfoundland</item>
+        <item>Surrey, British Columbia</item>
+        <item>Sussex, New Brunswick</item>
+        <item>Sutton, Ontario</item>
+        <item>Sutton, Quebec</item>
+        <item>Swan Hills, Alberta</item>
+        <item>Swan Lake, Manitoba</item>
+        <item>Swan River, Manitoba</item>
+        <item>Swastika, Ontario</item>
+        <item>Swift Current, Saskatchewan</item>
+        <item>Swift River, Yukon</item>
+        <item>Sydenham, Ontario</item>
+        <item>Sydney, Nova Scotia</item>
+        <item>Sylvan Lake, Alberta</item>
+        <item>Taber, Alberta</item>
+        <item>Tabusintac, New Brunswick</item>
+        <item>Tachie, British Columbia</item>
+        <item>Tadoule Lake, Manitoba</item>
+        <item>Tadoussac, Quebec</item>
+        <item>Tagish, Yukon</item>
+        <item>Tahsis, British Columbia</item>
+        <item>Tamworth, Ontario</item>
+        <item>Tangier, Nova Scotia</item>
+        <item>Tantallon, Saskatchewan</item>
+        <item>Tara, Ontario</item>
+        <item>Taschereau, Quebec</item>
+        <item>Tasiujaq, Quebec</item>
+        <item>Tatamagouche, Nova Scotia</item>
+        <item>Tatla Lake, British Columbia</item>
+        <item>Tavistock, Ontario</item>
+        <item>Taylor, British Columbia</item>
+        <item>Taylor Corners, Ontario</item>
+        <item>Tecumseh, Ontario</item>
+        <item>Teeswater, Ontario</item>
+        <item>Telegraph Creek, British Columbia</item>
+        <item>Telkwa, British Columbia</item>
+        <item>Temagami, Ontario</item>
+        <item>Temiscaming, Quebec</item>
+        <item>Terra Nova, Newfoundland</item>
+        <item>Terrace, British Columbia</item>
+        <item>Terrace Bay, Ontario</item>
+        <item>Terrasse Vaudreuil, Quebec</item>
+        <item>Terrebonne, Quebec</item>
+        <item>Terrenceville, Newfoundland</item>
+        <item>Teslin, Yukon</item>
+        <item>Tete-a-la-Baleine, Quebec</item>
+        <item>Teulon, Manitoba</item>
+        <item>Thamesford, Ontario</item>
+        <item>Thamesville, Ontario</item>
+        <item>The Eabametoong (Fort Hope) Fi, Ontario</item>
+        <item>The Pas, Manitoba</item>
+        <item>Thedford, Ontario</item>
+        <item>Theodore, Saskatchewan</item>
+        <item>Thessalon, Ontario</item>
+        <item>Thessalon First Nation, Ontario</item>
+        <item>Thetford Mines, Quebec</item>
+        <item>Thicket Portage, Manitoba</item>
+        <item>Thompson, Manitoba</item>
+        <item>Thorburn, Nova Scotia</item>
+        <item>Thorhild, Alberta</item>
+        <item>Thornbury, Ontario</item>
+        <item>Thorndale, Ontario</item>
+        <item>Thorne, Ontario</item>
+        <item>Thornhill, Ontario</item>
+        <item>Thorold, Ontario</item>
+        <item>Thorsby, Alberta</item>
+        <item>Three Hills, Alberta</item>
+        <item>Thrums, British Columbia</item>
+        <item>Thunder Bay, Ontario</item>
+        <item>Thurlow, Ontario</item>
+        <item>Thurso, Quebec</item>
+        <item>Tignish, Prince Edward Island</item>
+        <item>Tilbury, Ontario</item>
+        <item>Tilley, Alberta</item>
+        <item>Tillsonburg, Ontario</item>
+        <item>Timmins, Ontario</item>
+        <item>Tingwick, Quebec</item>
+        <item>Tisdale, Saskatchewan</item>
+        <item>Tiverton, Ontario</item>
+        <item>Toad River, British Columbia</item>
+        <item>Tobermory, Ontario</item>
+        <item>Tobique First Nation, New Brunswick</item>
+        <item>Tofield, Alberta</item>
+        <item>Tofino, British Columbia</item>
+        <item>Togo, Saskatchewan</item>
+        <item>Toledo, Ontario</item>
+        <item>Tomahawk, Alberta</item>
+        <item>Tompkins, Saskatchewan</item>
+        <item>Topley, British Columbia</item>
+        <item>Torbay, Newfoundland</item>
+        <item>Toronto, Ontario</item>
+        <item>Toronto Island, Ontario</item>
+        <item>Torquay, Saskatchewan</item>
+        <item>Torrington, Alberta</item>
+        <item>Tottenham, Ontario</item>
+        <item>Tracadie-Sheila, New Brunswick</item>
+        <item>Trail, British Columbia</item>
+        <item>Tramping Lake, Saskatchewan</item>
+        <item>Treherne, Manitoba</item>
+        <item>Tremblay, Quebec</item>
+        <item>Trenton, Nova Scotia</item>
+        <item>Trenton, Ontario</item>
+        <item>Trepassey, Newfoundland</item>
+        <item>Tribune, Saskatchewan</item>
+        <item>Tring-Jonction, Quebec</item>
+        <item>Triton, Newfoundland</item>
+        <item>Trochu, Alberta</item>
+        <item>Trois-Pistoles, Quebec</item>
+        <item>Trois-Rivieres, Quebec</item>
+        <item>Trout Creek, Ontario</item>
+        <item>Trout Lake, Alberta</item>
+        <item>Trout Lake, British Columbia</item>
+        <item>Trout Lake, Northwest Territories</item>
+        <item>Trout River, Newfoundland</item>
+        <item>Trowbridge, Ontario</item>
+        <item>Truro, Nova Scotia</item>
+        <item>Tsay Keh Dene, British Columbia</item>
+        <item>Tsiigehtchic, Northwest Territories</item>
+        <item>Tuktoyaktuk, Northwest Territories</item>
+        <item>Tumbler Ridge, British Columbia</item>
+        <item>Turner Valley, Alberta</item>
+        <item>Turnor Lake, Saskatchewan</item>
+        <item>Turtleford, Saskatchewan</item>
+        <item>Tusket, Nova Scotia</item>
+        <item>Tweed, Ontario</item>
+        <item>Twillingate, Newfoundland</item>
+        <item>Two Hills, Alberta</item>
+        <item>Tyne Valley, Prince Edward Island</item>
+        <item>Ucluelet, British Columbia</item>
+        <item>Udora, Ontario</item>
+        <item>Umiujaq, Quebec</item>
+        <item>Uniondale, Ontario</item>
+        <item>Unionville, Ontario</item>
+        <item>Unity, Saskatchewan</item>
+        <item>Upper Island Cove, Newfoundland</item>
+        <item>Upper Musquodoboit, Nova Scotia</item>
+        <item>Upper Stewiacke, Nova Scotia</item>
+        <item>Upsala, Ontario</item>
+        <item>Upton, Quebec</item>
+        <item>Uranium City, Saskatchewan</item>
+        <item>Utterson, Ontario</item>
+        <item>Uxbridge, Ontario</item>
+        <item>Val Marie, Saskatchewan</item>
+        <item>Val-Alain, Quebec</item>
+        <item>Val-Barrette, Quebec</item>
+        <item>Val-Belair, Quebec</item>
+        <item>Val-Brillant, Quebec</item>
+        <item>Val-David, Quebec</item>
+        <item>Val-des-Bois, Quebec</item>
+        <item>Val-d\'Or, Quebec</item>
+        <item>Valcartier, Quebec</item>
+        <item>Valcourt, Quebec</item>
+        <item>Valemount, British Columbia</item>
+        <item>Vallee-Jonction, Quebec</item>
+        <item>Valley East, Ontario</item>
+        <item>Valleyview, Alberta</item>
+        <item>Vallican, British Columbia</item>
+        <item>Van Anda, British Columbia</item>
+        <item>Vancouver, British Columbia</item>
+        <item>Vanderhoof, British Columbia</item>
+        <item>Vanguard, Saskatchewan</item>
+        <item>Vanier, Ontario</item>
+        <item>Vanier, Quebec</item>
+        <item>Vankleek Hill, Ontario</item>
+        <item>Vanscoy, Saskatchewan</item>
+        <item>Varennes, Quebec</item>
+        <item>Vaudreuil, Quebec</item>
+        <item>Vaudreuil Dorion, Quebec</item>
+        <item>Vaudreuil-sur-le-Lac, Quebec</item>
+        <item>Vaughan, Ontario</item>
+        <item>Vauxhall, Alberta</item>
+        <item>Vavenby, British Columbia</item>
+        <item>Vegreville, Alberta</item>
+        <item>Venise-en-Quebec, Quebec</item>
+        <item>Vercheres, Quebec</item>
+        <item>Verdun, Quebec</item>
+        <item>Vermilion, Alberta</item>
+        <item>Vermilion Bay, Ontario</item>
+        <item>Verner, Ontario</item>
+        <item>Vernon, British Columbia</item>
+        <item>Vernon River, Prince Edward Island</item>
+        <item>Verona, Ontario</item>
+        <item>Veteran, Alberta</item>
+        <item>Vibank, Saskatchewan</item>
+        <item>Victoria, British Columbia</item>
+        <item>Victoria, Newfoundland</item>
+        <item>Victoria, Ontario</item>
+        <item>Victoriaville, Quebec</item>
+        <item>View Royal, British Columbia</item>
+        <item>Viking, Alberta</item>
+        <item>Ville-Marie, Quebec</item>
+        <item>Vilna, Alberta</item>
+        <item>Vimont, Quebec</item>
+        <item>Vineland, Ontario</item>
+        <item>Virden, Manitoba</item>
+        <item>Virginiatown, Ontario</item>
+        <item>Viscount, Saskatchewan</item>
+        <item>Vita, Manitoba</item>
+        <item>Vonda, Saskatchewan</item>
+        <item>Vulcan, Alberta</item>
+        <item>Waasagomach, Manitoba</item>
+        <item>Wabamun, Alberta</item>
+        <item>Wabana, Newfoundland</item>
+        <item>Wabigoon, Ontario</item>
+        <item>Wabowden, Manitoba</item>
+        <item>Wabush, Newfoundland</item>
+        <item>Wadena, Saskatchewan</item>
+        <item>Wainfleet, Ontario</item>
+        <item>Wainwright, Alberta</item>
+        <item>Wakaw, Saskatchewan</item>
+        <item>Wakefield, Quebec</item>
+        <item>Walden, Ontario</item>
+        <item>Waldheim, Saskatchewan</item>
+        <item>Walkerton, Ontario</item>
+        <item>Wallace, Nova Scotia</item>
+        <item>Wallaceburg, Ontario</item>
+        <item>Walsh, Alberta</item>
+        <item>Walton, Nova Scotia</item>
+        <item>Wandering River, Alberta</item>
+        <item>Wanham, Alberta</item>
+        <item>Wanless, Manitoba</item>
+        <item>Wapekeka First Nation, Ontario</item>
+        <item>Wapella, Saskatchewan</item>
+        <item>Warburg, Alberta</item>
+        <item>Warden, Quebec</item>
+        <item>Wardsville, Ontario</item>
+        <item>Warkworth, Ontario</item>
+        <item>Warman, Saskatchewan</item>
+        <item>Warner, Alberta</item>
+        <item>Warren, Ontario</item>
+        <item>Warspite, Alberta</item>
+        <item>Warwick, Quebec</item>
+        <item>Wasaga Beach, Ontario</item>
+        <item>Wasagaming, Manitoba</item>
+        <item>Waskaganish, Quebec</item>
+        <item>Waskatenau, Alberta</item>
+        <item>Waskesiu Lake, Saskatchewan</item>
+        <item>Waswanipi, Quebec</item>
+        <item>Waterdown, Ontario</item>
+        <item>Waterford, Ontario</item>
+        <item>Waterhen, Manitoba</item>
+        <item>Waterloo, Ontario</item>
+        <item>Waterloo, Quebec</item>
+        <item>Waterville, Quebec</item>
+        <item>Watford, Ontario</item>
+        <item>Watrous, Saskatchewan</item>
+        <item>Watson, Saskatchewan</item>
+        <item>Watson Lake, Yukon</item>
+        <item>Waubaushene, Ontario</item>
+        <item>Waverley, Nova Scotia</item>
+        <item>Wawa, Ontario</item>
+        <item>Wawanesa, Manitoba</item>
+        <item>Wawota, Saskatchewan</item>
+        <item>Webb, Saskatchewan</item>
+        <item>Webbwood, Ontario</item>
+        <item>Webequie, Ontario</item>
+        <item>Wedgeport, Nova Scotia</item>
+        <item>Weedon, Quebec</item>
+        <item>Weedon Centre, Quebec</item>
+        <item>Welcome, Ontario</item>
+        <item>Welland, Ontario</item>
+        <item>Wellandport, Ontario</item>
+        <item>Wellesley, Ontario</item>
+        <item>Wellington, Ontario</item>
+        <item>Wellington, Prince Edward Island</item>
+        <item>Wells, British Columbia</item>
+        <item>Welsford, New Brunswick</item>
+        <item>Welwyn, Saskatchewan</item>
+        <item>Wembley, Alberta</item>
+        <item>Wemindji, Quebec</item>
+        <item>Wendover, Quebec</item>
+        <item>Wesleyville, Newfoundland</item>
+        <item>West Brome, Quebec</item>
+        <item>West Guilford, Ontario</item>
+        <item>West Lincoln, Ontario</item>
+        <item>West Lorne, Ontario</item>
+        <item>West Vancouver, British Columbia</item>
+        <item>Westbank, British Columbia</item>
+        <item>Westbury, Quebec</item>
+        <item>Western Bay, Newfoundland</item>
+        <item>Westfield, New Brunswick</item>
+        <item>Westlock, Alberta</item>
+        <item>Westmeath, Ontario</item>
+        <item>Westmount, Quebec</item>
+        <item>Westport, Newfoundland</item>
+        <item>Westport, Ontario</item>
+        <item>Westree, Ontario</item>
+        <item>Westville, Nova Scotia</item>
+        <item>Westwold, British Columbia</item>
+        <item>Wetaskiwin, Alberta</item>
+        <item>Weyburn, Saskatchewan</item>
+        <item>Weymouth, Nova Scotia</item>
+        <item>Whale Cove, Nunavut</item>
+        <item>Wheatley, Ontario</item>
+        <item>Whistler, British Columbia</item>
+        <item>Whitbourne, Newfoundland</item>
+        <item>Whitby, Ontario</item>
+        <item>Whitchurch-Stouffville, Ontario</item>
+        <item>White Fox, Saskatchewan</item>
+        <item>White River, Ontario</item>
+        <item>White Rock, British Columbia</item>
+        <item>Whitecourt, Alberta</item>
+        <item>Whitefish, Ontario</item>
+        <item>Whitefish Falls, Ontario</item>
+        <item>Whitefish River First Nation, Ontario</item>
+        <item>Whitehorse, Yukon</item>
+        <item>Whitelaw, Alberta</item>
+        <item>Whitemouth, Manitoba</item>
+        <item>Whitewood, Saskatchewan</item>
+        <item>Whitney, Ontario</item>
+        <item>Whycocomagh, Nova Scotia</item>
+        <item>Wiarton, Ontario</item>
+        <item>Wickham, Quebec</item>
+        <item>Widewater, Alberta</item>
+        <item>Wikwemikong, Ontario</item>
+        <item>Wilberforce, Ontario</item>
+        <item>Wilcox, Saskatchewan</item>
+        <item>Wildwood, Alberta</item>
+        <item>Wilkie, Saskatchewan</item>
+        <item>Williams Lake, British Columbia</item>
+        <item>Williamsburg, Ontario</item>
+        <item>Willingdon, Alberta</item>
+        <item>Willow Bunch, Saskatchewan</item>
+        <item>Willowbrook, British Columbia</item>
+        <item>Winchester, Ontario</item>
+        <item>Windermere, Ontario</item>
+        <item>Windsor, Nova Scotia</item>
+        <item>Windsor, Ontario</item>
+        <item>Windsor, Quebec</item>
+        <item>Windthorst, Saskatchewan</item>
+        <item>Winfield, Alberta</item>
+        <item>Winfield, British Columbia</item>
+        <item>Wingham, Ontario</item>
+        <item>Winkler, Manitoba</item>
+        <item>Winnipeg, Manitoba</item>
+        <item>Winnipeg Beach, Manitoba</item>
+        <item>Winnipegosis, Manitoba</item>
+        <item>Winona, Ontario</item>
+        <item>Winter Harbour, British Columbia</item>
+        <item>Winterton, Newfoundland</item>
+        <item>Wiseton, Saskatchewan</item>
+        <item>Wishart, Saskatchewan</item>
+        <item>Witless Bay, Newfoundland</item>
+        <item>Woburn, Quebec</item>
+        <item>Woking, Alberta</item>
+        <item>Wolfville, Nova Scotia</item>
+        <item>Wollaston Lake, Saskatchewan</item>
+        <item>Wolseley, Saskatchewan</item>
+        <item>Wonowon, British Columbia</item>
+        <item>Wood Mountain, Saskatchewan</item>
+        <item>Woodbridge, Ontario</item>
+        <item>Woodridge, Manitoba</item>
+        <item>Woodstock, New Brunswick</item>
+        <item>Woodstock, Ontario</item>
+        <item>Woodville, Ontario</item>
+        <item>Woody Point, Newfoundland</item>
+        <item>Wooler, Ontario</item>
+        <item>Worsley, Alberta</item>
+        <item>Wotton, Quebec</item>
+        <item>Wrentham, Alberta</item>
+        <item>Wrigley, Northwest Territories</item>
+        <item>Wunnummin Lake, Ontario</item>
+        <item>Wynndel, British Columbia</item>
+        <item>Wynyard, Saskatchewan</item>
+        <item>Wyoming, Ontario</item>
+        <item>Yahk, British Columbia</item>
+        <item>Yale, British Columbia</item>
+        <item>Yamachiche, Quebec</item>
+        <item>Yamaska, Quebec</item>
+        <item>Yamaska-Est, Quebec</item>
+        <item>Yarker, Ontario</item>
+        <item>Yarmouth, Nova Scotia</item>
+        <item>Yellow Creek, Saskatchewan</item>
+        <item>Yellow Grass, Saskatchewan</item>
+        <item>Yellowknife, Northwest Territories</item>
+        <item>York, Ontario</item>
+        <item>Yorkton, Saskatchewan</item>
+        <item>Youbou, British Columbia</item>
+        <item>Young, Saskatchewan</item>
+        <item>Youngstown, Alberta</item>
+        <item>Young\'s Cove Road, New Brunswick</item>
+        <item>Zealandia, Saskatchewan</item>
+        <item>Zeballos, British Columbia</item>
+        <item>Zenon Park, Saskatchewan</item>
+        <item>Zurich, Ontario</item>
+    </string-array>
 </resources>
