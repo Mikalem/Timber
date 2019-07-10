@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 // Time interval between back-key presses
 private const val BACK_KEY_TIME_INTERVAL = 1500 // in milliseconds
@@ -18,6 +19,8 @@ private const val RC_SIGN_IN = 123
 /* Handles all functionality related to the SignInUp activity */
 class SignInUp : AppCompatActivity() {
 
+    // Reference to Firebase database (more info: firebase.google.com)
+    private val database = FirebaseDatabase.getInstance()
     // Initialize back-key pressed timeStamp
     private var backPressedTimeStamp : Long = 0
 
@@ -114,10 +117,17 @@ class SignInUp : AppCompatActivity() {
                 // Successfully signed in
                 Log.i("myTag", "Login success")
                 val user = FirebaseAuth.getInstance().currentUser
-                val name = user?.displayName
+                val uid = user?.uid
+                val fullName = user?.displayName
+
+                if (fullName != null) {
+                    val fullNameRef = database.getReference("$uid/Full Name")
+                    fullNameRef.setValue(fullName)
+                    Log.d("myTag", "Full Name: $fullName")
+                }
 
                 // show a welcome popup msg
-                Toast.makeText(applicationContext, "Welcome $name!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Welcome $fullName!", Toast.LENGTH_SHORT).show()
 
                 toHomeActivity()
             } else {
