@@ -78,7 +78,6 @@ class ProfileEdit : AppCompatActivity() {
         // Instantiate userID from Firebase login info
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
-        val fullName = user?.displayName
 
         // Location references to read from in activity
         val usernameET = findViewById<TextInputEditText>(R.id.input_user_name_edit)
@@ -97,43 +96,26 @@ class ProfileEdit : AppCompatActivity() {
         val location = locationET.text.toString()
 
         // Write to in Firebase DB if values are not null && valid
-        if (fullName != null) {
-            val fullNameRef = database.getReference("$uid/Full Name")
-            fullNameRef.setValue(fullName)
-            Log.d("myTag", "Full Name: $fullName")
-        }
         if (username.isNotEmpty()) {
-            val usernameRef = database.getReference("$uid/Username")
-            usernameRef.setValue(username)
-            Log.d("myTag", "Username: $username")
+            writeDB("Username", username, "$uid/Username")
         }
         if (profession.isNotEmpty()) {
-            val professionRef = database.getReference("$uid/Profession")
-            professionRef.setValue(profession)
-            Log.d("myTag", "Profession: $profession")
+            writeDB("Profession", profession, "$uid/Profession")
         }
         if (burningQ.isNotEmpty()) {
-            val burningQRef = database.getReference("$uid/Burning Question")
-            burningQRef.setValue(burningQ)
-            Log.d("myTag", "Burning Question: $burningQ")
+            writeDB("Burning Question", burningQ, "$uid/Burning Question")
         }
         if (degree.isNotEmpty()) {
-            val degreeRef = database.getReference("$uid/Degree")
-            degreeRef.setValue(degree)
-            Log.d("myTag", "Degree: $degree")
+            writeDB("Degree", degree, "$uid/Degree")
         }
         if (university.isNotEmpty()) {
-            val universityRef = database.getReference("$uid/University")
-            universityRef.setValue(university)
-            Log.d("myTag", "University: $university")
+            writeDB("University", university, "$uid/University")
         }
         val yearPattern = "^\\d{4}$"
         if (graduateYear.isNotEmpty()
             && graduateYear.matches(yearPattern.toRegex())
             && graduateYear.toInt() <= currentYearPlusFive){
-            val graduateYearRef = database.getReference("$uid/Graduating Year")
-            graduateYearRef.setValue(graduateYear)
-            Log.d("myTag", "Graduating Year: $graduateYear")
+            writeDB("Graduating Year", graduateYear, "$uid/Graduating Year")
         }
         else if (graduateYear.isNotEmpty()){
             Log.d("myTag", "Year change invalid")
@@ -142,13 +124,18 @@ class ProfileEdit : AppCompatActivity() {
             return
         }
         if (location.isNotEmpty()) {
-            val locationRef = database.getReference("$uid/Location")
-            locationRef.setValue(location)
-            Log.d("myTag", "Location: $location")
+            writeDB("Location", location, "$uid/Location")
         }
 
         // Success, launch Profile, exit ProfileEdit
         toProfile()
+    }
+
+    /* Writes the passed info to the Firebase Database */
+    private fun writeDB(subject: String, subjVal: String, path: String) {
+        val myRef = database.getReference(path)
+        myRef.setValue(subjVal)
+        Log.d("myTag", "$subject: $subjVal")
     }
 
     /* Launches Profile activity */
