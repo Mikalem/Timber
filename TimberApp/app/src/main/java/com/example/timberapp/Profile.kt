@@ -29,7 +29,7 @@ class Profile : AppCompatActivity() {
         setUpToolbar()
 
         // Read values from Firebase if changes have been made in ProfileEdit
-        setProfileValues()
+        getProfileValues()
     }
 
     /* Handles the toolbar setup */
@@ -98,7 +98,7 @@ class Profile : AppCompatActivity() {
     }
 
     /* Handles any changes from ProfileEdit and displays the new information */
-    private fun setProfileValues() {
+    private fun getProfileValues() {
         // Instantiate userID from Firebase login info
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
