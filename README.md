@@ -72,7 +72,7 @@ The information displayed is the described later and is slightly different for a
 When there are two positives between a mentor and mentee, the app will bring up a “you have a match!” notification that the user(s) can select to bring up a chat window between both parties. This would be an app notification for the users who aren’t on their smartphone can become aware when they do check their phone.
  
 #### Miscellanious
-Warnings to the user will be issued when sending a message with email addresses and phone numbers. This is a precaution that can be averted by aknowledging “yes, I want to send this info”
+Warnings to the user will be issued when sending a message with email addresses and phone numbers. This is a precaution that can be averted by acknowledging “yes, I want to send this info”
 Users can block someone and/or report the person they’ve been matched with in case they become uncomfortable for any reason.
 Users can and are encouraged to rate the other party (like in Uber). This helps keeps both parties professional and avoid some app abuse (like users in it to get hired).
  
